@@ -12,6 +12,83 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
+import TeamMemberCard from './TeamMemberCard';
+
+const teamData = [
+    {
+        id: 1,
+        imageSrc: TeamDoc1,
+        speciality: "Family psychologist, Psy. D",
+        name: "Julian Rogers",
+        socialLinks: {
+            facebook: "https://facebook.com/julianrogers",
+            instagram: "https://instagram.com/julianrogers",
+            twitter: "https://twitter.com/julianrogers",
+            whatsapp: "https://wa.me/1234567890",
+        },
+    },
+    {
+        id: 2,
+        imageSrc: TeamDoc2,
+        speciality: "Clinical psychologist, Psy. D",
+        name: "Ruth Clark",
+        socialLinks: {
+            facebook: "https://facebook.com/sophiablake",
+            instagram: "https://instagram.com/sophiablake",
+            twitter: "https://twitter.com/julianrogers",
+            whatsapp: "https://wa.me/9876543210",
+        },
+    },
+    {
+        id: 3,
+        imageSrc: TeamDoc3,
+        speciality: "Practicing Psychologist",
+        name: "Joseph Powers",
+        socialLinks: {
+            facebook: "https://facebook.com/julianrogers",
+            instagram: "https://instagram.com/julianrogers",
+            twitter: "https://twitter.com/julianrogers",
+            whatsapp: "https://wa.me/1234567890",
+        },
+    },
+    {
+        id: 4,
+        imageSrc: TeamDoc4,
+        speciality: "Practicing psychologist, Psy. D",
+        name: "Robert Johnston",
+        socialLinks: {
+            facebook: "https://facebook.com/sophiablake",
+            instagram: "https://instagram.com/sophiablake",
+            twitter: "https://twitter.com/julianrogers",
+            whatsapp: "https://wa.me/9876543210",
+        },
+    },
+    {
+        id: 5,
+        imageSrc: TeamDoc5,
+        speciality: "Clinical psychologist, Psy. D",
+        name: "Carmella Floyd",
+        socialLinks: {
+            facebook: "https://facebook.com/julianrogers",
+            instagram: "https://instagram.com/julianrogers",
+            twitter: "https://twitter.com/julianrogers",
+            whatsapp: "https://wa.me/1234567890",
+        },
+    },
+    {
+        id: 6,
+        imageSrc: TeamDoc6,
+        speciality: "Child Psychologist",
+        name: "Merryl Morton",
+        socialLinks: {
+            facebook: "https://facebook.com/sophiablake",
+            instagram: "https://instagram.com/sophiablake",
+            twitter: "https://twitter.com/julianrogers",
+            whatsapp: "https://wa.me/9876543210",
+        },
+    },
+];
+
 
 const Team = () => {
 
@@ -54,6 +131,18 @@ const Team = () => {
                 </div>
 
                 <div id='team-grid-container'>
+                    {teamData.map((member) => (
+                        <TeamMemberCard
+                            key={member.id}
+                            imageSrc={member.imageSrc}
+                            speciality={member.speciality}
+                            name={member.name}
+                            socialLinks={member.socialLinks}
+                        />
+                    ))}
+                </div>
+
+                {/* <div id='team-grid-container'>
                     <div className="team-grid-card">
                         <div className='team-img'>
                             <img src={TeamDoc1} alt="team-img-1" />
@@ -63,17 +152,17 @@ const Team = () => {
                         <p className='doc-name'>Julian Rogers</p>
 
                         <div className='team-social-container'>
-                            <div className='icon-container'>
-                                <FaFacebookF className='social-media-icon' />
+                            <div className='team-icon-container'>
+                                <FaFacebookF className='team-social-media-icon' />
                             </div>
-                            <div className='icon-container'>
-                                <FaInstagram className='social-media-icon' />
+                            <div className='team-icon-container'>
+                                <FaInstagram className='team-social-media-icon' />
                             </div>
-                            <div className='icon-container'>
-                                <FaTwitter className='social-media-icon' />
+                            <div className='team-icon-container'>
+                                <FaTwitter className='team-social-media-icon' />
                             </div>
-                            <div className='icon-container'>
-                                <FaWhatsapp className='social-media-icon' />
+                            <div className='team-icon-container'>
+                                <FaWhatsapp className='team-social-media-icon' />
                             </div>
                         </div>
                     </div>
@@ -197,7 +286,7 @@ const Team = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </div>

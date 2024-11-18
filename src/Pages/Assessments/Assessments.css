@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: 100px auto;
+    margin: 100px auto 50px;
 }
 
 #assessment-process-section > p{
@@ -60,9 +60,9 @@
 
 
 
-#programs-section{
+/* #programs-section{
     
-}
+} */
 
 
 #programs-container{
@@ -95,6 +95,7 @@
     margin: 60px auto;
 }
 
+
 #form-img-container{
     width: 50%;
 }
@@ -123,8 +124,223 @@
     gap: 20px;
 }
 
-.form-input{
+.assessment-form-input{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+.assessment-form-input > input, .assessment-form-input > select{
+    padding: 7px 12px;
+    font-size: 1rem;
+    border-radius: 18px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+  /* Extra Small */
+  @media (max-width: 480px) {
+    /* Styles for extra small screens */
+    #assessment-process-section{
+        width: 90%;
+        margin: 80px auto;
+    }
+    #process-grid{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    #programs-container{
+        padding: 10px 0px;
+    }
+    #programs-container > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 900;
+    }
+    #assessment-process-section > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 700;
+    }
+    #assessments-form-section{
+        flex-direction: column;
+        margin: 0px auto 20px;
+        /* border: 1px solid; */
+    }
+    #form-img-container{
+        width: 100%;
+    }
+    #form-img-container > img{
+        width: 100%;
+        /* aspect-ratio: 3/2; */
+    }
+    #form-container{
+        width: 100%;
+    }
+    #form-container > p{
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
+    #form-container > button {
+        margin-top: 15px;
+    }
+    #assessment-consultation-form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .assessment-form-input{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .assessment-form-input > input, .assessment-form-input > select{
+        width: 80%;
+    }
+    .assessment-form-input > select{
+        width: 86%;
+    }
+    .asssess-btn{
+        margin: 20px 10px;
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+  }
+  
+  /* Small */
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* Styles for small screens */
+    #assessment-process-section{
+        width: 90%;
+        margin: 80px auto;
+    }
+    #process-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #programs-container{
+        padding: 40px 0px;
+    }
+    #programs-container > p:nth-child(1){
+        font-size: 34px;
+        font-weight: 900;
+    }
+    #assessment-process-section > p:nth-child(1){
+        font-size: 34px;
+        font-weight: 700;
+    }
+    #assessments-form-section{
+        flex-direction: column;
+        margin: 0px auto 20px;
+        /* border: 1px solid; */
+    }
+    #form-img-container{
+        width: 100%;
+    }
+    #form-img-container > img{
+        width: 100%;
+        aspect-ratio: 3/2;
+    }
+    #form-container{
+        width: 100%;
+    }
+    #form-container > p{
+        font-size: 34px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    #form-container > button {
+        margin-top: 15px;
+    }
+    #assessment-consultation-form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 30px 40px;
+    }
+    .assessment-form-input{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .assessment-form-input > input, .assessment-form-input > select{
+        width: 80%;
+    }
+    .assessment-form-input > select{
+        width: 86%;
+    }
+    .asssess-btn{
+        margin: 0 40px 10px;
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+  }
+  
+  /* Medium */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for medium screens */
+    #process-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #programs-container{
+        padding: 40px 0px;
+    }
+    #programs-container > p:nth-child(1){
+        font-size: 36px;
+        font-weight: 900;
+    }
+    #assessment-process-section > p:nth-child(1){
+        font-size: 36px;
+        font-weight: 700;
+    }
+    #assessments-form-section{
+        margin: 20px auto;
+        /* border: 1px solid; */
+    }
+    #form-img-container{
+        width: 45%;
+        /* border: 1px solid; */
+    }
+    #form-container{
+        width: 50%;
+    }
+    #form-container > p{
+        margin-top: 0;
+        font-size: 30px;
+        margin-bottom: 1.5rem;
+    }
+    #form-container > button {
+        margin-top: 30px;
+    }
+    #assessment-consultation-form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .assessment-form-input{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .assessment-form-input > input, .assessment-form-input > select{
+        width: 80%;
+        padding: 7px 12px;
+        font-size: 1rem;
+        border-radius: 18px;
+        border: 1px solid rgb(214, 214, 214);
+    }
+    .assessment-form-input > select{
+        width: 87%;
+    }
+  }
+  
+  /* Large */
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    /* Styles for large screens */
+    #process-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Extra Large */
+  @media (min-width: 1201px) and (max-width: 1440px) {
+    /* Styles for extra large screens */
+  }
+  

@@ -497,6 +497,10 @@
     .seminar-video-info > p:nth-child(2){
         margin: 0;
     }
+    #grid-section{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
   }
   
   /* Small */
@@ -527,6 +531,10 @@
     .seminar-video-info > p:nth-child(2){
         margin: 0;
     }
+    #grid-section{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
   }
   
   /* Medium */
@@ -541,11 +549,23 @@
     #seminar-content-container{
         width: 80%;
     }
+    #grid-section{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+    .primary-btn{
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
   }
   
   /* Large */
   @media (min-width: 1025px) and (max-width: 1200px) {
     /* Styles for large screens */
+    #grid-section{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
   }
   
   /* Extra Large */
