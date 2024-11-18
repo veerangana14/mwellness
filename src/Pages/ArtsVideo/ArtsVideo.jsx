@@ -17,9 +17,9 @@ const ArtsVideo = () => {
             <div id='outer-container'>
                 <div id='page-header'>
                 <div id="page-header-content">
-                    <p className='header-title'>ARTS - Mental Health Videos</p>
+                    <p className='video-header-title'>ARTS - Mental Health Videos</p>
 
-                    <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; ARTS - Mental Health Videos</p>
+                    <p className='video-header-sub-title'>Home &nbsp; &gt; &nbsp; ARTS - Mental Health Videos</p>
                 </div>
                 </div>
                 

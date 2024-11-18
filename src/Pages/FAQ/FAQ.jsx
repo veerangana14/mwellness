@@ -99,7 +99,7 @@ const FAQ = () => {
                 </div>
 
 
-                <div id="contact-inner-container">
+                <div id="faq-contact-inner-container">
                     <p>Contact Info</p>
                     <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</p>
 

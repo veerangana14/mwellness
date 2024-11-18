@@ -4,6 +4,7 @@
     width: 85%;
     gap: 25px;
     margin: 50px auto;
+    /* border: 1px solid; */
 }
 
 .audio-card{
@@ -13,6 +14,7 @@
     padding: 10px 30px;
     background-color: rgb(239, 239, 239);
     border-radius: 20px;
+    /* border: 1px solid; */
 }
 
 .audio-info-left-section {
@@ -24,14 +26,21 @@
     padding: 30px 30px;
     background-color: rgb(239, 239, 239);
     border-radius: 20px;
+    /* border: 1px solid; */
 }
 
 .audio-img{
-    width: 15%;
+    /* width: 15%; */
+    width: 12vh;
 
     img{
-        width: 100%;
+        width: 12vh;
+        
     }
+}
+
+.play-icon-button{
+    width: 3vh;
 }
 
 .audio-info-right-section{
@@ -43,6 +52,7 @@
     padding: 30px 30px;
     background-color: rgb(239, 239, 239);
     border-radius: 20px;
+    /* border: 1px solid; */
 
     p{
         color: gray;
@@ -57,3 +67,186 @@
         font-size: 16px;
     }
 }
+
+.audio-name-right-info{
+    display: none;
+}
+
+  /* Extra Small */
+  @media (max-width: 480px) {
+    /* Styles for extra small screens */
+    .audio-card{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .audio-info-left-section {
+        flex-direction: column;
+        width: 100%;
+        padding: 1vh 0vh;
+    }
+    .audio-info-right-section {
+        flex-direction: column;
+        width: 100%;
+        padding: 2vh 0vh;
+    }
+    .play-icon{
+        display: none;
+    }
+    .audio-img{
+        width: 100%;
+    
+        img{
+            width: 100%;
+            aspect-ratio: 3/2; 
+            border-radius: 14px;
+        }
+    }
+    .audio-name-info{
+        display: none;
+    }
+    .audio-name-right-info{
+        display: block;
+        p{
+            color: black;
+            font-size: 1rem;
+            margin: 0.5rem 0rem;
+        }
+    }
+  }
+  
+  /* Small */
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* Styles for small screens */
+    #audio-content-container{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        gap: 25px;
+        margin: 10% auto;
+        /* border: 1px solid; */
+    }
+    .audio-card{
+        padding: 10px 10px;
+    }
+    .audio-info-left-section {
+        flex-direction: column;
+        width: 40%;
+        padding: 2vh 0vh;
+    }
+    .audio-info-right-section {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 60%;
+        padding: 2vh 0vh;
+
+        button{
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            background-color: white;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+    }
+    .play-icon{
+        display: none;
+    }
+    .audio-img{
+        width: 35vh;
+    
+        img{
+            width: 35vh;  
+        }
+    }
+    .audio-name-info{
+        display: none;
+    }
+    .audio-name-right-info{
+        display: block;
+        p{
+            color: black;
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+    }
+  }
+  
+  /* Medium */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for medium screens */
+    .audio-info-left-section {
+        flex-direction: column;
+        width: 50%;
+        padding: 2vh 0vh;
+    }
+    .audio-info-right-section {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 45%;
+        padding: 2vh 0vh;
+    }
+    .play-icon{
+        display: none;
+    }
+    .audio-img{
+        width: 15vh;
+    
+        img{
+            width: 15vh;  
+        }
+    }
+    .audio-name-right-info{
+        display: none;
+    }
+  }
+  
+  /* Large */
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    /* Styles for large screens */
+    .audio-info-left-section {
+        flex-direction: column;
+        width: 45%;
+        padding: 2vh 0vh;
+    }
+    .audio-info-right-section {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 35%;
+    }
+    .play-icon{
+        display: none;
+    }
+    .audio-name-info{
+        line-height: 2vh;
+    }
+    .audio-img{
+        width: 15vh;
+    
+        img{
+            width: 15vh;  
+        }
+    }
+    .audio-name-right-info{
+        display: none;
+    }
+  }
+  
+  /* Extra Large */
+  @media (min-width: 1201px) and (max-width: 1440px) {
+    /* Styles for extra large screens */
+    .audio-info-left-section {
+        width: 45%;
+        padding: 4vh;
+    }
+    .audio-info-right-section{
+        width: 40%;
+        padding: 4vh;
+    }
+    .audio-name-right-info{
+        display: none;
+    }
+  }
+  
