@@ -27,7 +27,7 @@ const ArtsVideo = () => {
                     <p>Search Result</p>
 
                     <div id='seminar-video-content'>
-                        <div id="grid-section">
+                        <div id="video-grid-section">
                             <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe
@@ -41,7 +41,7 @@ const ArtsVideo = () => {
                                 <p>Relaxing music has the power to calm the mind, soothe anxiety, and uplift spirits, making it a powerful tool for healing ...</p>
                             </div>
                             </div>
-                            
+
                             <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe

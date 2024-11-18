@@ -2,7 +2,7 @@
  .video-header-title {
     font-size: 2.3rem;
  }
- #grid-section{
+ #video-grid-section{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -20,7 +20,7 @@
     .video-header-sub-title {
         font-size: 1rem;
     }
-    #grid-section{
+    #video-grid-section{
         grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -34,7 +34,7 @@
     .video-header-title {
         font-size: 1.8rem;
     }
-    #grid-section{
+    #video-grid-section{
         grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -51,7 +51,7 @@
     .video-header-sub-title {
         padding-top: 10px;
     }
-    #grid-section{
+    #video-grid-section{
         grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -65,7 +65,7 @@
     .video-header-sub-title {
         padding-top: 10px;
     }
-    #grid-section{
+    #video-grid-section{
         grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -73,7 +73,7 @@
   /* Extra Large */
   @media (min-width: 1201px) {
     /* Styles for extra large screens */
-    #grid-section{
+    #video-grid-section{
         grid-template-columns: repeat(1, 1fr);
     }
   }
