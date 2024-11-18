@@ -1,0 +1,59 @@
+#audio-content-container{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 25px;
+    margin: 50px auto;
+}
+
+.audio-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+}
+
+.audio-info-left-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    padding: 30px 30px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+}
+
+.audio-img{
+    width: 15%;
+
+    img{
+        width: 100%;
+    }
+}
+
+.audio-info-right-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    padding: 30px 30px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+
+    p{
+        color: gray;
+    }
+
+    button{
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}

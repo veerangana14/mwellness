@@ -1,0 +1,130 @@
+#assessment-process-section{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 100px auto;
+}
+
+#assessment-process-section > p{
+    margin: 0px;
+}
+
+#assessment-process-section > p:nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#assessment-process-section > p:nth-child(2){
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+#process-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 40px;
+    margin: 60px 0px;
+}
+
+.process-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+}
+
+.process-card > p{
+    margin: 0px;
+}
+
+.process-card > p:nth-child(1){
+    color: #c1e3de;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.process-card > p:nth-child(2){
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.process-card > p:nth-child(3){
+    font-weight: 200;
+    font-size: 18px;
+}
+
+
+
+#programs-section{
+    
+}
+
+
+#programs-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+#programs-container > p{
+    margin: 0px;
+}
+
+#programs-container > p:nth-child(1){
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#programs-container > p:nth-child(2){
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#assessments-form-section{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 60px auto;
+}
+
+#form-img-container{
+    width: 50%;
+}
+
+#form-img-container > img{
+    width: 100%;
+}
+
+#form-container{
+    width: 40%;
+    text-align: left;
+}
+
+#form-container > p{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#form-container > button {
+    margin-top: 30px;
+}
+
+#assessment-consultation-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

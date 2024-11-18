@@ -1,0 +1,128 @@
+#team-outer-container{
+    padding: 100px 0px;
+}
+
+#team-inner-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+
+#team-header-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#team-header{
+    text-align: left;
+    width: 45%;
+}
+
+#team-header > p{
+    margin: 0px;
+}
+
+#team-header > p:nth-child(1){
+    font-weight: 900;
+    font-size: 36px;
+}
+
+#team-header > p:nth-child(2){
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#team-header > p:nth-child(2){
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+#team-stats{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+
+    .stats-col > p {
+        margin: 0;
+    }
+    
+    .stat-num{
+        font-size: 70px;
+        font-weight: 900;
+        color: green;
+    }
+    
+    .stat-head{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+
+#team-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.team-grid-card{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 3px 8px;
+
+    .doc-speciality{
+        font-size: 20px;
+        font-weight: 500;
+        color: #26aba3;
+        margin-top: 10px;
+    }
+
+    .doc-name{
+        font-size: 24px;
+    }
+
+    p{
+        margin: 0px;
+    }
+
+    .team-img{
+        width: 100%;
+    }
+
+    .team-img > img{
+        width: 100%;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+}
+
+.team-social-container{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.icon-container{
+    background-color: orange;
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+
+.social-media-icon{
+    font-size: 20px;
+    fill: white;
+}
