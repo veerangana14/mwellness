@@ -27,7 +27,8 @@ const ArtsVideo = () => {
                     <p>Search Result</p>
 
                     <div id='seminar-video-content'>
-                        <div className='seminar-video-card'>
+                        <div id="grid-section">
+                            <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe
                                     // width="100%" height="280px" 
@@ -39,8 +40,9 @@ const ArtsVideo = () => {
                                 <p>Posted By: Dr. Chitanranjan | 3 minutes </p>
                                 <p>Relaxing music has the power to calm the mind, soothe anxiety, and uplift spirits, making it a powerful tool for healing ...</p>
                             </div>
-                        </div>
-                        <div className='seminar-video-card'>
+                            </div>
+                            
+                            <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe
                                     // width="100%" height="280px" 
@@ -52,8 +54,8 @@ const ArtsVideo = () => {
                                 <p>Posted By: Dr. Chitanranjan | 3 minutes </p>
                                 <p>Relaxing music has the power to calm the mind, soothe anxiety, and uplift spirits, making it a powerful tool for healing ...</p>
                             </div>
-                        </div>
-                        <div className='seminar-video-card'>
+                            </div>
+                            <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe
                                     // width="100%" height="280px" 
@@ -65,8 +67,8 @@ const ArtsVideo = () => {
                                 <p>Posted By: Dr. Chitanranjan | 3 minutes </p>
                                 <p>Relaxing music has the power to calm the mind, soothe anxiety, and uplift spirits, making it a powerful tool for healing ...</p>
                             </div>
-                        </div>
-                        <div className='seminar-video-card'>
+                            </div>
+                            <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe
                                     // width="100%" height="280px" 
@@ -78,8 +80,8 @@ const ArtsVideo = () => {
                                 <p>Posted By: Dr. Chitanranjan | 3 minutes </p>
                                 <p>Relaxing music has the power to calm the mind, soothe anxiety, and uplift spirits, making it a powerful tool for healing ...</p>
                             </div>
-                        </div>
-                        <div className='seminar-video-card'>
+                            </div>
+                            <div className='seminar-video-card'>
                             <div className='seminar-video'>
                                 <iframe
                                     // width="100%" height="280px" 
@@ -90,6 +92,7 @@ const ArtsVideo = () => {
                                 <p>Relaxing music for Stress Relief, Anxity, Depressive States: Heal Body, Mind and Soul</p>
                                 <p>Posted By: Dr. Chitanranjan | 3 minutes </p>
                                 <p>Relaxing music has the power to calm the mind, soothe anxiety, and uplift spirits, making it a powerful tool for healing ...</p>
+                            </div>
                             </div>
                         </div>
                     </div>
