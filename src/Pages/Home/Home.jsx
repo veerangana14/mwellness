@@ -19,6 +19,7 @@ import AccordImg1 from '../../Assets/images/accord-img-1.jpg'
 import AccordImg2 from '../../Assets/images/accord-img-2.jpg'
 import AccordImg3 from '../../Assets/images/accord-img-3.jpg'
 import AccordImg4 from '../../Assets/images/accord-img-4.jpg'
+import HomeBanner from '../../Assets/images/home-header.png'
 
 const patientReviews = [
     {
@@ -127,6 +128,11 @@ const Home = () => {
                     <div id="header-right-section">
                         <div id='header-img-container'>
                             <img src={HeaderImg} alt="header-img" />
+                        </div>
+                    </div>
+                    <div id="header-banner">
+                        <div id='header-banner-container'>
+                            <img src={HomeBanner} alt="header-img" />
                         </div>
                     </div>
                 </div>
