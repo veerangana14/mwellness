@@ -1,0 +1,134 @@
+.SeminarVideoCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.SeminarVideo {
+    width: 30%;
+}
+
+.SeminarVideo>iframe {
+    width: 100%;
+    height: 180px;
+}
+
+.SeminarVideoInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 65%;
+    text-align: left;
+}
+
+.SeminarVideoInfo>p:nth-child(1) {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.SeminarVideoInfo>p:nth-child(2) {
+    color: #26aba3;
+    font-weight: 400;
+}
+
+.SeminarVideoInfo>p:nth-child(2) {
+    font-weight: 200;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+@media (max-width: 480px) {
+    .SeminarVideoCard {
+        flex-direction: column;
+    }
+
+    .SeminarVideo {
+        width: 100%;
+    }
+
+    .SeminarVideoInfo {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        text-align: center;
+        margin-left: 5px;
+    }
+
+    .SeminarVideoInfo>p:nth-child(1) {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .SeminarVideoInfo>p:nth-child(2) {
+        margin: 0;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .SeminarVideoCard {
+        flex-direction: column;
+    }
+
+    .SeminarVideo {
+        width: 100%;
+    }
+
+    .SeminarVideoInfo {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        text-align: left;
+        margin-left: 5px;
+    }
+
+    .SeminarVideoInfo>p:nth-child(1) {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .SeminarVideoInfo>p:nth-child(2) {
+        margin: 0;
+    }
+
+    .SeminarVideoCard {
+        justify-content: flex-start;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .SeminarVideoCard{
+        width: 100%;
+    }
+
+    .SeminarVideo {
+        width: 40%;
+    }
+
+    .SeminarVideoInfo{
+        width: 55%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .SeminarVideoCard{
+        width: 100%;
+    }
+
+    .SeminarVideo {
+        width: 40%;
+    }
+
+    .SeminarVideoInfo{
+        width: 55%;
+    }
+}
+
+
+@media (min-width: 1201px) {
+
+}

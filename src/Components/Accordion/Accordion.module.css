@@ -1,0 +1,94 @@
+.AccordionItem {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: relative;
+}
+
+.AccordionItem:last-child {
+    border-bottom: none;
+}
+
+.AccordionItem.Open .AccordionContent {
+    max-height: 500px;
+    padding-top: 10px;
+}
+
+.AccordionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.AccordionHeader.Active>p,
+.AccordionHeader.Active>span {
+    color: #26aba3;
+}
+
+.AccordionQuestion {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.AccordionIcon {
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.AccordionContent>p {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.AccordionContent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease;
+    padding: 0;
+}
+
+@media (max-width: 480px) {
+    .AccordionQuestion {
+        font-size: 1rem;
+        padding: 0px 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .AccordionContent {
+        padding: 0px 20px;
+    }
+
+    .AccordionContent>p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .AccordionQuestion {
+        font-size: 18px;
+        padding: 0px 20px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .AccordionContent {
+        padding: 0px 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .AccordionQuestion {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .AccordionItem {
+        padding: 5px 0;
+    }
+}

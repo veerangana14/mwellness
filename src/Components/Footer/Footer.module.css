@@ -1,0 +1,208 @@
+#FooterOuterContainer{
+    background-color: #002422;
+    width: 100%;
+    padding: 60px 0px;
+}
+ 
+.LogoImgContainer{
+    width: 23%;
+}
+ 
+.LogoImgContainer > img{
+    width: 100%;
+}
+ 
+#FooterContainer{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+#PageLinksContainer{
+    width: 40%;
+}
+ 
+#LinksList{
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.ListItem{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    list-style: none;
+}
+ 
+.ListItem:hover{
+    color: orange;
+}
+ 
+#SocialMediaLinksContainer{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+ 
+.IconContainer{
+    background-color: orange;
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+ 
+.SocialMediaIcon{
+    font-size: 20px;
+    fill: white;
+}
+ 
+#Copyrights > p {
+    color: white;
+    font-weight: 200;
+}
+ 
+#FooterHr{
+    color: white;
+    width: 80%;
+    margin: 40px auto;
+}
+ 
+ 
+ 
+/* ------------------------------ MOBILE SCREEN ---------------------------------- */
+@media (max-width: 480px) {
+    .LogoImgContainer{
+        width: 80%;
+    }
+    
+    #FooterContainer{
+        flex-direction: column;
+        /* width: 80%; */
+        width: 100%;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    #PageLinksContainer{
+        width: 100%;
+    }
+    
+    #LinksList{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        row-gap: 20px;
+        padding: 0px;
+        margin: 20px 0px;
+    }
+    
+    .ListItem{
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        list-style: none;
+    }
+    
+    
+    #SocialMediaLinksContainer{
+        display: flex;
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+ 
+/* ------------------------------ TABLET SCREEN ---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    .LogoImgContainer{
+        width: 50%;
+    }
+    
+    #FooterContainer{
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+        align-items: center;
+    }
+ 
+    #PageLinksContainer{
+        width: 100%;
+    }
+ 
+    #LinksList{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        row-gap: 20px;
+        padding: 0px;
+        margin: 20px auto;
+    }
+    
+    .ListItem{
+        list-style: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    
+    #SocialMediaLinksContainer{
+        display: flex;
+        width: 50%;
+        margin: 20px auto;
+    }
+}
+ 
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .LogoImgContainer{
+        width: 35%;
+    }
+ 
+    #FooterContainer{
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        align-items: center;
+    }
+ 
+    #PageLinksContainer{
+        width: 100%;
+    }
+ 
+    #LinksList{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 70%;
+        padding: 0px;
+        margin: 20px auto;
+        row-gap: 20px;
+    }
+    
+    .ListItem{
+        list-style: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    
+    #SocialMediaLinksContainer{
+        display: flex;
+        width: 30%;
+        margin: 20px auto;
+    }
+}
+ 
+/* ---------------------------- SMALL SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #SocialMediaLinksContainer{
+        width: 25%;
+        justify-content: space-between;
+    }
+}
+ 
+/* ---------------------------- LARGE SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1201px) and (max-width: 1440px){
+
+}

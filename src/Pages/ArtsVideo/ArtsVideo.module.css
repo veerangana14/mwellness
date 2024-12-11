@@ -1,0 +1,117 @@
+#PageHeaderContent{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#SeminarContentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+
+#SeminarContentContainer>p {
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 70px;
+}
+
+#SeminarVideoContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+#VideoGridSection {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+
+@media (max-width: 480px) {
+    #PageHeaderContent {
+        flex-direction: column;
+    }
+
+    #SeminarContentContainer {
+        width: 80%;
+    }
+
+    #SeminarContentContainer>p {
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    #VideoGridSection {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #PageHeaderImg {
+        width: 90%;
+    }
+
+    #SeminarContentContainer {
+        width: 80%;
+    }
+
+    #SeminarContentContainer>p {
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    #VideoGridSection {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #PageHeaderContent {
+        flex-direction: column;
+    }
+
+    #SeminarContentContainer {
+        width: 80%;
+    }
+
+    #SeminarContentContainer>p {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    #VideoGridSection {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 60px;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #SeminarContentContainer>p {
+        font-weight: 700;
+        font-size: 30px;
+    }
+    
+    #VideoGridSection {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 30px;
+    }
+}
+
+
+@media (min-width: 1201px) {
+    #VideoGridSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

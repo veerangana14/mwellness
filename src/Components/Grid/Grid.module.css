@@ -1,0 +1,162 @@
+.GridCard{
+    text-align: left;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+    padding: 20px 35px;
+    border-radius: 30px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.GridCard:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 50px 100px -20px, rgba(43, 171, 160, 0.14) 0px 30px 60px -30px;
+}
+
+.GridCard>p:nth-child(2){
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.GridCard>p:nth-child(3){
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.GridLink{
+    display: flex;
+    align-items: center;
+}
+
+.GridLink > p{
+    color: #26aba3;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.GridLinkIcon{
+    font-size: 24px;
+    fill: #26aba3;
+    margin-left: 15px;
+}
+
+.CommunityGridImg{
+    width: 45%;
+}
+
+
+@media (max-width: 480px) {
+    .GridCard{
+        padding: 20px 35px;
+    }
+
+    .GridCard > img{
+        width: 30%;
+    }
+    
+    .GridCard>p:nth-child(2){
+        font-size: 20px;
+    }
+    
+    .GridCard>p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    .GridLink > p{
+        font-size: 16px;
+    }
+    
+    .GridLinkIcon{
+        font-size: 22px;
+    }
+
+    .CommunityGridImg{
+        width: 55%;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .GridCard > img{
+        width: 40%;
+    }
+    
+    .GridCard>p:nth-child(2){
+        font-size: 20px;
+    }
+    
+    .GridCard>p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    .GridLink > p{
+        font-size: 16px;
+    }
+    
+    .GridLinkIcon{
+        font-size: 22px;
+    }
+
+    .CommunityGridImg{
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .GridCard > img{
+        width: 30%;
+    }
+    
+    .GridCard>p:nth-child(2){
+        font-size: 20px;
+    }
+    
+    .GridCard>p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    .GridLink > p{
+        font-size: 16px;
+    }
+    
+    .GridLinkIcon{
+        font-size: 22px;
+    }
+
+    .CommunityGridImg{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .GridCard > img{
+        width: 40%;
+        height: 100px;
+    }
+    
+    .GridCard>p:nth-child(2){
+        font-size: 20px;
+    }
+    
+    .GridCard>p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    .GridLink > p{
+        font-size: 16px;
+    }
+    
+    .GridLinkIcon{
+        font-size: 22px;
+    }
+
+    .CommunityGridImg{
+        width: 10%;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .GridLink{
+        margin: 0rem;
+    }
+}

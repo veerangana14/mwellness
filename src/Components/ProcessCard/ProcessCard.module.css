@@ -1,0 +1,140 @@
+.ProcessCard{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 30px 30px;
+    border-radius: 30px;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ProcessCard:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 10px 15px -3px, rgba(43, 171, 160, 0.14) 0px 4px 6px -2px;
+}
+
+.ProcessCard > p{
+    margin: 0px;
+}
+
+.ProcessCard > p:nth-child(1){
+    color: #c1e3de;
+    font-weight: 900;
+    font-size: 70px;
+}
+
+.ProcessCard > p:nth-child(2){
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.ProcessCard > p:nth-child(3){
+    font-weight: 200;
+    font-size: 18px;
+}
+
+
+/* ------------------------------ MOBILE SCREEN ---------------------------------- */
+@media (max-width: 480px) {
+    .ProcessCard{
+        gap: 8px;
+        padding: 20px 20px;
+        border-radius: 20px;
+    }
+    
+    .ProcessCard > p:nth-child(1){
+        font-weight: 900;
+        font-size: 40px;
+    }
+    
+    .ProcessCard > p:nth-child(2){
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .ProcessCard > p:nth-child(3){
+        font-weight: 200;
+        font-size: 16px;
+    }
+}
+
+/* ------------------------------ TABLET SCREEN ---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    .ProcessCard{
+        gap: 8px;
+        padding: 20px 20px;
+        border-radius: 20px;
+    }
+    
+    .ProcessCard > p:nth-child(1){
+        font-weight: 900;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .ProcessCard > p:nth-child(2){
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .ProcessCard > p:nth-child(3){
+        font-weight: 200;
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ProcessCard{
+        gap: 8px;
+        padding: 30px 30px;
+        border-radius: 20px;
+    }
+    
+    .ProcessCard > p:nth-child(1){
+        font-weight: 900;
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+    
+    .ProcessCard > p:nth-child(2){
+        font-weight: 400;
+        font-size: 19px;
+    }
+    
+    .ProcessCard > p:nth-child(3){
+        font-weight: 200;
+        font-size: 17px;
+    }
+}
+
+/* ---------------------------- SMALL SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .ProcessCard{
+        gap: 8px;
+        padding: 30px 30px;
+        border-radius: 20px;
+    }
+    
+    .ProcessCard > p:nth-child(1){
+        font-weight: 900;
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .ProcessCard > p:nth-child(2){
+        font-weight: 400;
+        font-size: 19px;
+    }
+    
+    .ProcessCard > p:nth-child(3){
+        font-weight: 200;
+        font-size: 17px;
+    }
+}
+
+/* ---------------------------- LARGE SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1201px) and (max-width: 1440px){
+
+}

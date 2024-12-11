@@ -3,50 +3,49 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
-import './Footer.css';
 import '../../Assets/root.css';
 import Logo from '../../Assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
-
+import styles from './Footer.module.css'
 
 const Footer = () => {
     const navigate = useNavigate();
 
     return (
-        <div id="footer-outer-container">
-            <div id='footer-container'>
-                <div className='logo-img-container'>
+        <div id={styles.FooterOuterContainer}>
+            <div id={styles.FooterContainer}>
+                <div className={styles.LogoImgContainer}>
                     <img src={Logo} alt="logo-img" />
                 </div>
 
-                <div id='page-links-container'>
-                    <ul id='links-list'>
-                        <li className='list-item' onClick={() => navigate("/")}>Home</li>
-                        <li className='list-item' onClick={() => navigate("/")}>About</li>
-                        <li className='list-item' onClick={() => navigate("/team")}>Team</li>
-                        <li className='list-item' onClick={() => navigate("/faq")}>FAQ</li>
-                        <li className='list-item' onClick={() => navigate("/contact")}>Contact</li>
+                <div id={styles.PageLinksContainer}>
+                    <ul id={styles.LinksList} className={styles.FooterPageLinks}>
+                        <li className={styles.ListItem} onClick={() => navigate("/")}>Home</li>
+                        <li className={styles.ListItem} onClick={() => navigate("/")}>About</li>
+                        <li className={styles.ListItem} onClick={() => navigate("/team")}>Team</li>
+                        <li className={styles.ListItem} onClick={() => navigate("/faq")}>FAQ</li>
+                        <li className={styles.ListItem} onClick={() => navigate("/contact")}>Contact</li>
                     </ul>
                 </div>
 
-                <div id='social-media-links-container'>
-                    <div className='icon-container'>
-                        <FaFacebookF className='social-media-icon' />
+                <div id={styles.SocialMediaLinksContainer}>
+                    <div className={styles.IconContainer}>
+                        <FaFacebookF className={styles.SocialMediaIcon} />
                     </div>
-                    <div className='icon-container'>
-                        <FaInstagram className='social-media-icon' />
+                    <div className={styles.IconContainer}>
+                        <FaInstagram className={styles.SocialMediaIcon} />
                     </div>
-                    <div className='icon-container'>
-                        <FaTwitter className='social-media-icon' />
+                    <div className={styles.IconContainer}>
+                        <FaTwitter className={styles.SocialMediaIcon} />
                     </div>
-                    <div className='icon-container'>
-                        <FaWhatsapp className='social-media-icon' />
+                    <div className={styles.IconContainer}>
+                        <FaWhatsapp className={styles.SocialMediaIcon} />
                     </div>
                 </div>
 
             </div>
-            <hr id='footer-hr'></hr>
-            <div id='copyrights'>
+            <hr id={styles.FooterHr}></hr>
+            <div id={styles.Copyrights}>
                 <p>&copy; Webkype 2024-2025</p>
             </div>
         </div>

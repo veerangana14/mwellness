@@ -1,0 +1,1089 @@
+.PrimaryBtn {
+    padding: 14px 40px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#AboutFirstContainer {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+}
+
+#CounselorLeftSection {
+    width: 50%;
+    text-align: left;
+}
+
+#CounselorLeftSection>p:nth-child(1) {
+    font-size: 38px;
+    font-weight: 900;
+}
+
+#CounselorLeftSection>p:nth-child(2) {
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#CounselorLeftSection>button {
+    margin-top: 40px;
+}
+
+#LearnMoreBtn {
+    display: flex;
+    align-items: center;
+}
+
+#LearnMoreBtnArrowIcon {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#CounselorRightSection {
+    width: 42%;
+    position: relative;
+}
+
+#CounselorImgContainer {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+#CounselorImgContainer>img {
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+#CounselorImgContainer::after {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: #c1e3de;
+}
+
+.AboutVideoIcon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.VideoIcon {
+    font-size: 40px;
+}
+
+.AboutVideoIcon .VideoPlayBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 228, 185, 0.8);
+    border-radius: 50%;
+    color: rgb(255, 167, 5);
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+}
+
+.AboutVideoIcon .VideoPlayBtn:hover {
+    background-color: rgba(255, 228, 185, 0.8);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Popup container */
+.Popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1004;
+    opacity: 1;
+    transition: opacity 0.3s, opacity 0.3s ease-in-out;
+}
+
+/* Popup content */
+.PopupContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#VideoFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#ClosePopup {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 30px;
+}
+
+#PointersGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 15px;
+    margin: 40px 0px;
+}
+
+.Pointers {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.Pointers>p {
+    margin: 0px;
+}
+
+.PointersIcon {
+    fill: orange;
+    font-size: 20px;
+    stroke-width: 1;
+    color: orange;
+    margin-right: 15px;
+}
+
+
+#QuestionSection {
+    padding: 50px 0px;
+}
+
+#InnerContainer2 {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px auto;
+}
+
+#QuestionsLeftSection {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+#QuestionImgContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+#QuestionImgContainer2{
+    display: none;
+}
+
+.ImgGroupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ImgGroupContainer:first-child {
+    align-items: flex-end;
+    position: absolute;
+
+    top: -180px;
+    left: 0;
+}
+
+.ImgGroupContainer:last-child {
+    position: absolute;
+
+    bottom: -220px;
+    right: 0;
+}
+
+
+.ImgGroupContainer:first-child>img:first-child,
+.ImgGroupContainer:last-child>img:last-child {
+    width: 200px;
+    height: 200px;
+}
+
+.ImgGroupContainer:first-child>img:last-child,
+.ImgGroupContainer:last-child>img:first-child {
+    width: 230px;
+    height: 230px;
+}
+
+#QuestionImgContainer::after, #QuestionImgContainer::before{
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background-color: #fef3de;
+}
+
+#QuestionImgContainer::after{
+    top: -70px;
+    left: -40px;
+}
+
+#QuestionImgContainer::before{
+    bottom: -100px;
+    right: -40px;
+}
+
+
+#QuestionsRightSection>p {
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+
+#QuestionsRightSection {
+    text-align: left;
+    width: 50%;
+}
+
+#QuestionsRightSection {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#FaqAccordion {
+    margin-top: 20px;
+}
+
+
+#AboutThirdSection {
+    background-color: #edf7f6;
+}
+
+
+#AboutInnerContainer3 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+#AboutInnerContainer3>p {
+    margin: 0px;
+}
+
+#AboutInnerContainer3>p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#AboutInnerContainer3>p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#GridSection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 60px auto;
+}
+
+#AllProgramsBtn {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+#AllProgramsBtnIcon{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+#InnerContainer5 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+#InnerContainer5>p {
+    margin: 0px;
+}
+
+#InnerContainer5>p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#InnerContainer5>p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#InnerContainer6 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 100px auto;
+    padding: 100px 0px;
+    background-color: #f4fcfa;
+    border-radius: 50px;
+}
+
+#InnerContainer6>p:nth-child(1) {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+
+#InnerContainer6>button {
+    display: flex;
+    width: 22%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+
+@media (max-width: 480px) {
+    .PrimaryBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+
+    #AboutFirstContainer {
+        flex-direction: column-reverse;
+        margin: 50px auto;
+        gap: 50px;
+    }
+
+    #PointersGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #CounselorRightSection {
+        width: 90%;
+        position: relative;
+    }
+
+    #CounselorImgContainer {
+        position: relative;
+    }
+
+    #CounselorImgContainer::after {
+        top: 30px;
+        left: 30px;
+    }
+
+    .AboutVideoIcon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .VideoIcon {
+        font-size: 20px;
+    }
+
+    .AboutVideoIcon .VideoPlayBtn {
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+    }
+
+    .PopupContent {
+        width: 80%;
+        max-width: 700px;
+        height: 200px;
+    }
+
+    #CounselorLeftSection {
+        width: 100%;
+    }
+
+    #CounselorLeftSection>p:nth-child(1) {
+        font-size: 26px;
+        margin: 2rem 0 1rem;
+    }
+
+    #CounselorLeftSection>p:nth-child(2) {
+        line-height: 25px;
+        font-size: 16px;
+    }
+
+    #LearnMoreBtn {
+        margin-top: 25px;
+    }
+
+    #LearnMoreBtnArrowIcon {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer2 {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    #QuestionsLeftSection {
+        width: 100%;
+        display: flex;
+    }
+
+    #QuestionImgContainer {
+        display: none;
+    }
+
+    #QuestionImgContainer2{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    
+    #QuestionImgContainer2 > img {
+        width: 100%;
+    }
+
+    #QuestionsRightSection {
+        width: 100%;
+    }
+
+    #QuestionsRightSection>p {
+        font-size: 1.6rem;
+        margin: 0rem;
+        padding: 30px 20px 0;
+    }
+
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    #InnerContainer5>p:nth-child(1) {
+        font-size: 1.6rem;
+    }
+
+    #InnerContainer6 {
+        width: 90%;
+        margin: 100px auto;
+        padding: 30px 0px;
+        border-radius: 30px;
+    }
+
+    #InnerContainer6>p:nth-child(1) {
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    #InnerContainer6>button {
+        width: 50%;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .PrimaryBtn {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    #AboutFirstContainer {
+        flex-direction: column-reverse;
+        margin: 60px auto;
+        gap: 50px;
+    }
+
+    #CounselorRightSection {
+        width: 90%;
+        position: relative;
+    }
+
+    #CounselorImgContainer {
+        position: relative;
+    }
+
+    #CounselorImgContainer::after {
+        top: 30px;
+        left: 30px;
+    }
+
+    .AboutVideoIcon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .VideoIcon {
+        font-size: 50px;
+    }
+
+    .AboutVideoIcon .VideoPlayBtn {
+        width: 150px;
+        height: 150px;
+        font-size: 28px;
+    }
+
+    .PopupContent {
+        width: 80%;
+        max-width: 700px;
+        height: 300px;
+    }
+
+    #CounselorLeftSection {
+        width: 100%;
+    }
+
+
+    #CounselorLeftSection>p:nth-child(1) {
+        font-size: 28px;
+        margin: 2rem 0 1rem;
+    }
+
+    #CounselorLeftSection>p:nth-child(2) {
+        line-height: 30px;
+        font-size: 17px;
+    }
+
+    #CounselorLeftSection>button {
+        margin-top: 40px;
+    }
+
+    #LearnMoreBtn {
+        display: flex;
+        align-items: center;
+    }
+
+    #LearnMoreBtnArrowIcon {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer2 {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    #QuestionsLeftSection {
+        width: 100%;
+        display: flex;
+    }
+
+    #QuestionImgContainer {
+        display: none;
+    }
+
+    #QuestionImgContainer2{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    #QuestionImgContainer2 > img {
+        width: 100%;
+    }
+
+    #QuestionsRightSection {
+        width: 100%;
+    }
+
+    #QuestionsRightSection>p {
+        font-size: 28px;
+        margin: 0rem;
+        padding: 30px 20px 0;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer5 > p:nth-child(1){
+        font-size: 34px;
+    }
+
+    #InnerContainer6 {
+        width: 80%;
+        margin: 100px auto;
+        padding: 40px 0px;
+        gap: 30px;
+    }
+
+    #InnerContainer6>p:nth-child(1) {
+        font-weight: 900;
+        font-size: 25px;
+        width: 85%;
+        text-align: center;
+        margin: auto;
+    }
+
+    #InnerContainer6>button {
+        width: 45%;
+        margin: 20px auto;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .PrimaryBtn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+
+    #AboutFirstContainer {
+        margin: 10px auto 30px;
+        flex-direction: column-reverse;
+        margin: 0px auto;
+        gap: 50px;
+    }
+
+    #CounselorRightSection {
+        width: 70%;
+        margin: auto;
+        position: relative;
+    }
+
+    #CounselorImgContainer {
+        position: relative;
+    }
+
+    #CounselorImgContainer::after {
+        top: 30px;
+        left: 30px;
+    }
+
+    .AboutVideoIcon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .VideoIcon {
+        font-size: 20px;
+    }
+
+    .AboutVideoIcon .VideoPlayBtn {
+        width: 150px;
+        height: 150px;
+        font-size: 28px;
+    }
+
+    .PopupContent {
+        width: 80%;
+        max-width: 700px;
+        height: 300px;
+    }
+
+    #CounselorLeftSection {
+        width: 100%;
+    }
+
+
+    #CounselorLeftSection>p:nth-child(1) {
+        font-size: 28px;
+        margin: 2rem 0 1rem;
+    }
+
+    #CounselorLeftSection>p:nth-child(2) {
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+
+    #CounselorLeftSection>button {
+        margin-top: 40px;
+    }
+
+    #CounselorRightSection {
+        margin-top: 50px;
+    }
+
+    #LearnMoreBtn {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    #LearnMoreBtnArrowIcon {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer2 {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 80px auto;
+    }
+    
+    #QuestionsLeftSection {
+        width: 38%;
+        height: 100%;
+        position: relative;
+    }
+
+    #QuestionImgContainer2{
+        display: none;
+    }
+    
+    .ImgGroupContainer {
+        width: 45%;
+    }
+    
+    .ImgGroupContainer:first-child {
+        align-items: flex-end;
+        position: absolute;
+        top: -100px;
+        left: 0;
+    }
+    
+    .ImgGroupContainer:last-child {
+        position: absolute;
+        bottom: -120px;
+        right: 0;
+    }
+    
+    
+    .ImgGroupContainer:first-child>img:first-child,
+    .ImgGroupContainer:last-child>img:last-child {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .ImgGroupContainer:first-child>img:last-child,
+    .ImgGroupContainer:last-child>img:first-child {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #QuestionImgContainer::after, #QuestionImgContainer::before{
+        width: 280px;
+        height: 280px;
+        z-index: -1;
+        content: "";
+        position: absolute;
+        background-color: #fef3de;
+    }
+    
+    #QuestionImgContainer::after{
+        top: -20px;
+        left: -40px;
+    }
+    
+    #QuestionImgContainer::before{
+        bottom: -50px;
+        right: -40px;
+    }
+    
+    #QuestionsRightSection>p {
+        font-size: 23px;
+        margin: 0rem;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer5 > p:nth-child(1){
+        font-size: 34px;
+    }
+
+    #InnerContainer6 {
+        width: 80%;
+        margin: 100px auto;
+        padding: 30px 0px;
+    }
+
+    #InnerContainer6>p:nth-child(1) {
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    #InnerContainer6>button {
+        width: 25%;
+        font-size: 15px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .PrimaryBtn {
+        padding: 12px 30px;
+    }
+
+    .AboutVideoIcon {
+        top: 40%;
+        left: 0%;
+    }
+
+    #LearnMoreBtn {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    #LearnMoreBtnArrowIcon {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer2 {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 80px auto;
+        gap: 10px;
+    }
+
+    #QuestionImgContainer{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        z-index: 3;
+        border: 1px solid brown;
+    }
+
+    #QuestionImgContainer2{
+        display: none;
+    }
+    
+    #QuestionsLeftSection {
+        width: 38%;
+    }
+   
+    .ImgGroupContainer {
+        width: 45%;
+    }
+
+    
+    .ImgGroupContainer:first-child {
+        align-items: flex-end;
+        position: absolute;
+        top: -160px;
+        left: 0;
+    }
+    
+    .ImgGroupContainer:last-child {
+        position: absolute;
+        bottom: -150px;
+        right: 0;
+    }
+
+    .ImgGroupContainer:first-child>img:first-child,
+    .ImgGroupContainer:last-child>img:last-child {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .ImgGroupContainer:first-child>img:last-child,
+    .ImgGroupContainer:last-child>img:first-child {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    #QuestionImgContainer::after, #QuestionImgContainer::before{
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+        content: "";
+        position: absolute;
+        background-color: #fef3de;
+    }
+    
+    #QuestionImgContainer::after{
+        top: -40px;
+        left: -70px;
+    }
+    
+    #QuestionImgContainer::before{
+        bottom: -40px;
+        right: -70px;
+    }
+
+    #QuestionsRightSection>p {
+        font-size: 2rem;
+        margin: 0rem;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 34px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #InnerContainer6 {
+        width: 80%;
+        margin: 100px auto;
+        padding: 30px 0px;
+    }
+
+    #InnerContainer6>p:nth-child(1) {
+        font-weight: 900;
+        font-size: 30px;
+    }
+
+    #InnerContainer6>button {
+        width: 25%;
+        font-size: 15px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .AboutVideoIcon {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+    }
+
+    #LearnMoreBtn {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    #LearnMoreBtnArrowIcon {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .ImgGroupContainer {
+        width: 45%;
+    }
+    
+    .ImgGroupContainer:first-child {
+        align-items: flex-end;
+        position: absolute;
+    
+        top: -150px;
+        left: 0;
+    }
+    
+    .ImgGroupContainer:last-child {
+        position: absolute;
+    
+        bottom: -200px;
+        right: 0;
+    }
+    
+    
+    .ImgGroupContainer:first-child>img:first-child,
+    .ImgGroupContainer:last-child>img:last-child {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .ImgGroupContainer:first-child>img:last-child,
+    .ImgGroupContainer:last-child>img:first-child {
+        width: 230px;
+        height: 230px;
+    }
+    
+    #QuestionImgContainer::after, #QuestionImgContainer::before{
+        width: 350px;
+        height: 350px;
+    }
+    
+    #QuestionImgContainer::after{
+        top: -30px;
+        left: -60px;
+    }
+    
+    #QuestionImgContainer::before{
+        bottom: -70px;
+        right: -60px;
+    }
+
+    #QuestionsRightSection>p {
+        margin: 0rem;
+    }
+
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}

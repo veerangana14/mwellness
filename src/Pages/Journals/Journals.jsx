@@ -6,8 +6,38 @@ import { MdArrowOutward } from 'react-icons/md'
 import ArticleImg1 from '../../Assets/images/articles-img-1.jpg'
 import ArticleImg2 from '../../Assets/images/articles-img-2.jpg'
 import ArticleImg3 from '../../Assets/images/articles-img-3.jpg'
-import './Journals.css';
 import '../../Assets/root.css';
+import { Helmet } from 'react-helmet'
+import styles from './Journals.module.css'
+import ArticleGrid from '../../Components/Grid/ArticleGrid'
+
+
+const Articles = [
+    {
+        articleImg: ArticleImg1,
+        title: "The pros and cons of group psychotherapy",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil accusantium facere numquam expedita ipsa similique est inventore itaque ut quae aliquid veritatis quasi molestiae nemo, praesentium voluptatibus nesciunt modi!",
+        date: "26th July 2024",
+        views: "120",
+        comments: "0"
+    },
+    {
+        articleImg: ArticleImg2,
+        title: "The pros and cons of group psychotherapy",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil accusantium facere numquam expedita ipsa similique est inventore itaque ut quae aliquid veritatis quasi molestiae nemo, praesentium voluptatibus nesciunt modi!",
+        date: "26th July 2024",
+        views: "120",
+        comments: "0"
+    },
+    {
+        articleImg: ArticleImg3,
+        title: "Action, types and tips for finding group therapy",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil accusantium facere numquam expedita ipsa similique est inventore itaque ut quae aliquid veritatis quasi molestiae nemo, praesentium voluptatibus nesciunt modi!",
+        date: "26th July 2024",
+        views: "120",
+        comments: "0"
+    }
+]
 
 const Journals = () => {
 
@@ -17,81 +47,40 @@ const Journals = () => {
 
   return (
     <>
+        <Helmet>
+            <title>Journals - MWellness</title>
+        </Helmet>
+
         <Navbar />
 
-        <div id='outer-container'>
-            {/* ---------------- LATEST JOURNALS SECTION -------------------- */}
-            <div id='journal-section'>
-                <div id='journal-container'>
-                    <div id='articles-header'>
-                        <p>Latest Journals</p>
-                        <div>
-                            <button className='primary-btn'>
-                                Read Blogs
-                                <MdArrowOutward />
-                            </button>
-                        </div>
+        <div id={styles.OuterContainer}>
+            <div id={styles.InnerContainer7}>
+                <div id={styles.ArticlesHeader}>
+                    <p>Latest Articles</p>
+                    <div>
+                        <button className={styles.PrimaryBtn} id={styles.ArticleBtn}>
+                            Read Blogs
+                            <MdArrowOutward id={styles.ArticleBtnArrowIcon}/>
+                        </button>
                     </div>
+                </div>
 
 
-                    <div id='articles-grid'>
-                        <div className='article-card'>
-                            <div className='article-card-img-container'>
-                                <img src={ArticleImg1} alt="article-img-1" />
-                            </div>
-
-                            <div className='article-card-content-container'>
-                                <p className='article-card-date'>26th July 2024 | 120 Views | No Comments</p>
-
-                                <p className='article-card-title'>The pros and cons of group psychotherapy</p>
-
-                                <p className='article-card-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil accusantium facere numquam expedita ipsa similique est inventore itaque ut quae aliquid veritatis quasi molestiae nemo, praesentium voluptatibus nesciunt modi!</p>
-
-                                <div className='grid-link'>
-                                    <p>Read More</p>
-                                    <BsArrowUpRightCircleFill className='grid-link-icon'/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='article-card'>
-                            <div className='article-card-img-container'>
-                                <img src={ArticleImg2} alt="article-img-2" />
-                            </div>
-
-                            <div className='article-card-content-container'>
-                                <p className='article-card-date'>26th July 2024 | 120 Views | No Comments</p>
-
-                                <p className='article-card-title'>Top seven challenges in counselling children</p>
-
-                                <p className='article-card-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil accusantium facere numquam expedita ipsa similique est inventore itaque ut quae aliquid veritatis quasi molestiae nemo, praesentium voluptatibus nesciunt modi!</p>
-
-                                <div className='grid-link'>
-                                    <p>Read More</p>
-                                    <BsArrowUpRightCircleFill className='grid-link-icon'/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='article-card'>
-                            <div className='article-card-img-container'>
-                                <img src={ArticleImg3} alt="article-img-3" />
-                            </div>
-
-                            <div className='article-card-content-container'>
-                                <p className='article-card-date'>26th July 2024 | 120 Views | No Comments</p>
-
-                                <p className='article-card-title'>Action, types and tips for finding group therapy</p>
-
-                                <p className='article-card-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil accusantium facere numquam expedita ipsa similique est inventore itaque ut quae aliquid veritatis quasi molestiae nemo, praesentium voluptatibus nesciunt modi!</p>
-
-                                <div className='grid-link'>
-                                    <p>Read More</p>
-                                    <BsArrowUpRightCircleFill className='grid-link-icon'/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id={styles.ArticledGrid}>
+                    {
+                        Articles.map((article, index) => (
+                            <ArticleGrid
+                                index={index}
+                                articleImg={article.articleImg}
+                                title={article.title}
+                                description={article.description}
+                                date={article.date}
+                                views={`${article.views} Views`}
+                                comments={article.comments === 0 ? "No Comments" : `${article.comments} Comments`}
+                                linkText={"Read More"}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </div>

@@ -12,6 +12,8 @@ import Campaign from '../Pages/Campaign/Campaign';
 import Seminar from '../Pages/Seminar/Seminar';
 import ArtsVideo from '../Pages/ArtsVideo/ArtsVideo';
 import ArtsAudio from '../Pages/ArtsAudio/ArtsAudio';
+import GetStarted from '../Pages/GetStarted/GetStarted';
+import GetStarted2 from '../Pages/GetStarted/GetStarted2';
 
 const MainRoutes = () => {
   return (
@@ -29,6 +31,8 @@ const MainRoutes = () => {
             <Route path="/awareness-campaigns" element={<Campaign />} />
             <Route path="/arts-audio" element={<ArtsAudio />} />
             <Route path="/arts-video" element={<ArtsVideo />} />
+            <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/get-started2" element={<GetStarted2 />} />
         </Routes>
     </div>
   )

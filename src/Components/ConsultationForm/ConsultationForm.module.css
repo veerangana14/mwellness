@@ -1,0 +1,115 @@
+#ConsultationForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    gap: 40px;
+    margin: 40px auto;
+}
+
+#ConsultationForm>div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.FormInput>label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.FormInput>input,
+.FormInput>select {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+@media (max-width: 480px) {
+    #ConsultationForm {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        gap: 30px;
+        margin: 20px auto;
+    }
+
+    .FormInput>label {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .FormInput>input,
+    .FormInput>select {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #ConsultationForm {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        gap: 30px;
+        margin: 20px auto;
+    }
+
+    .FormInput>label {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .FormInput>input,
+    .FormInput>select {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #ConsultationForm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 40px;
+        margin: 30px auto;
+    }
+
+    .FormInput>label {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .FormInput>input,
+    .FormInput>select {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #ConsultationForm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 40px;
+        margin: 30px auto;
+    }
+
+    .FormInput>label {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    
+    .FormInput>input,
+    .FormInput>select {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+
+}

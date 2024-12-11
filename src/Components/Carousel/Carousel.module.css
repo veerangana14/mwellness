@@ -1,0 +1,181 @@
+#CarouselContainer{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.Slide {
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Slide {
+    display: flex;
+    width: 105%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.SlideContent {
+    min-width: 95%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* .Slide.active {
+    transform: translateX(0);
+} */
+
+.Slide.hidden {
+    display: none;
+}
+
+.Slide2 {
+    display: none;
+}
+.SlideIndicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.Indicator {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Indicator.IActive {
+    background-color: orange;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.ReviewCard {
+    border-radius: 15px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+    transition: transform 0.5s ease-in-out;
+}
+.ReviewCard:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 4px 12px;;
+}
+
+.ReviewName {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.ReviewJob {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.ReviewText {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+
+@media (max-width: 480px) {
+    .Slide {
+        display: none
+    }
+    .SlideContent {
+        display: none;
+    }
+
+    .SlideContent2 {
+        min-width: 100%;
+        gap: 0px;
+    }
+    .Slide2 {
+        display: flex;
+        justify-content: space-around;
+        gap: 0px;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    .ReviewCard {
+        width: 80%;
+    }
+    .ReviewCard:hover {
+        transform: translateY(-5px);
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .Slide {
+        display: none
+    }
+
+    .SlideContent {
+        display: none;
+    }
+
+    .SlideContent2 {
+        min-width: 100%;
+        gap: 0px;
+    }
+    .Slide2 {
+        display: flex;
+        justify-content: space-around;
+        gap: 0px;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    .ReviewCard {
+        width: 90%;
+    }
+    .ReviewCard:hover {
+        transform: translateY(-5px);
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Slide {
+        gap: 55px;
+        width: 105%;
+    }
+    
+    .SlideContent {
+        min-width: 95%;
+        gap: 18px;
+    }
+    
+    .ReviewCard {
+        padding: 20px;
+        width: 42%;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    
+}

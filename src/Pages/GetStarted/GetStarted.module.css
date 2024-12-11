@@ -1,0 +1,726 @@
+#OuterContainer{
+    padding: 100px 0px;
+    /* display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto; */
+}
+
+#BannerImgContainer{
+    display: flex;
+    width: 80%;
+    margin: 60px auto;
+    position: relative;
+}
+
+#BannerImgContainer > img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.VideoIconContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.VideoIcon{
+    font-size: 40px;
+}
+
+.VideoIconContainer .VideoPlayBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 228, 185, 0.8);
+    border-radius: 50%;
+    color: rgb(255, 167, 5);
+    font-size: 24px;
+    text-decoration: none;
+    border: none;
+}
+
+.VideoIconContainer .VideoPlayBtn:hover {
+    background-color: rgba(255, 228, 185, 0.8);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.Popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1004;
+    opacity: 1;
+    transition: opacity 0.3s, opacity 0.3s ease-in-out;
+}
+
+.PopupContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#VideoFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#ClosePopup {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    /* top: 135px;
+    right:350px; */
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 30px;
+}
+
+
+
+#ContentInnerContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    text-align: left;
+}
+
+.ParaStyle1, .ParaStyle2{
+    /* text-align: left; */
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.ParaStyle2{
+    font-weight: 600;
+}
+
+#PointersGrid{
+    display: grid;
+    width: 100%;
+    column-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.PointerItem{
+    display: flex;
+    align-items: center;
+}
+
+.PointerIcon{
+    fill: orange;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.PointerLine{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#DocCardContainer{
+    width: 80%;
+    margin: 60px auto;
+    border-radius: 30px;
+    background-color: #eefffc;
+    padding: 60px 0px;
+}
+
+#DocCard{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#DocInfoContainer{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#DocImgContainer{
+    width: 35%;
+}
+
+#DocImgContainer > img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#DocInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+}
+
+#DocInfo > p{
+    padding: 0;
+    margin: 0;
+}
+
+#DocInfo > p:nth-child(1){
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#DocInfo > p:nth-child(2), #DocInfo > p:nth-child(3){
+    color: #33b7a3;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#SocialMediaLinksContainer{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+ 
+.IconContainer{
+    background-color: orange;
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+ 
+.SocialMIcon{
+    font-size: 20px;
+    fill: white;
+}
+
+#GreenBtn{
+    display: flex;
+    margin: auto;
+    padding: 15px 30px;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+}
+
+#OutwardArrowIcon{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+
+
+
+/* ----------------------- GET STARTED 2 PAGE ------------------------- */
+#AssessmentProcessSection{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 100px auto 50px;
+}
+
+#AssessmentProcessSection > p{
+    margin: 0px;
+}
+
+#AssessmentProcessSection > p:nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#AssessmentProcessSection > p:nth-child(2){
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+#ProcessGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 40px;
+    margin: 60px 0px;
+}
+
+
+
+/* ------------------------------ MOBILE SCREEN ---------------------------------- */
+@media (max-width: 480px) {
+    #OuterContainer{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #BannerImgContainer{
+        width: 100%;
+        height: 150px;
+        margin: 30px auto;
+        position: relative;
+    }
+    
+    .VideoIcon{
+        font-size: 20px;
+    }
+    
+    .VideoIconContainer .VideoPlayBtn {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .Popup {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .PopupContent {
+        width: 70%;
+        max-width: 700px;
+        height: 250px;
+    }
+    
+    
+    #ContentInnerContainer{
+        width: 90%;
+    }
+    
+    .ParaStyle1, .ParaStyle2{
+        font-size: 16px;
+    }
+    
+    #PointersGrid{
+        row-gap: 0px;
+        column-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .PointerLine{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    #DocCardContainer{
+        width: 90%;
+        border-radius: 20px;
+        padding: 30px 0px;
+    }
+    
+    #DocCard{
+        flex-direction: column;
+        width: 90%;
+        gap: 30px;
+    }
+    
+    #DocInfoContainer{
+        width: 90%;
+    }
+    
+    #DocImgContainer{
+        width: 30%;
+    }
+    
+    #DocInfo{
+        width: 60%;
+        gap: 10px;
+    }
+    
+    #DocInfo > p:nth-child(1){
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    
+    #DocInfo > p:nth-child(2), #DocInfo > p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    #SocialMediaLinksContainer{
+        width: 80%;
+    }
+
+    .SocialMIcon{
+        font-size: 17px;
+    }
+    
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+    
+
+    #AssessmentProcessSection{
+        width: 100%;
+        margin: 70px auto 50px;
+    }
+
+    #AssessmentProcessSection > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #AssessmentProcessSection > p:nth-child(2){
+        font-size: 17px;
+        line-height: 27px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        gap: 30px;
+        margin: 30px auto;
+    }
+}
+
+/* ------------------------------ TABLET SCREEN ---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    #OuterContainer{
+        padding: 60px 0px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #BannerImgContainer{
+        width: 100%;
+        height: 150px;
+        margin: 30px auto;
+        position: relative;
+    }
+    
+    .VideoIcon{
+        font-size: 20px;
+    }
+    
+    .VideoIconContainer .VideoPlayBtn {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .Popup {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .PopupContent {
+        width: 70%;
+        max-width: 700px;
+        height: 250px;
+    }
+    
+    
+    #ContentInnerContainer{
+        width: 90%;
+    }
+    
+    .ParaStyle1, .ParaStyle2{
+        font-size: 16px;
+    }
+    
+    #PointersGrid{
+        row-gap: 0px;
+        column-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .PointerLine{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    #DocCardContainer{
+        width: 90%;
+        border-radius: 20px;
+        padding: 30px 0px;
+    }
+    
+    #DocCard{
+        flex-direction: column;
+        width: 90%;
+        gap: 30px;
+    }
+    
+    #DocInfoContainer{
+        width: 90%;
+    }
+    
+    #DocImgContainer{
+        width: 30%;
+    }
+    
+    #DocInfo{
+        width: 60%;
+        gap: 10px;
+    }
+    
+    #DocInfo > p:nth-child(1){
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    
+    #DocInfo > p:nth-child(2), #DocInfo > p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    #SocialMediaLinksContainer{
+        width: 65%;
+    }
+
+    .SocialMIcon{
+        font-size: 17px;
+    }
+    
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+    
+    #AssessmentProcessSection{
+        width: 100%;
+        margin: 70px auto 50px;
+    }
+
+    #AssessmentProcessSection > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #AssessmentProcessSection > p:nth-child(2){
+        font-size: 17px;
+        line-height: 27px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 30px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #OuterContainer{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    
+    #BannerImgContainer{
+        margin: 30px auto;
+        position: relative;
+    }
+    
+    .VideoIcon{
+        font-size: 20px;
+    }
+    
+    .VideoIconContainer .VideoPlayBtn {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .Popup {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .PopupContent {
+        width: 70%;
+        max-width: 700px;
+        height: 280px;
+    }
+    
+    
+    #ContentInnerContainer{
+        width: 75%;
+    }
+    
+    .ParaStyle1, .ParaStyle2{
+        font-size: 17px;
+    }
+    
+    #PointersGrid{
+        row-gap: 0px;
+        column-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .PointerLine{
+        font-weight: 600;
+        font-size: 15px;
+    }
+    
+    #DocCardContainer{
+        width: 80%;
+        border-radius: 20px;
+        padding: 30px 0px;
+    }
+    
+    #DocCard{
+        flex-direction: column;
+        width: 90%;
+        gap: 30px;
+    }
+    
+    #DocInfoContainer{
+        width: 80%;
+    }
+    
+    #DocImgContainer{
+        width: 25%;
+    }
+    
+    #DocInfo{
+        width: 60%;
+        gap: 10px;
+    }
+    
+    #DocInfo > p:nth-child(1){
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    
+    #DocInfo > p:nth-child(2), #DocInfo > p:nth-child(3){
+        font-size: 16px;
+    }
+    
+    #SocialMediaLinksContainer{
+        width: 50%;
+    }
+
+    .SocialMIcon{
+        font-size: 18px;
+    }
+    
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+    
+    #AssessmentProcessSection{
+        width: 100%;
+        margin: 70px auto 50px;
+    }
+
+    #AssessmentProcessSection > p:nth-child(1){
+        font-size: 36px;
+        font-weight: 800;
+    }
+    
+    #AssessmentProcessSection > p:nth-child(2){
+        font-size: 17px;
+        line-height: 24px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 30px;
+        margin: 50px auto;
+    }
+}
+
+/* ---------------------------- SMALL SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {    
+    #BannerImgContainer{
+        margin: 60px auto;
+    }
+    
+    #ContentInnerContainer{
+        width: 60%;
+    }
+    
+    .ParaStyle1, .ParaStyle2{
+        font-size: 18px;
+    }
+    
+    #PointersGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #DocCardContainer{
+        width: 70%;
+    }
+    
+    #DocInfoContainer{
+        width: 55%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #DocImgContainer{
+        width: 30%;
+    }
+    
+    #DocInfo > p:nth-child(1){
+        font-size: 20px;
+    }
+    
+    #DocInfo > p:nth-child(2), #DocInfo > p:nth-child(3){
+        font-size: 18px;
+    }
+    
+    #SocialMediaLinksContainer{
+        width: 32%;
+    }
+     
+    .SocialMIcon{
+        font-size: 18px;
+    }
+
+    #AssessmentProcessSection{
+        width: 100%;
+        margin: 70px auto 50px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        gap: 40px;
+        margin: 50px auto;
+    }
+}
+
+/* ---------------------------- LARGE SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1201px) and (max-width: 1440px){
+
+}

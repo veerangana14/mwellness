@@ -1,0 +1,171 @@
+.ArticleCard{
+    text-align: left;
+    border-radius: 25px;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ArticleCardImgContainer {
+    overflow: hidden;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.ArticleCard:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 50px 100px -20px, rgba(43, 171, 160, 0.14) 0px 30px 60px -30px;
+
+    .ArticleCardImgContainer img {
+        transform: scale(1.1);
+    }
+}
+
+#ArticlesHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ArticlesHeader > p:nth-child(1){
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.ArticleCardImgContainer > img{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.ArticleCardDate{
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.ArticleCardTitle{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.ArticleCardDesc{
+    font-weight: 200;
+
+}
+
+.ArticleCardContentContainer{
+    padding: 30px 25px;
+}
+
+#ArticlesHeader button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.GridLink{
+    display: flex;
+    align-items: center;
+}
+
+.GridLink > p{
+    color: #26aba3;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.GridLinkIcon{
+    font-size: 24px;
+    fill: #26aba3;
+    margin-left: 15px;
+}
+
+@media (max-width: 480px) {
+    #ArticledGrid{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+    }
+    .ArticleCardContentContainer{
+        padding: 0px 25px;
+    }
+
+    .ArticleCardDesc{
+        margin-bottom: 0rem;
+    }
+    #ArticlesHeader{
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .GridLink > p{
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 26px;
+    }
+    #ArticledGrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .ArticleCardContentContainer{
+        padding: 0px 25px;
+    }
+
+    .ArticleCardDesc{
+        margin-bottom: 0rem;
+    }
+
+    .GridLink > p{
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 35px;
+    }
+    
+    .ArticleCardContentContainer{
+        padding: 0px 25px;
+    }
+
+    .ArticleCardDesc{
+        margin-bottom: 0rem;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .GridLink{
+        margin: 0rem;
+    }
+
+    .ArticleCardContentContainer{
+        padding: 0px 25px;
+    }
+
+    .ArticleCardDesc{
+        margin-bottom: 0rem;
+    }
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .GridLink{
+        margin: 0rem;
+    }
+
+    .ArticleCardContentContainer{
+        padding: 0px 25px;
+    }
+
+    .ArticleCardDesc{
+        margin-bottom: 0rem;
+    }
+}

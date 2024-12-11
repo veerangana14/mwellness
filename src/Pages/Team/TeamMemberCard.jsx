@@ -1,49 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa"
+import styles from './Team.module.css'
 
-const TeamMemberCard = ({ 
-    imageSrc, 
-    speciality, 
-    name, 
-    socialLinks 
-}) => {
+const TeamMemberCard = ({ imageSrc, speciality, name, socialLinks }) => {
     return (
-        <div className="team-grid-card">
-            <div className='team-img'>
+        <div className={styles.TeamGridCard}>
+            <div className={styles.TeamImg}>
                 <img src={imageSrc} alt={`team-img-${name}`} />
             </div>
 
-            <p className='doc-speciality'>{speciality}</p>
-            <p className='doc-name'>{name}</p>
+            <p className={styles.DocSpeciality}>{speciality}</p>
+            <p className={styles.DocName}>{name}</p>
 
-            <div className='team-social-container'>
+            <div className={styles.TeamSocialMediaContainer}>
                 {socialLinks.facebook && (
-                    <div className='team-icon-container'>
-                        {/* <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer"> */}
-                            <FaFacebookF className='team-social-media-icon' />
-                        {/* </a> */}
+                    <div className={styles.TeamSocialMIconContainer}>
+                        <FaFacebookF className={styles.TeamSocialMediaIcon} />
                     </div>
                 )}
                 {socialLinks.instagram && (
-                    <div className='team-icon-container'>
-                        {/* <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer"> */}
-                            <FaInstagram className='team-social-media-icon' />
-                        {/* </a> */}
+                    <div className={styles.TeamSocialMIconContainer}>
+                        <FaInstagram className={styles.TeamSocialMediaIcon} />
                     </div>
                 )}
                 {socialLinks.twitter && (
-                    <div className='team-icon-container'>
-                        {/* <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer"> */}
-                            <FaTwitter className='team-social-media-icon' />
-                        {/* </a> */}
+                    <div className={styles.TeamSocialMIconContainer}>
+                        <FaTwitter className={styles.TeamSocialMediaIcon} />
                     </div>
                 )}
                 {socialLinks.whatsapp && (
-                    <div className='team-icon-container'>
-                        {/* <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer"> */}
-                            <FaWhatsapp className='team-social-media-icon' />
-                        {/* </a> */}
+                    <div className={styles.TeamSocialMIconContainer}>
+                        <FaWhatsapp className={styles.TeamSocialMediaIcon} />
                     </div>
                 )}
             </div>
@@ -51,16 +39,16 @@ const TeamMemberCard = ({
     );
 };
 
-TeamMemberCard.propTypes = {
-    imageSrc: PropTypes.string.isRequired,
-    speciality: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    socialLinks: PropTypes.shape({
-        facebook: PropTypes.string,
-        instagram: PropTypes.string,
-        twitter: PropTypes.string,
-        whatsapp: PropTypes.string,
-    }).isRequired,
-};
+// TeamMemberCard.propTypes = {
+//     imageSrc: PropTypes.string.isRequired,
+//     speciality: PropTypes.string.isRequired,
+//     name: PropTypes.string.isRequired,
+//     socialLinks: PropTypes.shape({
+//         facebook: PropTypes.string,
+//         instagram: PropTypes.string,
+//         twitter: PropTypes.string,
+//         whatsapp: PropTypes.string,
+//     }).isRequired,
+// };
 
 export default TeamMemberCard;

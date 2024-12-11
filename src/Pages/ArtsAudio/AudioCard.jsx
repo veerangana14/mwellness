@@ -1,36 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FaPlay } from 'react-icons/fa';
+import styles from './ArtsAudio.module.css';
 
-const AudioCard = ({ 
-    audioTitle, 
-    tags, 
-    uploadedBy, 
-    duration, 
-    audioImage, 
-    onPlay, 
-    onDownload 
-}) => {
+const AudioCard = ({ audioTitle, tags, uploadedBy, duration, audioImage, onPlay, onDownload }) => {
     return (
-        <div className='audio-card'>
-            <div className='audio-info-left-section'>
-                <div className='play-icon' onClick={onPlay}>
-                    <FaPlay className='play-icon-button' />
+        <div className={styles.AudioCard}>
+            <div className={styles.AudioInfoLeftSection}>
+                <div className={styles.PlayIcon} onClick={onPlay}>
+                    <FaPlay className={styles.PlayIconBtn} />
                 </div>
-                <div className='audio-img'>
+                <div className={styles.AudioImg}>
                     <img src={audioImage} alt="audio-sample-img" />
                 </div>
-                <div className='audio-name-info'>
+                <div className={styles.AudioNameInfo}>
                     <p>{audioTitle}</p>
-                    <p><span>Tags:</span> {tags.join(' | ')}</p>
+                    <p><span className={styles.BoldTags}>Tags: &nbsp;</span> {tags.join(' | ')}</p>
                 </div>
             </div>
 
-            <div className='audio-info-right-section'>
-                <div className='audio-name-right-info'>
-                    <p>{audioTitle}</p>
-                    <p><span>Tags:</span> {tags.join(' | ')}</p>
-                </div>
+            <div className={styles.AudioInfoRightSection}>
                 <p>Uploaded By: {uploadedBy} | {duration} seconds</p>
                 <button onClick={onDownload}>Download</button>
             </div>
@@ -38,14 +27,14 @@ const AudioCard = ({
     );
 };
 
-AudioCard.propTypes = {
-    audioTitle: PropTypes.string.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-    uploadedBy: PropTypes.string.isRequired,
-    duration: PropTypes.number.isRequired,
-    audioImage: PropTypes.string.isRequired,
-    onPlay: PropTypes.func.isRequired,
-    onDownload: PropTypes.func.isRequired,
-};
+// AudioCard.propTypes = {
+//     audioTitle: PropTypes.string.isRequired,
+//     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+//     uploadedBy: PropTypes.string.isRequired,
+//     duration: PropTypes.number.isRequired,
+//     audioImage: PropTypes.string.isRequired,
+//     onPlay: PropTypes.func.isRequired,
+//     onDownload: PropTypes.func.isRequired,
+// };
 
 export default AudioCard;

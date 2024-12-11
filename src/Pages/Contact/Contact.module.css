@@ -1,0 +1,36 @@
+#ContactOuterContainer {
+    padding: 100px 0px;
+}
+
+#ContactHeader {
+    width: 100%;
+    background-color: #f4fcfa;
+    padding: 40px 0px;
+}
+
+#ContactHeaderContent {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#ContactMap {
+    display: flex;
+    width: 100%;
+}
+
+
+@media (max-width: 480px) {
+    #ContactHeaderContent {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #ContactHeaderContent {
+        flex-direction: column;
+    }
+}

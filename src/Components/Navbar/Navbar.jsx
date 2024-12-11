@@ -1,80 +1,93 @@
 import React, { useState } from 'react'
-import './Navbar.css';
 import '../../Assets/root.css';
 import Logo from '../../Assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
+import styles from './Navbar.module.css'
 
 const Navbar = () => {
 
     const [isResourcesHovered, setIsResourcesHovered] = useState(false);
     const [isArtsHovered, setIsArtsHovered] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
 
+    const toggleMenu = () => {
+        setIsMenuOpen((prev) => !prev);
+    };
+
   return (
-    <div id="navbar-outer-container">
-        <div id='navbar-container'>
-            <div className='logo-img-container' onClick={() => navigate("/")}>
+    // <div id="navbar-outer-container">
+    <div id={styles.NavbarOuterContainer}>
+        <div id={styles.NavbarContainer}>
+            {/* <div className='logo-img-container' id="navbar-logo" onClick={() => navigate("/")}> */}
+            <div className={styles.LogoImgContainer} id={styles.NavbarLogo} onClick={() => navigate("/")}>
                 <img src={Logo} alt="logo-img" />
             </div>
-
-            <div id='nav-links-container'>
-                <ul id='links-list'>
-                    <div className='nav-list-item' onClick={() => navigate("/")}>
-                        <li className='navbar-list-item'>Home</li>
+ 
+            {/* <div id="hamburger-icon" onClick={toggleMenu}> */}
+            <div id={styles.HamburgerIcon} onClick={toggleMenu}>
+                {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </div>
+ 
+            <div id={styles.NavLinksContainer} className={isMenuOpen ? `${styles.Open}` : ""}>
+                <ul id={styles.NavLinksList} className={styles.NavbarPageList}>
+                    <div className={styles.NavListItem} onClick={() => navigate("/")}>
+                        <li className={styles.NavbarListItem}>Home</li>
                     </div>
-                    <div className='nav-list-item' onClick={() => navigate("/about")}>                    
-                        <li className='navbar-list-item'>About</li>
+                    <div className={styles.NavListItem} onClick={() => navigate("/about")}>                    
+                        <li className={styles.NavbarListItem}>About</li>
                     </div>
-                    <div className='nav-list-item' onClick={() => navigate("/team")}>                    
-                        <li className='navbar-list-item'>Team</li>
+                    <div className={styles.NavListItem} onClick={() => navigate("/team")}>                    
+                        <li className={styles.NavbarListItem}>Team</li>
                     </div>
-                    <div className='nav-list-item resources'
+                    <div className={`${styles.NavListItem} ${styles.Resources}`}
                         onMouseEnter={() => setIsResourcesHovered(true)}
                         onMouseLeave={() => setIsResourcesHovered(false)}
+                        onClick={() => {setIsResourcesHovered((prev) => !prev);  setIsArtsHovered(false);}}
                     >                    
-                        <li className='navbar-list-item'>
+                        <li className={styles.NavbarListItem}>
                             {/* Resources */}
-                            Resources {isResourcesHovered ? <FaChevronUp /> : <FaChevronDown />}
+                            Resources {isResourcesHovered ? <FaChevronUp className={styles.ChevronIcon}/> : <FaChevronDown className={styles.ChevronIcon}/>}
                         </li>
 
                         {isResourcesHovered && (
-                            <ul className="dropdown-menu">
+                            <ul className={styles.DropdownMenu}>
                                 <li onClick={() => navigate("/assessments")}>Assessments</li>
                                 <li onClick={() => navigate("/awareness-campaigns")}>Awareness Campaigns</li>
                                 <li onClick={() => navigate("/journals")}>Journals</li>
                                 <li onClick={() => navigate("/seminars")}>Seminars</li>
                                 <li onClick={() => navigate("/community")}>Community</li>
-                                {/* <li onClick={() => navigate("/patient-gallery")}>Patient Gallery</li> */}
                             </ul>
                         )}
                     </div>
-                    <div className='nav-list-item arts'
+                    <div className={`${styles.NavListItem} ${styles.Arts}`}
                         onMouseEnter={() => setIsArtsHovered(true)}
                         onMouseLeave={() => setIsArtsHovered(false)}
+                        onClick={() => {setIsArtsHovered((prev) => !prev); setIsResourcesHovered(false);}}
                     >                    
-                        <li className='navbar-list-item'>
-                            Arts {isArtsHovered ? <FaChevronUp /> : <FaChevronDown />}
+                        <li className={styles.NavbarListItem}>
+                            Arts {isArtsHovered ? <FaChevronUp className={styles.ChevronIcon}/> : <FaChevronDown className={styles.ChevronIcon}/>}
                         </li>
 
                         {isArtsHovered && (
-                            <ul className="dropdown-menu">
+                            <ul className={styles.DropdownMenu}>
                                 <li onClick={() => navigate("/arts-audio")}>Audio</li>
                                 <li onClick={() => navigate("/arts-video")}>Video</li>
                             </ul>
                         )}
                     </div>
-                    <div className='nav-list-item' onClick={() => navigate("/faq")}>                    
-                        <li className='navbar-list-item'>FAQ</li>
+                    <div className={styles.NavListItem} onClick={() => navigate("/faq")}>                    
+                        <li className={styles.NavbarListItem}>FAQ</li>
                     </div>
-                    <div className='nav-list-item' onClick={() => navigate("/contact")}>                    
-                        <li className='navbar-list-item'>Contact</li>
+                    <div className={styles.NavListItem} onClick={() => navigate("/contact")}>                    
+                        <li className={styles.NavbarListItem}>Contact</li>
                     </div>
                 </ul>
             </div>
-
-            <div id='get-started'>
-                <button className='primary-btn'>Get Started</button>
+ 
+            <div id={styles.GetStartedBtnContainer}>
+                <button className={styles.PrimaryBtn} onClick={() => navigate("/get-started")}>Get Started</button>
             </div>
         </div>
     </div>

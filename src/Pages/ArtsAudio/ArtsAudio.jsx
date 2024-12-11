@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
-import './ArtsAudio.css';
-import '../../Assets/root.css';
+import '../../Assets/root.css'
 import AudioSampleImg from '../../Assets/images/audio-sample-img.jpg'
-import { FaPlay } from "react-icons/fa";
-import AudioCard from './AudioCard';
+import AudioCard from './AudioCard'
+import { Helmet } from 'react-helmet'
+import styles from './ArtsAudio.module.css'
 
 const audioData = [
     {
@@ -67,171 +67,31 @@ const ArtsAudio = () => {
 
     return (
         <>
+            <Helmet>
+                <title>ARTS Audio - MWellness</title>
+            </Helmet>
+            
             <Navbar />
-                <div id='outer-container'>
-                    <div id='audio-content-container'>
-                        {audioData.map((audio) => (
-                            <AudioCard
-                                key={audio.id}
-                                audioTitle={audio.audioTitle}
-                                tags={audio.tags}
-                                uploadedBy={audio.uploadedBy}
-                                duration={audio.duration}
-                                audioImage={audio.audioImage}
-                                onPlay={() => handlePlay(audio.id)}
-                                onDownload={() => handleDownload(audio.id)}
-                            />
-                        ))}
-                    </div>
+
+            <div id='outer-container'>
+                <div id={styles.AudioContentContainer}>
+                    {audioData.map((audio) => (
+                        <AudioCard
+                            key={audio.id}
+                            audioTitle={audio.audioTitle}
+                            tags={audio.tags}
+                            uploadedBy={audio.uploadedBy}
+                            duration={audio.duration}
+                            audioImage={audio.audioImage}
+                            onPlay={() => handlePlay(audio.id)}
+                            onDownload={() => handleDownload(audio.id)}
+                        />
+                    ))}
                 </div>
+            </div>
+
             <Footer />
         </>
-        // <>
-        //     <Navbar />
-
-        //     <div id='outer-container'>     
-        //         <div id='audio-content-container'>
-        //             <div className='audio-card'>
-        //                 <div className='audio-info-left-section'>
-        //                     <div className='play-icon'>
-        //                         <FaPlay className='play-icon-button' />
-        //                     </div>
-        //                     <div className='audio-img'>
-        //                         <img src={AudioSampleImg} alt="audio-sample-img" />
-        //                     </div>
-        //                     <div className='audio-name-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className='audio-info-right-section'>
-        //                     <div className='audio-name-right-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                     <p>Uploaded By: Gajenn | 0.08 seconds </p>
-        //                     <button>
-        //                         Download
-        //                     </button>
-        //                 </div>
-        //             </div>
-
-        //             <div className='audio-card'>
-        //                 <div className='audio-info-left-section'>
-        //                     <div className='play-icon'>
-        //                         <FaPlay />
-        //                     </div>
-        //                     <div className='audio-img'>
-        //                         <img src={AudioSampleImg} alt="audio-sample-img" />
-        //                     </div>
-        //                     <div className='audio-name-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className='audio-info-right-section'>
-        //                     <p>Uploaded By: Gajenn | 0.08 seconds </p>
-        //                     <button>
-        //                         Download
-        //                     </button>
-        //                 </div>
-        //             </div>
-
-        //             <div className='audio-card'>
-        //                 <div className='audio-info-left-section'>
-        //                     <div className='play-icon'>
-        //                         <FaPlay />
-        //                     </div>
-        //                     <div className='audio-img'>
-        //                         <img src={AudioSampleImg} alt="audio-sample-img" />
-        //                     </div>
-        //                     <div className='audio-name-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className='audio-info-right-section'>
-        //                     <p>Uploaded By: Gajenn | 0.08 seconds </p>
-        //                     <button>
-        //                         Download
-        //                     </button>
-        //                 </div>
-        //             </div>
-
-        //             <div className='audio-card'>
-        //                 <div className='audio-info-left-section'>
-        //                     <div className='play-icon'>
-        //                         <FaPlay />
-        //                     </div>
-        //                     <div className='audio-img'>
-        //                         <img src={AudioSampleImg} alt="audio-sample-img" />
-        //                     </div>
-        //                     <div className='audio-name-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className='audio-info-right-section'>
-        //                     <p>Uploaded By: Gajenn | 0.08 seconds </p>
-        //                     <button>
-        //                         Download
-        //                     </button>
-        //                 </div>
-        //             </div>
-
-        //             <div className='audio-card'>
-        //                 <div className='audio-info-left-section'>
-        //                     <div className='play-icon'>
-        //                         <FaPlay />
-        //                     </div>
-        //                     <div className='audio-img'>
-        //                         <img src={AudioSampleImg} alt="audio-sample-img" />
-        //                     </div>
-        //                     <div className='audio-name-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className='audio-info-right-section'>
-        //                     <p>Uploaded By: Gajenn | 0.08 seconds </p>
-        //                     <button>
-        //                         Download
-        //                     </button>
-        //                 </div>
-        //             </div>
-                    
-        //             <div className='audio-card'>
-        //                 <div className='audio-info-left-section'>
-        //                     <div className='play-icon'>
-        //                         <FaPlay />
-        //                     </div>
-        //                     <div className='audio-img'>
-        //                         <img src={AudioSampleImg} alt="audio-sample-img" />
-        //                     </div>
-        //                     <div className='audio-name-info'>
-        //                         <p>Calm Sea Waves Sounds - Make You Relax</p>
-        //                         <p><span>Tags:</span> Love | Feeling | Relax | Calm | Stress</p>
-        //                     </div>
-        //                 </div>
-
-        //                 <div className='audio-info-right-section'>
-        //                     <p>Uploaded By: Gajenn | 0.08 seconds </p>
-        //                     <button>
-        //                         Download
-        //                     </button>
-        //                 </div>
-        //             </div>
-
-        //         </div>
-        //     </div>
-
-        //     <Footer />
-        // </>
     )
 }
 

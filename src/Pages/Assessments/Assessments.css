@@ -36,7 +36,14 @@
     padding: 30px 30px;
     border-radius: 30px;
     box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.process-card:hover{
+    transform: translateY(-5px);
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 10px 15px -3px, rgba(43, 171, 160, 0.14) 0px 4px 6px -2px;
+}
+
 
 .process-card > p{
     margin: 0px;

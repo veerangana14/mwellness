@@ -1,8 +1,8 @@
-#team-outer-container{
+#TeamOuterContainer {
     padding: 100px 0px;
 }
 
-#team-inner-container{
+#TeamInnerContainer {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -10,63 +10,60 @@
     margin: 100px auto;
 }
 
-#team-header-container{
+#TeamHeaderContainer {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid; */
 }
 
-#team-header{
+#TeamHeader {
     text-align: left;
     width: 45%;
-    /* border: 1px solid; */
 }
 
-#team-header > p{
+#TeamHeader>p {
     margin: 0px;
 }
 
-#team-header > p:nth-child(1){
+#TeamHeader>p:nth-child(1) {
     font-weight: 900;
     font-size: 36px;
 }
 
-#team-header > p:nth-child(2){
+#TeamHeader>p:nth-child(2) {
     font-weight: 200;
     font-size: 20px;
 }
 
-#team-header > p:nth-child(2){
+#TeamHeader>p:nth-child(2) {
     margin-top: 15px;
     line-height: 30px;
 }
 
-#team-stats{
+#TeamStats {
     display: flex;
     width: 40%;
     justify-content: space-between;
-    /* border: 1px solid; */
 
-    .stats-col > p {
+    .StatsCol>p {
         margin: 0;
     }
-    
-    .stat-num{
+
+    .StatsNum {
         font-size: 70px;
         font-weight: 900;
         color: green;
     }
-    
-    .stat-head{
+
+    .StatsHead {
         font-size: 20px;
         font-weight: 500;
     }
 }
 
 
-#team-grid-container{
+#TeamGridContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -74,7 +71,7 @@
     margin: 50px 0px;
 }
 
-.team-grid-card{
+.TeamGridCard {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -84,7 +81,7 @@
     border-bottom-left-radius: 30px;
     box-shadow: rgba(43, 171, 160, 0.14) 0px 3px 8px;
 
-    .doc-speciality{
+    .DocSpeciality {
         font-size: 1.4rem;
         font-weight: 500;
         color: #26aba3;
@@ -92,26 +89,26 @@
         padding: 5px;
     }
 
-    .doc-name{
+    .DocName {
         font-size: 1.4rem;
     }
 
-    p{
+    p {
         margin: 0px;
     }
 
-    .team-img{
+    .TeamImg {
         width: 100%;
     }
 
-    .team-img > img{
+    .TeamImg>img {
         width: 100%;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
     }
 }
 
-.team-social-container{
+.TeamSocialMediaContainer {
     display: flex;
     width: 60%;
     margin: auto;
@@ -119,10 +116,9 @@
     margin-bottom: 30px;
     justify-content: space-between;
     color: white;
-    /* border: 1px solid; */
 }
 
-.team-icon-container{
+.TeamSocialMIconContainer {
     display: flex;
     background-color: orange;
     border-radius: 50%;
@@ -130,189 +126,237 @@
     height: 42px;
 }
 
-.team-social-media-icon{
+.TeamSocialMediaIcon {
     margin: auto;
     font-size: 22px;
     fill: white;
 }
 
-  /* Extra Small */
-  @media (max-width: 480px) {
-    /* Styles for extra small screens */
-    #team-header-container{
+/* ------------------------------ MOBILE SCREEN ---------------------------------- */
+@media (max-width: 480px) {
+    #TeamHeaderContainer {
         flex-direction: column;
         gap: 20px;
     }
-    #team-header{
+
+    #TeamHeader {
         width: 100%;
         text-align: center;
     }
-    #team-stats{
+
+    #TeamHeader>p:nth-child(1) {
+        font-size: 32px;
+    }
+
+    #TeamHeader>p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    #TeamStats {
         width: 100%;
         justify-content: center;
         gap: 30px;
+        margin: 30px 0px;
 
-        .stat-num{
+        .StatsNum {
             font-size: 2.3rem;
-        }     
-        .stat-head{
-            font-size: 0.9rem;
+        }
+
+        .StatsHead {
+            font-size: 1rem;
+            font-weight: 600;
         }
     }
-    #team-grid-container{
+
+    #TeamGridContainer {
         grid-template-columns: repeat(1, 1fr);
-        gap: 60px;
+        gap: 40px;
+        width: 90%;
+        margin: 0px auto;
+        margin-top: 50px;
     }
-    .team-icon-container{
+
+    .TeamSocialMIconContainer {
         width: 34px;
         height: 34px;
     }
-    
-    .team-social-media-icon{
+
+    .TeamSocialMediaIcon {
         margin: auto;
         font-size: 18px;
         fill: white;
     }
-    .team-grid-card{
-        .doc-name{
-            font-size: 4vh;
+
+    .TeamGridCard {
+        .DocName {
+            font-size: 18px;
         }
-        .doc-speciality{
-            font-size: 4vh;
+
+        .DocSpeciality {
+            font-size: 20px;
         }
     }
-    .team-social-container{
+
+    .TeamSocialMediaContainer {
         width: 32vh;
     }
-  }
-  
-  /* Small */
-  @media (min-width: 481px) and (max-width: 768px) {
-    /* Styles for small screens */
-    #team-header-container{
+}
+
+/* ------------------------------ TABLET SCREEN ---------------------------------- */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #TeamHeaderContainer {
         flex-direction: column;
         gap: 20px;
     }
-    #team-header{
+
+    #TeamHeader {
         width: 100%;
         text-align: center;
     }
-    #team-stats{
-        width: 100%;
-        justify-content: center;
-        gap: 30px;
 
-        .stat-num{
+    #TeamHeader>p:nth-child(1) {
+        font-size: 34px;
+    }
+
+    #TeamHeader>p:nth-child(2) {
+        font-size: 17px;
+    }
+
+    #TeamStats {
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 30px;
+        margin: 30px 0px;
+
+        .StatsNum {
             font-size: 50px;
-        }     
-        .stat-head{
-            font-size: 18px;
+        }
+
+        .StatsHead {
+            font-size: 16px;
         }
     }
-    #team-grid-container{
+
+    #TeamGridContainer {
         grid-template-columns: repeat(2, 1fr);
-        gap: 60px;
+        row-gap: 60px;
+        column-gap: 30px;
     }
-    .team-icon-container{
+
+    .TeamSocialMIconContainer {
         width: 34px;
         height: 34px;
     }
-    
-    .team-social-media-icon{
+
+    .TeamSocialMediaIcon {
         margin: auto;
         font-size: 18px;
         fill: white;
     }
-    .team-grid-card{
-        .doc-name{
-            font-size: 3vh;
+
+    .TeamGridCard {
+        .DocName {
+            font-size: 17px;
         }
-        .doc-speciality{
-            font-size: 3vh;
+
+        .DocSpeciality {
+            font-size: 18px;
         }
     }
-    .team-social-container{
+
+    .TeamSocialMediaContainer {
         width: 28vh;
     }
-  }
-  
-  /* Medium */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    /* Styles for medium screens */
-    #team-header-container{
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #TeamHeaderContainer {
         flex-direction: column;
         gap: 20px;
     }
-    #team-header{
+
+    #TeamHeader {
         width: 100%;
         text-align: center;
     }
-    #team-header > p:nth-child(1){
+
+    #TeamHeader>p:nth-child(1) {
         font-size: 38px;
     }
-    #team-stats{
-        width: 100%;
-        justify-content: center;
-        gap: 30px;
 
-        .stat-num{
+    #TeamStats {
+        width: 80%;
+        justify-content: space-evenly;
+        gap: 30px;
+        margin: 40px 0px;
+
+        .StatsNum {
             font-size: 55px;
-        }     
-        .stat-head{
+        }
+
+        .StatsHead {
             font-size: 18px;
         }
     }
-    #team-grid-container{
+
+    #TeamGridContainer {
         grid-template-columns: repeat(2, 1fr);
         gap: 60px;
     }
-    .team-grid-card{
-        .doc-name{
-            font-size: 3.6vh;
+
+    .TeamGridCard {
+        .DocName {
+            font-size: 18px;
         }
-        .doc-speciality{
-            font-size: 3.6vh;
+
+        .DocSpeciality {
+            font-size: 20px;
         }
     }
-    .team-social-container{
+
+    .TeamSocialMediaContainer {
         width: 70%;
     }
-  }
-  
-  /* Large */
-  @media (min-width: 1025px) and (max-width: 1200px) {
-    /* Styles for large screens */
-    #team-stats{
+}
+
+/* ---------------------------- SMALL SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #TeamStats {
         width: 45%;
 
-        .stat-num{
+        .StatsNum {
             font-size: 60px;
-        }     
-        .stat-head{
+        }
+
+        .StatsHead {
             font-size: 18px;
         }
     }
-    #team-grid-container{
+
+    #TeamGridContainer {
         grid-template-columns: repeat(3, 1fr);
     }
-    .team-social-container{
+
+    .TeamSocialMediaContainer {
         width: 70%;
     }
-    .team-grid-card{
-        .doc-name{
+
+    .TeamGridCard {
+        .DocName {
             font-size: 3vh;
         }
-        .doc-speciality{
+
+        .DocSpeciality {
             font-size: 3vh;
         }
     }
-  }
-  
-  /* Extra Large */
-  @media (min-width: 1201px) and (max-width: 1440px) {
-    /* Styles for extra large screens */
-    #team-stats{
+}
+
+/* ---------------------------- LARGE SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    #TeamStats {
         width: 45%
     }
-  }
-  
+}

@@ -1,0 +1,304 @@
+#GreenBtn{
+    display: flex;
+    margin: auto;
+    padding: 15px 30px;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+}
+
+#OutwardArrowIcon{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#AssessmentsFormSection{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 60px auto;
+    align-items: center;
+    
+}
+
+#FormImgContainer{
+    width: 45%;
+    position: relative;
+}
+
+
+#FormImgContainer > img{
+    width: 100%;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+#FormImgContainer::after{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: #fef3de;
+}
+
+#FormContainer{
+    width: 45%;
+    text-align: left;
+}
+
+#FormContainer > p{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#FormContainer > button {
+    margin-top: 30px;
+}
+
+#AssessmentConsultationForm{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 40px;
+}
+
+.AssessmentFormInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.AssessmentFormInput > label{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.AssessmentFormInput > input, .AssessmentFormInput > select{
+    padding: 14px 15px;
+    font-size: 17px;
+    border-radius: 25px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.AssessmentFormInput > input::placeholder{
+    color: gray;
+}
+
+#StartedBtn{
+    display: block;
+    margin-top: 40px;
+    width: fit-content;
+}
+
+
+/* ------------------------------ MOBILE SCREEN ---------------------------------- */
+@media (max-width: 480px) {
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+
+    #AssessmentsFormSection{
+        flex-direction: column;
+        width: 80%;
+        gap: 60px;
+        margin: 40px auto; 
+    }
+    
+    #FormImgContainer{
+        width: 90%;
+    }
+    
+    #FormImgContainer::after{
+        top: 20px;
+        right: 20px;
+    }
+    
+    #FormContainer{
+        width: 90%;
+    }
+    
+    #FormContainer > p{
+        font-size: 30px;
+    }
+    
+    #FormContainer > button {
+        margin-top: 30px;
+    }
+    
+    #AssessmentConsultationForm{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+        column-gap: 0px;
+    }
+    
+    .AssessmentFormInput > label{
+        font-size: 16px;
+    }
+    
+    .AssessmentFormInput > input, .AssessmentFormInput > select{
+        font-size: 16px;
+    }
+}
+
+/* ------------------------------ TABLET SCREEN ---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+
+    #AssessmentsFormSection{
+        flex-direction: column;
+        width: 80%;
+        gap: 60px;
+        margin: 40px auto; 
+    }
+    
+    #FormImgContainer{
+        width: 90%;
+    }
+    
+    #FormImgContainer::after{
+        top: 20px;
+        right: 20px;
+    }
+    
+    #FormContainer{
+        width: 90%;
+    }
+    
+    #FormContainer > p{
+        font-size: 30px;
+    }
+    
+    #FormContainer > button {
+        margin-top: 30px;
+    }
+    
+    #AssessmentConsultationForm{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 25px;
+        column-gap: 0px;
+    }
+    
+    .AssessmentFormInput > label{
+        font-size: 16px;
+    }
+    
+    .AssessmentFormInput > input, .AssessmentFormInput > select{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+    
+    #AssessmentsFormSection{
+        flex-direction: column;
+        width: 80%;
+        gap: 60px;
+        margin: 40px auto; 
+    }
+    
+    #FormImgContainer{
+        width: 90%;
+    }
+    
+    #FormImgContainer::after{
+        top: 20px;
+        right: 20px;
+    }
+    
+    #FormContainer{
+        width: 90%;
+    }
+    
+    #FormContainer > p{
+        font-size: 30px;
+    }
+    
+    #StartedBtn {
+        display: flex;
+        width: 100%;
+        margin-top: 30px auto;
+        align-items: center;
+    }
+    
+    #AssessmentConsultationForm{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 35px;
+        column-gap: 25px;
+        margin: 50px 0px;
+    }
+    
+    .AssessmentFormInput > label{
+        font-size: 16px;
+    }
+    
+    .AssessmentFormInput > input, .AssessmentFormInput > select{
+        font-size: 16px;
+    }
+}
+
+/* ---------------------------- SMALL SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {    
+    #FormImgContainer{
+        width: 40%;
+    }
+    
+    #FormImgContainer::after{
+        top: 30px;
+        right: 30px;
+    }
+    
+    #FormContainer > p{
+        font-size: 32px;
+    }
+    
+    #AssessmentConsultationForm{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        column-gap: 0px;
+    }
+    
+    .AssessmentFormInput{
+        gap: 5px;
+    }
+    
+    .AssessmentFormInput > label{
+        font-size: 17px;
+    }
+    
+    .AssessmentFormInput > input, .AssessmentFormInput > select{
+        padding: 13px 15px;
+    }
+}
+
+/* ---------------------------- LARGE SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1201px) and (max-width: 1440px){
+
+}

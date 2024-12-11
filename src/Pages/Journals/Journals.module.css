@@ -1,0 +1,178 @@
+#OuterContainer {
+    padding: 100px 0px;
+}
+
+.PrimaryBtn {
+    padding: 14px 40px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#InnerContainer7 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 100px auto;
+}
+
+#ArticledGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#ArticlesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ArticlesHeader>p:nth-child(1) {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+
+
+@media (max-width: 480px) {
+    .PrimaryBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+
+    #InnerContainer7 {
+        margin-top: 0px;
+    }
+
+    #ArticlesHeader {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #ArticlesHeader>p:nth-child(1) {
+        font-size: 30px;
+    }
+
+    #ArticleBtn {
+        font-size: 16px;
+    }
+
+    #ArticleBtnArrowIcon {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #ArticledGrid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .PrimaryBtn {
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 28px;
+    }
+
+    #ArticleBtn{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    #ArticleBtnArrowIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #ArticledGrid{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .PrimaryBtn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+
+    #ArticleBtn{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    #ArticleBtnArrowIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #ArticledGrid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .PrimaryBtn {
+        padding: 12px 30px;
+    }
+    
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 32px;
+    }
+
+    #ArticleBtn{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    #ArticleBtnArrowIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #ArticledGrid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 34px;
+    }
+
+    #ArticleBtn{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    #ArticleBtnArrowIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}

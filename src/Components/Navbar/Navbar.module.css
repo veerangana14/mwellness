@@ -1,0 +1,387 @@
+#NavbarOuterContainer{
+    width: 100%;
+    padding: 20px 0px;
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+}
+ 
+.LogoImgContainer{
+    width: 23%;
+}
+ 
+.LogoImgContainer > img{
+    width: 100%;
+}
+ 
+#NavbarContainer{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+#NavLinksContainer{
+    width: 60%;
+}
+ 
+.NavListItem.Resources {
+    position: relative;
+    cursor: pointer;
+}
+.NavListItem.Resources:hover .DropdownMenu {
+    display: block;
+}
+.NavListItem.Resources .DropdownMenu {
+    display: block;
+}
+
+.NavListItem.Arts {
+    position: relative;
+    cursor: pointer;
+}
+.NavListItem.Arts:hover .DropdownMenu {
+    display: block;
+}
+.NavListItem.Arts .DropdownMenu {
+    display: block;
+}
+ 
+ 
+/* Dropdown menu */
+.DropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e7f2f1;
+    box-shadow: 0px 4px 8px #e7f2f1;
+    padding: 10px;
+    display: none;
+    list-style: none;
+    margin: 0;
+ 
+    border-radius: 5px;
+    width: 150%;
+    text-align: left;
+}
+ 
+.DropdownMenu li {
+    padding: 15px 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+ 
+.DropdownMenu li:hover {
+    background-color: #e7f2f1;
+    border-radius: 5px;
+}
+
+#NavLinksList{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+ 
+.NavbarListItem{
+    color: black;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+}
+
+.ChevronIcon{
+    margin-left: 8px;
+    font-size: 14px;
+}
+ 
+.NavbarListItem:hover{
+    color: #26aba3;
+    background-color: #eff6f6;
+    border-radius: 7px;
+}
+ 
+#HamburgerIcon {
+    display: none;
+    cursor: pointer;
+    color: black;
+}
+
+.PrimaryBtn{
+    padding: 10px 30px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+ 
+ 
+
+/* ------------------------------ MOBILE SCREEN ---------------------------------- */
+@media (max-width: 480px) {   
+    #NavbarContainer{
+        flex-direction: flex;
+        width: 90%;
+        gap: 30px;
+    }
+ 
+    #NavbarLogo{
+        width: 60%;
+    }
+ 
+    #NavLinksContainer{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+ 
+    .NavbarPageList{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        
+        padding: 0px;
+        width: 80%;
+        margin: 25px auto;
+    }
+    
+    #NavLinksContainer.Open{
+        width: 100%;
+        display: flex;
+        padding: 0px;
+    }
+    
+    .NavListItem {
+        padding: 0px;
+        margin: 0px;
+        border-bottom: 1px solid #e7f2f1;
+    }
+
+    .NavListItem:last-child {
+        border-bottom: none;
+    }
+ 
+    #HamburgerIcon {
+        display: block;
+    }
+ 
+    #GetStartedBtnContainer {
+        display: none;
+    }
+ 
+    
+    .NavListItem.Resources {
+        position: relative;
+    }
+    .NavListItem.Resources:hover .DropdownMenu {
+        display: relative;
+    }
+    .NavListItem.Resources .DropdownMenu {
+        display: relative;
+    }
+    
+    .NavListItem.Arts {
+        position: relative;
+    }
+    .NavListItem.Arts:hover .DropdownMenu {
+        display: relative;
+    }
+    .NavListItem.Arts .DropdownMenu {
+        display: relative;
+    }
+    
+    .DropdownMenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        /* padding: 10px 0px; */
+        padding: 10px;
+        display: none;
+        width: 100%;
+        text-align: center;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .DropdownMenu li {
+        padding: 10px;
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    
+    .NavbarListItem{
+        padding: 15px 0px;
+        font-size: 16px;
+    }
+ 
+    
+}
+ 
+/* ------------------------------ TABLET SCREEN ---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+    #NavbarContainer{
+        flex-direction: flex;
+        width: 90%;
+        gap: 30px;
+    }
+ 
+    #NavbarLogo{
+        width: 40%;
+    }
+ 
+    #NavLinksContainer{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    #NavLinksContainer.Open{
+        width: 100%;
+        display: flex;
+        padding: 0px;
+    }
+ 
+    .NavbarPageList{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        padding: 0px;
+        width: 80%;
+        margin: 25px auto;
+    }
+    
+    .NavListItem {
+        padding: 0px;
+        margin: 0px;
+        border-bottom: 1px solid #e7f2f1;
+    }
+
+    .NavListItem:last-child {
+        border-bottom: none;
+    }
+ 
+    #HamburgerIcon {
+        display: block;
+    }
+ 
+    #GetStartedBtnContainer {
+        display: none;
+    }
+ 
+    .NavListItem.Resources {
+        position: relative;
+    }
+    .NavListItem.Resources:hover .DropdownMenu {
+        display: relative;
+    }
+    .NavListItem.Resources .DropdownMenu {
+        display: relative;
+    }
+    
+    .NavListItem.Arts {
+        position: relative;
+    }
+    .NavListItem.Arts:hover .DropdownMenu {
+        display: relative;
+    }
+    .NavListItem.Arts .DropdownMenu {
+        display: relative;
+    }
+    
+    .DropdownMenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        /* padding: 10px 0px; */
+        padding: 10px;
+        display: none;
+        width: 100%;
+        text-align: center;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .DropdownMenu li {
+        padding: 15px 10px;
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    .NavbarListItem{
+        padding: 15px 0px;
+        font-size: 17px;
+    }
+}
+ 
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #NavLinksContainer{
+        width: 80%;
+    }
+ 
+    .NavbarListItem{
+        padding: 10px 15px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+ 
+    .DropdownMenu li {
+        font-size: 15px;
+    }
+ 
+    #GetStartedBtnContainer{
+        display: none;
+    }
+}
+ 
+/* ---------------------------- SMALL SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #NavLinksContainer{
+        width: 65%;
+    }
+ 
+    .NavbarListItem{
+        padding: 10px 15px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+ 
+    .DropdownMenu li {
+        font-size: 15px;
+    }
+
+    #GetStartedBtnContainer{
+        display: none;
+    }
+}
+ 
+/* ---------------------------- LARGE SCREEN LAPTOP ------------------------------- */
+@media (min-width: 1201px) and (max-width: 1440px){
+ 
+}
