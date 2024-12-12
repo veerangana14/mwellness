@@ -241,7 +241,7 @@ const Home = () => {
                             </button>
                         </div>
 
-                        <div id={styles.HeaderStatsSection}>
+                        {/* <div id={styles.HeaderStatsSection}>
                             <div className={styles.HeaderStatsItem}>
                                 <p>20+</p>
                                 <hr />
@@ -257,7 +257,7 @@ const Home = () => {
                                 <hr />
                                 <p>Educational Seminars</p>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div id={styles.HeaderRightSection}>
                         <div id={styles.HeaderImgContainer}>

@@ -13,13 +13,13 @@
 }
 
 .GridCard>p:nth-child(2){
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .GridCard>p:nth-child(3){
     line-height: 25px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 200;
 }
 
@@ -40,6 +40,11 @@
     margin-left: 15px;
 }
 
+.ImpactGoalsIcon {
+    fill: #26aba3;
+    width: 20%;
+}
+
 .CommunityGridImg{
     width: 45%;
 }
@@ -50,7 +55,10 @@
         padding: 20px 35px;
     }
 
-    .GridCard > img{
+    /* .GridCard > img{
+        width: 30%;
+    } */
+    .GridIconImg{
         width: 30%;
     }
     
@@ -70,6 +78,10 @@
         font-size: 22px;
     }
 
+    .ImpactGoalsIcon {
+        width: 20%;
+    }
+
     .CommunityGridImg{
         width: 55%;
     }
@@ -77,7 +89,10 @@
 
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .GridCard > img{
+    /* .GridCard > img{
+        width: 40%;
+    } */
+    .GridIconImg{
         width: 40%;
     }
     
@@ -97,13 +112,20 @@
         font-size: 22px;
     }
 
+    .ImpactGoalsIcon {
+        width: 25%;
+    }
+
     .CommunityGridImg{
         width: 100%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .GridCard > img{
+    /* .GridCard > img{
+        width: 30%;
+    } */
+    .GridIconImg{
         width: 30%;
     }
     
@@ -123,13 +145,21 @@
         font-size: 22px;
     }
 
+    .ImpactGoalsIcon {
+        width: 20%;
+    }
+
     .CommunityGridImg{
         width: 100%;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
-    .GridCard > img{
+    /* .GridCard > img{
+        width: 40%;
+        height: 100px;
+    } */
+    .GridIconImg{
         width: 40%;
         height: 100px;
     }
@@ -148,6 +178,10 @@
     
     .GridLinkIcon{
         font-size: 22px;
+    }
+
+    .ImpactGoalsIcon {
+        width: 15%;
     }
 
     .CommunityGridImg{

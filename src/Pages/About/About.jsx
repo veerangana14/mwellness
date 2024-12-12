@@ -95,6 +95,35 @@ const GridItems = [
 ]
 
 
+const ImpactGoals = [
+    {
+        svgPath: "M17.5.917a6.4,6.4,0,0,0-5.5,3.3A6.4,6.4,0,0,0,6.5.917,6.8,6.8,0,0,0,0,7.967c0,6.775,10.956,14.6,11.422,14.932l.578.409.578-.409C13.044,22.569,24,14.742,24,7.967A6.8,6.8,0,0,0,17.5.917ZM12,20.846c-3.253-2.43-10-8.4-10-12.879a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,7.967h2a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,7.967C22,12.448,15.253,18.416,12,20.846Z",
+        title: "Erasing Stigma",
+        description: "We actively work to normalise conversations around mental health through awareness campaigns, online educational seminars, and collaborations with communities. By fostering understanding, we aim to dissolve the shame often associated with seeking help.",
+    },
+    {
+        svgPath: "m7.5 13a4.5 4.5 0 1 1 4.5-4.5 4.505 4.505 0 0 1 -4.5 4.5zm0-7a2.5 2.5 0 1 0 2.5 2.5 2.5 2.5 0 0 0 -2.5-2.5zm7.5 14a5.006 5.006 0 0 0 -5-5h-5a5.006 5.006 0 0 0 -5 5v4h2v-4a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4h2zm2.5-11a4.5 4.5 0 1 1 4.5-4.5 4.505 4.505 0 0 1 -4.5 4.5zm0-7a2.5 2.5 0 1 0 2.5 2.5 2.5 2.5 0 0 0 -2.5-2.5zm6.5 14a5.006 5.006 0 0 0 -5-5h-4v2h4a3 3 0 0 1 3 3v4h2z",
+        title: "Affordable Access for All",
+        description: "With cost-effective consultation models and tailored subscription packages, XXX ensures that quality mental health care is not a privilege but a right for everyone.",
+    },
+    {
+        svgPath: "M19.5,24a1,1,0,0,1-.929-.628l-.844-2.113-2.116-.891a1.007,1.007,0,0,1,.035-1.857l2.088-.791.837-2.092a1.008,1.008,0,0,1,1.858,0l.841,2.1,2.1.841a1.007,1.007,0,0,1,0,1.858l-2.1.841-.841,2.1A1,1,0,0,1,19.5,24ZM10,21a2,2,0,0,1-1.936-1.413L6.45,14.54,1.387,12.846a2.032,2.032,0,0,1,.052-3.871L6.462,7.441,8.154,2.387A1.956,1.956,0,0,1,10.108,1a2,2,0,0,1,1.917,1.439l1.532,5.015,5.03,1.61a2.042,2.042,0,0,1,0,3.872h0l-5.039,1.612-1.612,5.039A2,2,0,0,1,10,21Zm.112-17.977L8.2,8.564a1,1,0,0,1-.656.64L2.023,10.888l5.541,1.917a1,1,0,0,1,.636.643l1.77,5.53,1.83-5.53a1,1,0,0,1,.648-.648l5.53-1.769a.072.072,0,0,0,.02-.009L12.448,9.2a1,1,0,0,1-.652-.661Zm8.17,8.96h0ZM20.5,7a1,1,0,0,1-.97-.757l-.357-1.43L17.74,4.428a1,1,0,0,1,.034-1.94l1.4-.325L19.53.757a1,1,0,0,1,1.94,0l.354,1.418,1.418.355a1,1,0,0,1,0,1.94l-1.418.355L21.47,6.243A1,1,0,0,1,20.5,7Z",
+        title: "Holistic Wellness Through Creativity",
+        description: "Our commitment to expressive arts therapy, including music, dance, and art, allows individuals to explore unconventional pathways to healing and self-expression.",
+    },
+    {
+        svgPath: "m4 13h3v2h-3zm5 2h3v-2h-3zm-5 4h3v-2h-3zm5 0h3v-2h-3zm-5-12h3v-2h-3zm5 0h3v-2h-3zm-5 4h3v-2h-3zm5 0h3v-2h-3zm15-3v16h-24v-21a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v2h5a3 3 0 0 1 3 3zm-10-5a1 1 0 0 0 -1-1h-10a1 1 0 0 0 -1 1v19h12zm8 5a1 1 0 0 0 -1-1h-5v15h6zm-4 7h2v-2h-2zm0 4h2v-2h-2zm0-8h2v-2h-2z",
+        title: "Building Resilience in Communities",
+        description: "By connecting users with local and online support groups, we create a network of care that extends beyond individual therapy.",
+    },
+    {
+        svgPath: "M24,11c0-1.57-.75-3.04-2-3.98v-.02c0-1.9-1.33-3.49-3.1-3.9-.41-1.77-2-3.1-3.9-3.1-1.19,0-2.27,.53-3,1.36-.73-.83-1.81-1.36-3-1.36-1.9,0-3.49,1.33-3.9,3.1-1.77,.41-3.1,2-3.1,3.9v.02c-1.25,.94-2,2.41-2,3.98,0,.89,.24,1.74,.69,2.5-.45,.76-.69,1.61-.69,2.5,0,1.69,.86,3.24,2.27,4.17,.72,2.28,2.81,3.83,5.23,3.83,1.86,0,3.5-.93,4.5-2.34,1,1.41,2.64,2.34,4.5,2.34,2.42,0,4.51-1.56,5.23-3.83,1.41-.92,2.27-2.48,2.27-4.17,0-.89-.24-1.74-.69-2.5,.45-.76,.69-1.61,.69-2.5ZM7.5,22c-1.63,0-3.03-1.12-3.4-2.71l-.1-.44-.4-.21c-.98-.53-1.6-1.54-1.6-2.63,0-.67,.23-1.32,.68-1.87l.51-.63-.51-.63c-.44-.55-.68-1.2-.68-1.87,0-1.07,.59-2.07,1.54-2.6l.62-.35s-.16-.93-.16-1.05c0-1.1,.9-2,2-2h1v-1c0-1.1,.9-2,2-2s2,.9,2,2v14.5c0,1.93-1.57,3.5-3.5,3.5Zm13.82-7.87c.44,.55,.68,1.2,.68,1.87,0,1.1-.61,2.1-1.6,2.63l-.4,.21-.1,.44c-.37,1.6-1.77,2.71-3.4,2.71-1.93,0-3.5-1.57-3.5-3.5V4c0-1.1,.9-2,2-2s2,.9,2,2v1h1c1.1,0,2,.9,2,2,0,.12-.16,1.05-.16,1.05l.62,.35c.95,.54,1.54,1.53,1.54,2.6,0,.68-.23,1.32-.68,1.87l-.51,.63,.51,.63Z",
+        title: "Empowering the Next Generation",
+        description: "With a focus on young adults and working professionals, our platform offers tools and resources to help them navigate the complexities of modern life.",
+    }
+]
+
+
 const About = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPopupVisible, setPopupVisible] = useState(false);
@@ -260,24 +289,41 @@ const About = () => {
             <div id={styles.StoryContainer}>
                 <p id={styles.StoryHeading}>Our Story</p>
 
-                <p>XXX was born out of a shared realisation of the urgent need for accessible mental health care in India. With the rising stigma surrounding mental health, limited availability of affordable services, and geographical barriers to care, many individuals are left to struggle alone.</p>
+                <div id={styles.StoryBgContainer}>
+                    <p>XXX was born out of a shared realisation of the urgent need for accessible mental health care in India. With the rising stigma surrounding mental health, limited availability of affordable services, and geographical barriers to care, many individuals are left to struggle alone.</p>
 
-                <p>Founded in 2021 by Dr. Chitrabh Raghav Sinha and Neelabh Keshav Sinha, XXX set out to address these challenges head-on. Inspired by their combined experience in psychiatry, public health, and the innovative potential of digital platforms, the Sinha brothers envisioned a virtual mental health hospital—accessible to all, regardless of location or financial status.</p>
+                    <p>Founded in 2021 by Dr. Chitrabh Raghav Sinha and Neelabh Keshav Sinha, XXX set out to address these challenges head-on. Inspired by their combined experience in psychiatry, public health, and the innovative potential of digital platforms, the Sinha brothers envisioned a virtual mental health hospital—accessible to all, regardless of location or financial status.</p>
 
-                <p>Drawing upon the expertise of a multidisciplinary team, including specialists in psychiatry, psychology, and expressive arts therapy, XXX integrates traditional and creative therapeutic approaches. By harnessing the power of music, art, and dance therapies alongside evidence-based clinical practices, we offer a unique pathway to healing that acknowledges the complexities of every individual’s mental health journey.</p>
+                    <p>Drawing upon the expertise of a multidisciplinary team, including specialists in psychiatry, psychology, and expressive arts therapy, XXX integrates traditional and creative therapeutic approaches. By harnessing the power of music, art, and dance therapies alongside evidence-based clinical practices, we offer a unique pathway to healing that acknowledges the complexities of every individual’s mental health journey.</p>
+                </div>
 
-                <p id={styles.StorySubheading}>Impact Goals</p>
-                <ul id={styles.GoalsList}>
+                {/* <ul id={styles.GoalsList}>
                     <li className={styles.GoalItem}><span>Erasing Stigma: &nbsp;</span>We actively work to normalise conversations around mental health through awareness campaigns, online educational seminars, and collaborations with communities. By fostering understanding, we aim to dissolve the shame often associated with seeking help.</li>
-
+                    
                     <li className={styles.GoalItem}><span>Affordable Access for All: &nbsp;</span>With cost-effective consultation models and tailored subscription packages, XXX ensures that quality mental health care is not a privilege but a right for everyone.</li>
-
+                    
                     <li className={styles.GoalItem}><span>Holistic Wellness Through Creativity: &nbsp;</span>Our commitment to expressive arts therapy, including music, dance, and art, allows individuals to explore unconventional pathways to healing and self-expression.</li>
-
+                    
                     <li className={styles.GoalItem}><span>Building Resilience in Communities: &nbsp;</span>By connecting users with local and online support groups, we create a network of care that extends beyond individual therapy.</li>
-
+                    
                     <li className={styles.GoalItem}><span>Empowering the Next Generation: &nbsp;</span> With a focus on young adults and working professionals, our platform offers tools and resources to help them navigate the complexities of modern life.</li>
-                </ul>
+                </ul> */}
+
+
+                {/* <p id={styles.StorySubheading}>Impact Goals</p>
+                <div id={styles.GridSection}>
+                    {
+                        ImpactGoals.map((item, index) => (
+                            <Grid 
+                                index={index+1}
+                                gridImg={item.img}
+                                title={item.title}
+                                description={item.description}
+                            />
+                        ))
+                    }
+                </div> */}
+
             </div>
 
 
@@ -367,10 +413,10 @@ const About = () => {
             {/* ---------------- ABOUT PAGE THIRD SECTION -------------------- */}
             <div id={styles.AboutThirdSection}>
                 <div id={styles.AboutInnerContainer3}>
-                    <p>What I'm Offer</p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Impact Goals</p>
+                    {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
 
-                    <div id={styles.GridSection}>
+                    {/* <div id={styles.GridSection}>
                         {
                             GridItems.map((item, index) => (
                                 <Grid 
@@ -382,12 +428,26 @@ const About = () => {
                                 />
                             ))
                         }
+                    </div> */}
+
+                    <div id={styles.GridSection}>
+                        {
+                            ImpactGoals.map((item, index) => (
+                                <Grid 
+                                    index={index+1}
+                                    gridImg={item.img}
+                                    title={item.title}
+                                    description={item.description}
+                                    svgPath={item.svgPath}
+                                />
+                            ))
+                        }
                     </div>
 
-                    <button className={styles.PrimaryBtn} id={styles.AllProgramsBtn}>
+                    {/* <button className={styles.PrimaryBtn} id={styles.AllProgramsBtn}>
                         All programs
                         <MdArrowOutward id={styles.AllProgramsBtnIcon}/>
-                    </button>
+                    </button> */}
                 </div>
             </div>
 

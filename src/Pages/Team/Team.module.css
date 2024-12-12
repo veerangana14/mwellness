@@ -80,7 +80,15 @@
     font-weight: 700;
 }
 
-#TeamGridContainer {
+#TeamGridContainer2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 70%;
+    margin: 40px auto;
+}
+
+#TeamGridContainer3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -236,7 +244,15 @@
         font-size: 24px;
     }
 
-    #TeamGridContainer {
+    #TeamGridContainer2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        width: 90%;
+        margin: 0px auto;
+        margin-top: 50px;
+    }
+
+    #TeamGridContainer3 {
         grid-template-columns: repeat(1, 1fr);
         gap: 40px;
         width: 90%;
@@ -316,7 +332,13 @@
         }
     }
 
-    #TeamGridContainer {
+    #TeamGridContainer2 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 60px;
+        width: 100%;
+    }
+
+    #TeamGridContainer3 {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 60px;
         column-gap: 30px;
@@ -390,7 +412,13 @@
         }
     }
 
-    #TeamGridContainer {
+    #TeamGridContainer2 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 60px;
+    }
+
+    #TeamGridContainer3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 60px;
     }
@@ -424,7 +452,12 @@
         }
     }
 
-    #TeamGridContainer {
+    #TeamGridContainer2 {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+
+    #TeamGridContainer3 {
         grid-template-columns: repeat(3, 1fr);
     }
 

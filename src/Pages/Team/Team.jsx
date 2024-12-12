@@ -165,7 +165,7 @@ const Team = () => {
                 <div id={styles.ExpertGridContainer}>
                     <div className="ExpertGridContents">
                         <p className={styles.ExpertsHeading}>Psychiatry Experts</p>
-                        <div id={styles.TeamGridContainer}>
+                        <div id={styles.TeamGridContainer2}>
                             {psychiatryExpertsTeam.map((member) => (
                                 <TeamMemberCard
                                     key={member.id}
@@ -182,7 +182,7 @@ const Team = () => {
 
                     <div className="ExpertGridContents">
                         <p className={styles.ExpertsHeading}>Clinical Psychology Professionals</p>
-                        <div id={styles.TeamGridContainer}>
+                        <div id={styles.TeamGridContainer2}>
                             {clinicalPsychologyTeam.map((member) => (
                                 <TeamMemberCard
                                     key={member.id}
@@ -199,7 +199,7 @@ const Team = () => {
 
                     <div className="ExpertGridContents">
                         <p className={styles.ExpertsHeading}>Expressive Arts Therapy Pioneers</p>
-                        <div id={styles.TeamGridContainer}>
+                        <div id={styles.TeamGridContainer3}>
                             {expressiveArtsTherapyTeam.map((member) => (
                                 <TeamMemberCard
                                     key={member.id}
