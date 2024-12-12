@@ -19,7 +19,7 @@
     font-weight: 900;
 }
 
-#HeaderLeftSection>p:nth-child(2) {
+#HeaderLeftSection>p:nth-child(2), #HeaderLeftSection>p:nth-child(3) {
     line-height: 30px;
     font-size: 20px;
     font-weight: 200;

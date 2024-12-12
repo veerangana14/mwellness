@@ -12,21 +12,29 @@ import '../../Assets/root.css'
 
 const AccordionItems = [
     {
-        question: "What is mental health?",
-        answer: "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act."
+        question: "What services does XXX offer?",
+        answer: "XXX provides a wide range of mental health services, including one-on-one therapy, group sessions, self-assessment tools, and expressive arts therapies such as music, art, and dance therapy. Our platform connects you with qualified professionals in psychiatry, clinical psychology, counselling psychology, and more—all available online."
     },
     {
-        question: "How can I support a friend with mental health issues?",
-        answer: "Listening and offering support, encouraging them to seek professional help, and staying connected can make a big difference."
+        question: "How do I book a consultation?",
+        answer: "Booking a consultation is simple! Click on 'Get the App', register, choose your preferred therapy type, and select a time that works best for you. You can opt for individual or group sessions via text, call, or video. Our secure portal ensures a seamless booking and payment experience"
     },
     {
-        question: "Can you prevent mental health problems ?",
-        answer: "Listening and offering support, encouraging them to seek professional help, and staying connected can make a big difference."
+        question: " Are the consultations condential?",
+        answer: "Absolutely. Your privacy and confidentiality are our top priorities. All sessions are conducted through secure channels, and your personal information is protected in compliance with industry standards and regulations."
     },
     {
-        question: "What are the 7 components of mental health?",
-        answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        question: "How does expressive arts therapy work?",
+        answer: "Expressive arts therapy uses creative forms of expression—like drawing, music, and movement—to help you explore and process emotions. Guided by trained expressive arts therapists, this approach can be an effective complement to traditional therapies, providing a holistic healing experience."
     },
+    {
+        question: "What can I expect from the self-assessment tools?",
+        answer: "Our self-assessment tools are designed to help you understand your mental health better. These evidence-based forms cover areas like anxiety, stress, depression, and more. Results are private, insightful, and can be shared with your therapist for personalised care planning."
+    },
+    {
+        question: " Is XXX affordable?",
+        answer: "Yes, we aim to make mental health care accessible and affordable for everyone. Our transparent pricing includes flat fees for consultations, subscription packages for ongoing support, and discounts for young adults (18–23). Explore the right plan for you during your registration process."
+    }
 ]
 
 const FAQ = () => {

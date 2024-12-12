@@ -19,7 +19,7 @@
 
 #TeamHeader {
     text-align: left;
-    width: 45%;
+    width: 100%;
 }
 
 #TeamHeader>p {
@@ -29,6 +29,7 @@
 #TeamHeader>p:nth-child(1) {
     font-weight: 900;
     font-size: 36px;
+    text-align: center;
 }
 
 #TeamHeader>p:nth-child(2) {
@@ -62,18 +63,35 @@
     }
 }
 
+#ExpertGridContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.ExpertGridContents{
+    display: flex;
+    flex-direction: column;
+}
+
+.ExpertsHeading{
+    font-size: 26px;
+    font-weight: 700;
+}
 
 #TeamGridContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     width: 100%;
-    margin: 50px 0px;
+    margin: 40px 0px;
 }
 
 .TeamGridCard {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 10px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -81,16 +99,43 @@
     border-bottom-left-radius: 30px;
     box-shadow: rgba(43, 171, 160, 0.14) 0px 3px 8px;
 
+    #TeamTextContent{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 15px;
+        margin: 0px auto;
+    }
+
     .DocSpeciality {
-        font-size: 1.4rem;
+        font-size: 18px;
         font-weight: 500;
         color: #26aba3;
+        
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin: auto;
         margin-top: 10px;
-        padding: 5px;
     }
 
     .DocName {
-        font-size: 1.4rem;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .DocDesc{
+        font-size: 15px;
+        text-align: justify;
+
+        max-height: 100px;
+        overflow-y: auto;
+        /* scrollbar-width: thin;
+        scrollbar-color: #dddddd transparent; */
+    }
+
+    .DocDesc::-webkit-scrollbar {
+        display: none;
     }
 
     p {
@@ -103,6 +148,7 @@
 
     .TeamImg>img {
         width: 100%;
+        object-fit: cover;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
     }
@@ -130,6 +176,19 @@
     margin: auto;
     font-size: 22px;
     fill: white;
+}
+
+#TeamFooter{
+    margin-top: 50px;
+    text-align: left;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#TeamFooter>p:nth-child(1){
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
 }
 
 /* ------------------------------ MOBILE SCREEN ---------------------------------- */
@@ -168,6 +227,15 @@
         }
     }
 
+    #ExpertGridContainer{
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .ExpertsHeading{
+        font-size: 24px;
+    }
+
     #TeamGridContainer {
         grid-template-columns: repeat(1, 1fr);
         gap: 40px;
@@ -189,16 +257,26 @@
 
     .TeamGridCard {
         .DocName {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .DocSpeciality {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 
     .TeamSocialMediaContainer {
         width: 32vh;
+    }
+
+
+    #TeamFooter{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    
+    #TeamFooter>p:nth-child(1){
+        font-size: 32px;
     }
 }
 
@@ -261,12 +339,23 @@
         }
 
         .DocSpeciality {
-            font-size: 18px;
+            font-size: 17px;
+            height: 90px;
+            margin-top: 10px;
         }
     }
 
     .TeamSocialMediaContainer {
         width: 28vh;
+    }
+
+    #TeamFooter{
+        margin-top: 20px;
+        font-size: 17px;
+    }
+    
+    #TeamFooter>p:nth-child(1){
+        font-size: 32px;
     }
 }
 
@@ -312,7 +401,7 @@
         }
 
         .DocSpeciality {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -345,11 +434,11 @@
 
     .TeamGridCard {
         .DocName {
-            font-size: 3vh;
+            font-size: 18px;
         }
 
         .DocSpeciality {
-            font-size: 3vh;
+            font-size: 18px;
         }
     }
 }

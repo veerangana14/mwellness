@@ -31,7 +31,7 @@
     font-weight: 900;
 }
 
-#CounselorLeftSection>p:nth-child(2) {
+#CounselorLeftSection>p:nth-child(2), #CounselorLeftSection>p:nth-child(3) {
     line-height: 30px;
     font-size: 20px;
     font-weight: 200;
@@ -186,6 +186,43 @@
     margin-right: 15px;
 }
 
+
+#StoryContainer{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#StoryHeading{
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+}
+
+#StorySubheading{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+#GoalsList{
+    margin: 0px;
+
+    .GoalItem{
+        margin: 15px 0px;
+    }
+
+    .GoalItem > span {
+        font-weight: 500;
+    }
+}
 
 #AboutInnerContainer2 {
     display: flex;
@@ -661,7 +698,7 @@
         margin: 2rem 0 1rem;
     }
 
-    #CounselorLeftSection>p:nth-child(2) {
+    #CounselorLeftSection>p:nth-child(2), #CounselorLeftSection>p:nth-child(3) {
         line-height: 25px;
         font-size: 16px;
     }
@@ -674,6 +711,20 @@
         font-size: 20px;
         margin-left: 10px;
     }
+
+    #StoryContainer{
+        font-size: 16px;
+    }
+    
+    #StoryHeading{
+        font-size: 30px;
+    }
+    
+    #StorySubheading{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
 
     #AboutInnerContainer2 {
         width: 85%;
@@ -881,7 +932,7 @@
         margin: 2rem 0 1rem;
     }
 
-    #CounselorLeftSection>p:nth-child(2) {
+    #CounselorLeftSection>p:nth-child(2), #CounselorLeftSection>p:nth-child(3) {
         line-height: 30px;
         font-size: 17px;
     }
@@ -899,6 +950,21 @@
         font-size: 20px;
         margin-left: 10px;
     }
+
+    #StoryContainer{
+        font-size: 17px;
+        padding-top: 0px;
+    }
+    
+    #StoryHeading{
+        font-size: 30px;
+    }
+    
+    #StorySubheading{
+        font-size: 20px;
+    }
+
+
 
     #AboutInnerContainer2 {
         width: 85%;
@@ -1084,7 +1150,7 @@
         margin: 2rem 0 1rem;
     }
 
-    #CounselorLeftSection>p:nth-child(2) {
+    #CounselorLeftSection>p:nth-child(2), #CounselorLeftSection>p:nth-child(3) {
         line-height: 30px;
         font-size: 18px;
     }

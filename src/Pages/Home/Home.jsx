@@ -65,21 +65,29 @@ import ConsultationForm from '../../Components/ConsultationForm/ConsultationForm
 
 const AccordionItems = [
     {
-        question: "What is mental health?",
-        answer: "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act."
+        question: "What services does XXX offer?",
+        answer: "XXX provides a wide range of mental health services, including one-on-one therapy, group sessions, self-assessment tools, and expressive arts therapies such as music, art, and dance therapy. Our platform connects you with qualified professionals in psychiatry, clinical psychology, counselling psychology, and more—all available online."
     },
     {
-        question: "How can I support a friend with mental health issues?",
-        answer: "Listening and offering support, encouraging them to seek professional help, and staying connected can make a big difference."
+        question: "How do I book a consultation?",
+        answer: "Booking a consultation is simple! Click on 'Get the App', register, choose your preferred therapy type, and select a time that works best for you. You can opt for individual or group sessions via text, call, or video. Our secure portal ensures a seamless booking and payment experience"
     },
     {
-        question: "Can you prevent mental health problems ?",
-        answer: "Listening and offering support, encouraging them to seek professional help, and staying connected can make a big difference."
+        question: " Are the consultations condential?",
+        answer: "Absolutely. Your privacy and confidentiality are our top priorities. All sessions are conducted through secure channels, and your personal information is protected in compliance with industry standards and regulations."
     },
     {
-        question: "What are the 7 components of mental health?",
-        answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        question: "How does expressive arts therapy work?",
+        answer: "Expressive arts therapy uses creative forms of expression—like drawing, music, and movement—to help you explore and process emotions. Guided by trained expressive arts therapists, this approach can be an effective complement to traditional therapies, providing a holistic healing experience."
     },
+    {
+        question: "What can I expect from the self-assessment tools?",
+        answer: "Our self-assessment tools are designed to help you understand your mental health better. These evidence-based forms cover areas like anxiety, stress, depression, and more. Results are private, insightful, and can be shared with your therapist for personalised care planning."
+    },
+    {
+        question: " Is XXX affordable?",
+        answer: "Yes, we aim to make mental health care accessible and affordable for everyone. Our transparent pricing includes flat fees for consultations, subscription packages for ongoing support, and discounts for young adults (18–23). Explore the right plan for you during your registration process."
+    }
 ]
 
 const GridItems = [
@@ -217,17 +225,19 @@ const Home = () => {
             <div id={styles.HeaderSection}>
                 <div id={styles.InnerContainer1}>
                     <div id={styles.HeaderLeftSection}>
-                        <p>Understand Mental Health</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam architecto iste vitae non perspiciatis repellendus totam ipsa odio deserunt natus, eveniet.</p>
+                        <p>Breaking Barriers to Mental Health—For Everyone, Everywhere.</p>
+                        <p>At XXX, our certified experts are ready to help, offering world-class care through digital convenience, multidisciplinary approaches, and compassionate support. Transforming care into a seamless experience, we bring you advanced tools, expert guidance, and holistic therapies—all under one digital roof.</p>
+                        <p>Experience a first-of-its-kind digital mental health hospital dedicated to your well-being,
+                        ensuring you’re never alone on your journey to recovery.</p>
 
                         <div id={styles.HeaderSectionButtons}>
                             <button className={styles.PrimaryBtn} id={styles.HeaderGreenBtn}>
                                 Meet Experts
-                                <MdArrowOutward className={styles.HeaderBtnArrowIcon}/>
+                                <MdArrowOutward className={styles.HeaderBtnArrowIcon} />
                             </button>
                             <button className={styles.SecondaryBtn} id={styles.HeaderOrangeBtn}>
                                 Get Started
-                                <MdArrowOutward className={styles.HeaderBtnArrowIcon}/>
+                                <MdArrowOutward className={styles.HeaderBtnArrowIcon} />
                             </button>
                         </div>
 
@@ -315,7 +325,7 @@ const Home = () => {
 
                             {
                                 AccordionItems.map((item, index) => (
-                                    <Accordion 
+                                    <Accordion
                                         openIndex={openIndex}
                                         contentRef={contentRef}
                                         index={index}
@@ -343,8 +353,8 @@ const Home = () => {
                     <div id={styles.GridSection}>
                         {
                             GridItems.map((item, index) => (
-                                <Grid 
-                                    index={index+1}
+                                <Grid
+                                    index={index + 1}
                                     gridImg={item.img}
                                     title={item.title}
                                     description={item.description}
@@ -368,7 +378,7 @@ const Home = () => {
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page. Sed ut perspiciatis unde omnis iste natus error.It is a long established fact that a reader will be distracted by the readable content of a page. Sed ut perspiciatis unde omnis iste natus error.</p>
 
                         <button className={styles.PrimaryBtn} id={styles.DownloadBtn}>
-                            Download App <MdArrowOutward id={styles.DownloadBtnArrowIcon}/>
+                            Download App <MdArrowOutward id={styles.DownloadBtnArrowIcon} />
                         </button>
                     </div>
 
@@ -423,7 +433,7 @@ const Home = () => {
 
 
                     {/* <div id={styles.CarouselContainer}> */}
-                        {/* <div className="slide">
+                    {/* <div className="slide">
                             {slides[currentSlide]?.map((review, index) => (
                             <div key={index} className={styles.ReviewCard}>
                                 <h4 className={styles.ReviewName}>{review.name}</h4>
@@ -433,7 +443,7 @@ const Home = () => {
                             ))}
                         </div> */}
 
-                        {/* <div className={styles.Slide2}>
+                    {/* <div className={styles.Slide2}>
                             {slides2[currentSlide2]?.map((review, index) => (
                             <div key={index} className={styles.ReviewCard}>
                                 <h4 className={styles.ReviewName}>{review.name}</h4>
@@ -443,7 +453,7 @@ const Home = () => {
                             ))}
                         </div> */}
 
-                        {/* <div
+                    {/* <div
                             className={styles.Slide}
                             style={{
                                 transform: `translateX(-${currentSlide * 100}%)`,
@@ -508,7 +518,7 @@ const Home = () => {
 
                     <button className={styles.PrimaryBtn}>
                         Get A Consultation
-                        <MdArrowOutward id={styles.FormOutwardArrowIcon}/> 
+                        <MdArrowOutward id={styles.FormOutwardArrowIcon} />
                     </button>
                 </div>
             </div>
@@ -522,7 +532,7 @@ const Home = () => {
                         <div>
                             <button className={styles.PrimaryBtn} id={styles.ArticleBtn}>
                                 Read More Articles
-                                <MdArrowOutward id={styles.ArticleBtnArrowIcon}/>
+                                <MdArrowOutward id={styles.ArticleBtnArrowIcon} />
                             </button>
                         </div>
                     </div>

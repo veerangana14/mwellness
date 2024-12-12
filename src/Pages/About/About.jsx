@@ -156,7 +156,7 @@ const About = () => {
             <div id={styles.AboutFirstSection}>
                 <div id={styles.AboutFirstContainer}>
                     <div id={styles.CounselorLeftSection}>
-                        <p><span style={{ color: "#26aba3" }}>Dr. Merry Stone</span> — Licensed Mental Health Counselor, Psychotherapist</p>
+                        {/* <p><span style={{ color: "#26aba3" }}>Dr. Merry Stone</span> — Licensed Mental Health Counselor, Psychotherapist</p>
 
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page. Sed ut perspiciatis unde omnis iste natus error.</p>
 
@@ -185,7 +185,13 @@ const About = () => {
 
                         <button className={styles.PrimaryBtn} id={styles.LearnMoreBtn}>
                             Learn More <MdArrowOutward id={styles.LearnMoreBtnArrowIcon}/>
-                        </button>
+                        </button> */}
+
+                        <p>Mission and Vision</p>
+
+                        <p>At XXX, our mission is to revolutionise mental health care by breaking barriers to accessibility, affordability, and acceptance. We are committed to providing an inclusive, secure, and holistic space where individuals can connect with certified experts and explore transformative therapies, empowering them to lead healthier, more balanced lives.</p>
+
+                        <p>We envision a world where mental health is treated with the same urgency and compassion as physical health. By leveraging technology and fostering creativity through expressive arts, we aim to create a mental health ecosystem that prioritises care, understanding, and innovation, reshaping how the world perceives and accesses mental health support.</p>
                     </div>
 
                     <div id={styles.CounselorRightSection}>
@@ -230,7 +236,7 @@ const About = () => {
 
 
             {/* --------------------------- ABOUT SECOND SECTION -------------------------- */}
-            <div id={styles.AboutInnerContainer2}>
+            {/* <div id={styles.AboutInnerContainer2}>
                 <div id={styles.StatsCard}>
                     <div className={styles.StatsCol}>
                         <p>20+</p>
@@ -248,6 +254,30 @@ const About = () => {
                         <p>From our doctors</p>
                     </div>
                 </div>
+            </div> */}
+
+
+            <div id={styles.StoryContainer}>
+                <p id={styles.StoryHeading}>Our Story</p>
+
+                <p>XXX was born out of a shared realisation of the urgent need for accessible mental health care in India. With the rising stigma surrounding mental health, limited availability of affordable services, and geographical barriers to care, many individuals are left to struggle alone.</p>
+
+                <p>Founded in 2021 by Dr. Chitrabh Raghav Sinha and Neelabh Keshav Sinha, XXX set out to address these challenges head-on. Inspired by their combined experience in psychiatry, public health, and the innovative potential of digital platforms, the Sinha brothers envisioned a virtual mental health hospital—accessible to all, regardless of location or financial status.</p>
+
+                <p>Drawing upon the expertise of a multidisciplinary team, including specialists in psychiatry, psychology, and expressive arts therapy, XXX integrates traditional and creative therapeutic approaches. By harnessing the power of music, art, and dance therapies alongside evidence-based clinical practices, we offer a unique pathway to healing that acknowledges the complexities of every individual’s mental health journey.</p>
+
+                <p id={styles.StorySubheading}>Impact Goals</p>
+                <ul id={styles.GoalsList}>
+                    <li className={styles.GoalItem}><span>Erasing Stigma: &nbsp;</span>We actively work to normalise conversations around mental health through awareness campaigns, online educational seminars, and collaborations with communities. By fostering understanding, we aim to dissolve the shame often associated with seeking help.</li>
+
+                    <li className={styles.GoalItem}><span>Affordable Access for All: &nbsp;</span>With cost-effective consultation models and tailored subscription packages, XXX ensures that quality mental health care is not a privilege but a right for everyone.</li>
+
+                    <li className={styles.GoalItem}><span>Holistic Wellness Through Creativity: &nbsp;</span>Our commitment to expressive arts therapy, including music, dance, and art, allows individuals to explore unconventional pathways to healing and self-expression.</li>
+
+                    <li className={styles.GoalItem}><span>Building Resilience in Communities: &nbsp;</span>By connecting users with local and online support groups, we create a network of care that extends beyond individual therapy.</li>
+
+                    <li className={styles.GoalItem}><span>Empowering the Next Generation: &nbsp;</span> With a focus on young adults and working professionals, our platform offers tools and resources to help them navigate the complexities of modern life.</li>
+                </ul>
             </div>
 
 
