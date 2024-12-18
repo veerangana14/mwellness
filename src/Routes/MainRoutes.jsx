@@ -14,6 +14,8 @@ import ArtsVideo from '../Pages/ArtsVideo/ArtsVideo';
 import ArtsAudio from '../Pages/ArtsAudio/ArtsAudio';
 import GetStarted from '../Pages/GetStarted/GetStarted';
 import GetStarted2 from '../Pages/GetStarted/GetStarted2';
+import BlogGrid from '../Pages/Blogs/Blogs'
+import SingleBlogPage from '../Pages/Blogs/SingleBlogPage';
 
 const MainRoutes = () => {
   return (
@@ -33,6 +35,8 @@ const MainRoutes = () => {
             <Route path="/arts-video" element={<ArtsVideo />} />
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/get-started2" element={<GetStarted2 />} />
+            <Route path="/blog-grid" element={<BlogGrid />} />
+            <Route path="/single-blog" element={<SingleBlogPage />} />
         </Routes>
     </div>
   )

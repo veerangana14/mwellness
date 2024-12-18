@@ -10,6 +10,7 @@ import '../../Assets/root.css';
 import { Helmet } from 'react-helmet'
 import styles from './Journals.module.css'
 import ArticleGrid from '../../Components/Grid/ArticleGrid'
+import { useNavigate } from 'react-router-dom'
 
 
 const Articles = [
@@ -45,6 +46,8 @@ const Journals = () => {
         window.scrollTo(0, 0);
     },[])
 
+    const navigate = useNavigate();
+
   return (
     <>
         <Helmet>
@@ -58,7 +61,7 @@ const Journals = () => {
                 <div id={styles.ArticlesHeader}>
                     <p>Latest Articles</p>
                     <div>
-                        <button className={styles.PrimaryBtn} id={styles.ArticleBtn}>
+                        <button className={styles.PrimaryBtn} id={styles.ArticleBtn} onClick={() => navigate('/blog-grid')}>
                             Read Blogs
                             <MdArrowOutward id={styles.ArticleBtnArrowIcon}/>
                         </button>

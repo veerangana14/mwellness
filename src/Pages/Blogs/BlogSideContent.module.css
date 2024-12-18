@@ -1,0 +1,170 @@
+#BlogSideContentContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#SearchBar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+#SearchBar input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#SearchBar #SearchIcon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    /* color: #999; */
+    color: #26aba3;
+    pointer-events: none;
+}
+
+
+#BlogSideHeading{
+    display: flex;
+    align-items: center;
+
+    #BlogSideIcon{
+        margin-right: 15px;
+    }
+
+    p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+#CategoriesList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+    #CategoryItem{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #CategoryItem > p{
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+    }
+}
+
+#TagsListContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+
+    p{
+        padding: 10px 20px;
+        margin: 0px;
+        border: 1.5px solid rgb(199, 199, 199);
+        border-radius: 25px;
+        font-weight: 600;
+    }
+
+    p:hover{
+        color: white;
+        background: #26aba3;
+        border: 1.5px solid #26aba3;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #SearchBar {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    #SearchBar input {
+        font-size: 16px;
+    }
+    
+    #SearchBar #SearchIcon {
+        font-size: 18px;
+    }
+    
+    
+    #BlogSideHeading{
+        p {
+            font-size: 20px;
+        }
+    }
+    
+    #CategoriesList{
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    #TagsListContainer{
+        p{
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #SearchBar {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    #SearchBar input {
+        font-size: 16px;
+    }
+    
+    #SearchBar #SearchIcon {
+        font-size: 18px;
+    }
+    
+    
+    #BlogSideHeading{
+        p {
+            font-size: 20px;
+        }
+    }
+    
+    #CategoriesList{
+        gap: 12px;
+        margin-top: 20px;
+    }
+    
+    #TagsListContainer{
+        p{
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    
+}

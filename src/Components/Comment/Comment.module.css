@@ -1,0 +1,118 @@
+#CommentBox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0px;
+
+    .CommentDesc {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+.CommentTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.CommentLeftSection{
+    display: flex;
+    width: 35%;
+    align-items: center;
+
+    .ProfileImg{
+        width: 20%;
+        margin-right: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    .ProfileName{
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+.CommentRightSection{
+    display: flex;
+    align-items: center;
+
+    .ReplyIconContainer{
+        margin-right: 15px;
+
+        .ReplyIcon{
+            fill: #26aba3;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    #CommentBox{
+        .CommentDesc {
+            font-size: 16px;
+        }
+    }
+    
+    .CommentLeftSection{
+        width: 65%;
+    
+        .ProfileImg{
+            width: 30%;
+        }
+
+        .ProfileName{
+            font-size: 16px;
+        }
+    }
+    
+    .CommentRightSection{
+        width: 30%;
+    
+        .ReplyIconContainer{
+            margin-right: 10px;
+        }
+    }    
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .CommentLeftSection{
+        width: 50%;
+    
+        .ProfileImg{
+            width: 20%;
+        }
+
+        .ProfileName{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .CommentLeftSection{
+        width: 50%;
+    
+        .ProfileImg{
+            width: 20%;
+        }
+
+        .ProfileName{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    
+}

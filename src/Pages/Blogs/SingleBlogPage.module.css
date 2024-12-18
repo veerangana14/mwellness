@@ -1,0 +1,491 @@
+#BlogContentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    margin: 80px auto;
+}
+
+#BlogDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+#BlogDetailsBannerImg{
+    width: 100%;
+
+    img {
+        width: 100%;
+        border-radius: 30px;
+    }
+}
+
+#BlogDeets{
+    text-align: left;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+#BlogDetailsContent{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+
+    .BlogListBoldText{
+        font-weight: 500;
+    }
+}
+
+#TagsAndShare{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+
+    #RelatedTagsContainer{
+        text-align: left;
+        width: 40%;
+
+        p{
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        #TagsListContainer{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 15px;
+            margin-top: 20px;
+        
+            p{
+                padding: 10px 20px;
+                margin: 0px;
+                border: 1.5px solid rgb(199, 199, 199);
+                border-radius: 25px;
+                font-weight: 600;
+                font-size: 15px;
+            }
+        
+            p:hover{
+                color: white;
+                background: #26aba3;
+                border: 1.5px solid #26aba3;
+            }
+        }
+        
+    }
+
+
+    #ShareContainer{
+        text-align: right;
+        width: 25%;
+
+        p{
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        #ShareIcons{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .IconContainer{
+                background-color: orange;
+                border-radius: 50%;
+                padding: 10px 12px;
+            }
+             
+            .SocialMediaIcon{
+                font-size: 20px;
+                fill: white;
+            }
+        }
+    }
+}
+
+#CommentsContainer{
+    text-align: left;
+    margin-top: 30px;
+
+    #CommentHeading{
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+
+#CommentFormContainer{
+    text-align: left;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    #CommentHeading{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    #CommentForm{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .CommentInput{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 20px;
+                margin-bottom: 8px;
+            }
+            
+            input, textarea {
+                border: 1px solid rgb(196, 196, 196);
+                border-radius: 25px;
+                padding: 10px 25px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    #CommentBtn{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        padding: 15px 25px;
+        margin-top: 20px;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 25px;
+        background-color: green;
+        color: white;
+        border: none;
+
+
+        #CommentArrowIcon{
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+#BlogSideContainer{
+    width: 25%;
+}
+
+
+
+#InnerContainer7 {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 70px auto;
+}
+
+#ArticledGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#ArticlesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ArticlesHeader>p:nth-child(1) {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+
+@media (max-width: 480px) {
+    #BlogContentContainer{
+        flex-direction: column;
+        width: 80%;
+        margin: 60px auto;
+    }
+    
+    #BlogDetailsContainer{
+        width: 100%;
+        margin: auto;
+    }
+
+    #BlogDeets{
+        font-size: 15px;
+    }
+    
+    #BlogDetailsContent{
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    #TagsAndShare{
+        flex-direction: column;
+        gap: 15px;
+    
+        #RelatedTagsContainer{
+            width: 100%;
+
+            #TagsListContainer{
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    
+    
+        #ShareContainer{
+            text-align: left;
+            width: 70%;
+        }
+    }
+
+    #CommentsContainer{
+        #CommentHeading{
+            font-size: 26px;
+        }
+    }
+    
+    #CommentFormContainer{
+        #CommentHeading{
+            font-size: 26px;
+        }
+    
+        #CommentForm{
+            .CommentInput{
+                label{
+                    font-size: 16px;
+                    margin-left: 15px;
+                }
+                
+                input, textarea {
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        #CommentBtn{
+            padding: 15px 25px;
+            margin-top: 30px;
+            font-size: 14px;
+    
+            #CommentArrowIcon{
+                font-size: 18px;
+            }
+        }
+    }
+    
+    #BlogSideContainer{
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    #InnerContainer7 {
+        margin-top: 0px;
+    }
+
+    #ArticlesHeader {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    #ArticlesHeader>p:nth-child(1) {
+        font-size: 30px;
+    }
+
+    #ArticledGrid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #BlogContentContainer{
+        flex-direction: column;
+        width: 80%;
+        margin: 60px auto;
+    }
+    
+    #BlogDetailsContainer{
+        width: 100%;
+        margin: auto;
+    }
+
+
+    #BlogDeets{
+        font-size: 15px;
+    }
+    
+    #BlogDetailsContent{
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    #TagsAndShare{
+        flex-direction: column;
+        gap: 15px;
+    
+        #RelatedTagsContainer{
+            width: 100%;
+
+            #TagsListContainer{
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    
+    
+        #ShareContainer{
+            text-align: left;
+            width: 50%;
+        }
+    }
+
+    #CommentsContainer{
+        #CommentHeading{
+            font-size: 26px;
+        }
+    }
+    
+    #CommentFormContainer{
+        #CommentHeading{
+            font-size: 26px;
+        }
+    
+        #CommentForm{
+            .CommentInput{
+                label{
+                    font-size: 16px;
+                    margin-left: 15px;
+                }
+                
+                input, textarea {
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        #CommentBtn{
+            padding: 15px 25px;
+            margin-top: 30px;
+            font-size: 14px;
+    
+            #CommentArrowIcon{
+                font-size: 18px;
+            }
+        }
+    }
+
+    
+    #BlogSideContainer{
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 28px;
+    }
+
+    #ArticledGrid{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #BlogContentContainer{
+        flex-direction: row;
+        width: 80%;
+        margin: 60px auto;
+    }
+    
+    #BlogDetailsContainer{
+        width: 60%;
+    }
+
+    #TagsAndShare{
+        flex-direction: column;
+        gap: 15px;
+    
+        #RelatedTagsContainer{
+            width: 100%;
+
+            #TagsListContainer{
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    
+        #ShareContainer{
+            text-align: left;
+            width: 40%;
+        }
+    }
+    
+    #CommentFormContainer{
+        #CommentForm{
+            .CommentInput{
+                label{
+                    font-size: 16px;
+                    margin-left: 15px;
+                }
+                
+                input, textarea {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    #BlogSideContainer{
+        width: 30%;
+        margin-top: 60px;
+    }
+
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 32px;
+    }
+
+    #ArticledGrid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 32px;
+    }
+
+    #ArticledGrid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    #ArticlesHeader > p:nth-child(1){
+        font-weight: 800;
+        font-size: 34px;
+    }
+}

@@ -1,0 +1,106 @@
+#BlogContentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    margin: 80px auto;
+    /* border: 1px solid purple; */
+
+}
+
+#BlogGridSection{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+#BlogSideContainer{
+    width: 25%;
+}
+
+#BlogGridContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+
+@media (max-width: 480px) {
+    #BlogContentContainer{
+        flex-direction: column;
+        width: 80%;
+        margin: 60px auto;
+    }
+    
+    #BlogGridSection{
+        width: 100%;
+        margin: auto;
+    }
+    
+    #BlogSideContainer{
+        width: 100%;
+        margin-top: 60px;
+    }
+    
+    #BlogGridContainer{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #BlogContentContainer{
+        flex-direction: column;
+        width: 80%;
+        margin: 60px auto;
+    }
+    
+    #BlogGridSection{
+        width: 100%;
+        margin: auto;
+    }
+    
+    #BlogSideContainer{
+        width: 100%;
+        margin-top: 60px;
+    }
+    
+    #BlogGridContainer{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #BlogContentContainer{
+        flex-direction: row;
+        width: 80%;
+        margin: 60px auto;
+    }
+    
+    #BlogGridSection{
+        width: 50%;
+    }
+    
+    #BlogSideContainer{
+        width: 40%;
+        margin-top: 60px;
+    }
+    
+    #BlogGridContainer{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    
+}

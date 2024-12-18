@@ -1,0 +1,50 @@
+.PaginationContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* .PaginationBtn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+} */
+
+#PageNumber{
+    color: #26aba3;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.PaginationBtn.Active {
+    color: #26aba3;
+    /* background-color: #26aba3; */
+    /* border-color: #26aba3; */
+}
+
+.PaginationBtn:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+.PrevBtn, .NextBtn {
+    /* padding: 8px 12px; */
+    /* border: 1px solid #ccc; */
+    /* background-color: #f9f9f9; */
+    /* border-radius: 4px; */
+    background-color: transparent;
+    border: none;
+    color: #26aba3;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.PrevBtn:disabled, .NextBtn:disabled {
+    color: #8d979f;
+}

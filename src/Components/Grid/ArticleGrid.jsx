@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from './ArticleGrid.module.css'
 import { BsArrowUpRightCircleFill } from "react-icons/bs"
+import { useNavigate } from 'react-router-dom'
 
 const ArticleGrid = ({ index, articleImg, title, description, date, views, comments, linkText }) => {
+    const navigate = useNavigate();
+
     return (
-        <div className={styles.ArticleCard}>
+        <div className={styles.ArticleCard} onClick={() => navigate("/single-blog")}>
             <div className={styles.ArticleCardImgContainer}>
                 <img src={articleImg} alt={`article-img-${index}`} />
             </div>
