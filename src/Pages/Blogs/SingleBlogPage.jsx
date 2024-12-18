@@ -177,7 +177,6 @@ const SingleBlogPage = () => {
                                 Post Comment
                                 <MdArrowOutward id={styles.CommentArrowIcon}/>
                             </button>
-
                         </div>
                     </div>
 
@@ -186,6 +185,7 @@ const SingleBlogPage = () => {
                     <div id={styles.BlogSideContainer}>
                         <BlogSideContent />
                     </div>
+
                 </div>
 
 
