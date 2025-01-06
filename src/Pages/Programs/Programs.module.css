@@ -1,0 +1,478 @@
+#OuterContainer{
+    padding: 100px 0px;
+}
+
+#AboutInnerContainer3 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+#AboutInnerContainer3>p {
+    margin: 0px;
+}
+
+#AboutInnerContainer3>p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#AboutInnerContainer3>p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#GridSection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 60px auto;
+}
+
+.PrimaryBtn {
+    padding: 14px 40px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+ 
+
+#ChildrenTherapyContainer{
+    background-color: #f4fcfa;
+    padding: 80px 0px;
+}
+
+#GreenBtn{
+    display: flex;
+    margin: auto;
+    padding: 15px 30px;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+}
+
+#OutwardArrowIcon{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#ChildrenTherapySection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+#ChildrenTherapyContent{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+
+    p{
+        margin: 10px;
+    }
+}
+
+#ChildrenTherapyContent>p:nth-child(1){
+    font-size: 34px;
+    font-weight: 800;
+}
+
+#ChildrenTherapyContent>p:nth-child(2){
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#ChildrenTherapyPointersGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 30px auto;
+    gap: 30px;
+}
+
+#StartedBtn{
+    display: block;
+    margin-top: 40px;
+    width: fit-content;
+}
+
+#ChildrenTherapyImgContainer{
+    width: 45%;
+    position: relative;
+}
+
+
+#ChildrenTherapyImgContainer > img{
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+
+#AssessmentProcessSection{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 100px auto 50px;
+}
+
+#AssessmentProcessSection > p{
+    margin: 0px;
+}
+
+#AssessmentProcessSection > p:nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#AssessmentProcessSection > p:nth-child(2){
+    font-size: 20px;
+    font-weight: 200;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+#ProcessGrid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 40px;
+    margin: 60px 0px;
+}
+
+#PricingContainer{
+    background-color: #f4fcfa;
+    padding: 60px 0px;
+}
+
+#PricingContainer > p{
+    margin: 0px;
+}
+
+#PricingContainer > p:nth-child(1){
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#PricingContainer > p:nth-child(2){
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+
+#SwitchTabBox{
+    margin-top: 30px ;
+}
+
+
+#PricingPlanContainer{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+@media (max-width: 480px) {
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+
+    #ChildrenTherapyContainer{
+        padding: 50px 0px;
+    }
+
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+
+    #ChildrenTherapySection{
+        flex-direction: column;
+        width: 80%;
+        gap: 60px;
+        margin: 0px auto; 
+    }
+
+    #ChildrenTherapyContent{
+        width: 100%;
+
+        p{
+            margin: 10px;
+        }
+    }
+    
+    #ChildrenTherapyContent>p:nth-child(1){
+        font-size: 30px;
+    }
+    
+    #ChildrenTherapyContent>p:nth-child(2){
+        font-size: 16px;
+    }
+    
+    #ChildrenTherapyPointersGrid{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    
+    #ChildrenTherapyImgContainer{
+        width: 90%;
+    }
+
+    #AssessmentProcessSection{
+        width: 100%;
+        margin: 70px auto 50px;
+    }
+
+    #AssessmentProcessSection > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #AssessmentProcessSection > p:nth-child(2){
+        font-size: 17px;
+        line-height: 27px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        gap: 30px;
+        margin: 30px auto;
+    }
+
+    
+    #PricingContainer > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #PricingContainer > p:nth-child(2){
+        font-size: 17px;
+        line-height: 27px;
+    }
+    
+    #PricingPlanContainer{
+        flex-direction: column;
+        width: 80%;
+        gap: 40px;
+        margin: auto;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    #ChildrenTherapyContainer{
+        padding: 50px 0px;
+    }
+
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+
+    #ChildrenTherapySection{
+        flex-direction: column;
+        width: 80%;
+        gap: 60px;
+        margin: 0px auto; 
+    }
+    
+    #ChildrenTherapyContent{
+        width: 100%;
+
+        p{
+            margin: 10px;
+        }
+    }
+    
+    #ChildrenTherapyContent>p:nth-child(1){
+        font-size: 30px;
+    }
+    
+    #ChildrenTherapyContent>p:nth-child(2){
+        font-size: 16px;
+    }
+    
+    #ChildrenTherapyPointersGrid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    #ChildrenTherapyImgContainer{
+        width: 90%;
+    }
+
+    #AssessmentProcessSection{
+        width: 85%;
+        margin: 70px auto 50px;
+    }
+
+    #AssessmentProcessSection > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #AssessmentProcessSection > p:nth-child(2){
+        font-size: 17px;
+        line-height: 27px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 30px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+
+    #GreenBtn{
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+    
+    #OutwardArrowIcon{
+        font-size: 18px;
+    }
+
+    #ChildrenTherapyContainer{
+        padding: 50px 0px;
+    }
+    
+    #ChildrenTherapySection{
+        flex-direction: column;
+        width: 80%;
+        gap: 60px;
+        margin: 0px auto; 
+    }
+
+    #ChildrenTherapyContent{
+        width: 100%;
+
+        p{
+            margin: 10px;
+        }
+    }
+    
+    #ChildrenTherapyContent>p:nth-child(1){
+        font-size: 30px;
+    }
+    
+    #ChildrenTherapyContent>p:nth-child(2){
+        font-size: 16px;
+    }
+    
+    #ChildrenTherapyPointersGrid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    #ChildrenTherapyImgContainer{
+        width: 90%;
+    }
+
+    #AssessmentProcessSection{
+        width: 80%;
+        margin: 70px auto 50px;
+    }
+
+    #AssessmentProcessSection > p:nth-child(1){
+        font-size: 36px;
+        font-weight: 800;
+    }
+    
+    #AssessmentProcessSection > p:nth-child(2){
+        font-size: 17px;
+        line-height: 24px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        gap: 30px;
+        margin: 50px auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 34px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    #ChildrenTherapyImgContainer{
+        width: 40%;
+    }
+
+    #AssessmentProcessSection{
+        width: 100%;
+        margin: 70px auto 50px;
+    }
+    
+    #ProcessGrid{
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        gap: 40px;
+        margin: 50px auto;
+    }
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    
+}

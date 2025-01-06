@@ -816,7 +816,35 @@
 
     #StagesRightSection {
         text-align: left;
-        width: 100%;
+        width: 85%;
+    }
+
+    #StagesGrid {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 30px auto;
+    }
+
+    .StagesCard {
+        padding: 30px;
+    }
+    
+    .StagesCard>p {
+        margin: 5px;
+    }
+    
+    .StagesCard>p:nth-child(1) {
+        font-size: 48px;
+    }
+    
+    .StagesCard>p:nth-child(2) {
+        font-size: 19px;
+    }
+    
+    .StagesCard>p:nth-child(3) {
+        font-size: 16px;
     }
     
     #AllProgramsBtnIcon{

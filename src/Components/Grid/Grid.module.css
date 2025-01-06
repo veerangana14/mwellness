@@ -26,6 +26,7 @@
 .GridLink{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .GridLink > p{

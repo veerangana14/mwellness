@@ -1,0 +1,39 @@
+.SwitchTabContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    width:  430px;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.SwitchTab {
+    flex: 1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
+    color: black;
+}
+
+.SwitchTab.Active {
+    background-color: #26aba3;
+    color: #fff;
+}
+
+.SwitchTab:not(.Active):hover {
+    background-color: white;
+}
+
+@media (max-width: 480px) {
+    .SwitchTabContainer {
+        width:  fit-content;
+    }
+}

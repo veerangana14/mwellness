@@ -1,0 +1,501 @@
+#OuterContainer {
+    padding-top: 100px;
+
+}
+
+#ConsultationStagesSection {
+    margin: 30px 0px;
+}
+
+#StagesInnerContainer {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#QuestionsLeftSection {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+#QuestionImgContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+#QuestionImgContainer2{
+    display: none;
+}
+
+.ImgGroupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ImgGroupContainer:first-child {
+    align-items: flex-end;
+    position: absolute;
+    top: -180px;
+    left: 0;
+}
+
+.ImgGroupContainer:last-child {
+    position: absolute;
+    bottom: -220px;
+    right: 0;
+}
+
+
+.ImgGroupContainer:first-child>img:first-child,
+.ImgGroupContainer:last-child>img:last-child {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.ImgGroupContainer:first-child>img:last-child,
+.ImgGroupContainer:last-child>img:first-child {
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
+}
+
+#QuestionImgContainer::after, #QuestionImgContainer::before{
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background-color: #fef3de;
+}
+
+#QuestionImgContainer::after{
+    top: -70px;
+    left: -40px;
+}
+
+#QuestionImgContainer::before{
+    bottom: -100px;
+    right: -40px;
+}
+
+
+
+#StagesRightSection {
+    text-align: left;
+    width: 50%;
+}
+
+#StagesRightSection>p {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+#StagesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 30px 0px;
+}
+
+.StagesCard {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 50px;
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 2px 5px 0px, rgba(43, 171, 160, 0.14) 0px 1px 1px 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.StagesCard:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(43, 171, 160, 0.14) 0px 10px 15px -3px, rgba(43, 171, 160, 0.14) 0px 4px 6px -2px;
+}
+
+.StagesCard>p {
+    margin: 10px 0px;
+}
+
+.StagesCard>p:nth-child(1) {
+    font-weight: 900;
+    font-size: 48px;
+    color: #c1e3de;
+}
+
+.StagesCard>p:nth-child(2) {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.StagesCard>p:nth-child(3) {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+
+#Questionaire{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+    margin: 50px auto;
+    margin-bottom: 100px ;
+}
+
+#QuestionaireHeading{
+    font-size: 34px;
+    font-weight: 900;
+    text-align: left;
+}
+
+#SecondQuestionaire{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+    margin: auto;
+}
+
+#AboutThirdSection {
+    background-color: #edf7f6;
+}
+
+
+#AboutInnerContainer3 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px;
+}
+
+#AboutInnerContainer3>p {
+    margin: 0px;
+}
+
+#AboutInnerContainer3>p:nth-child(1) {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#AboutInnerContainer3>p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#GridSection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 60px auto;
+}
+
+.PrimaryBtn {
+    padding: 14px 40px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#AllProgramsBtn {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+#AllProgramsBtnIcon{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+
+@media (max-width: 480px) {
+    #StagesRightSection>p {
+        font-size: 1.8rem;
+    }
+
+    #StagesInnerContainer {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    #QuestionsLeftSection {
+        width: 100%;
+        display: flex;
+    }
+
+    #QuestionImgContainer {
+        display: none;
+    }
+
+    #QuestionImgContainer2{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    
+    #QuestionImgContainer2 > img {
+        width: 100%;
+    }
+
+    #StagesRightSection {
+        text-align: left;
+        width: 85%;
+    }
+
+    #StagesGrid {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 30px auto;
+    }
+
+    .StagesCard {
+        padding: 30px;
+    }
+    
+    .StagesCard>p {
+        margin: 5px;
+    }
+    
+    .StagesCard>p:nth-child(1) {
+        font-size: 48px;
+    }
+    
+    .StagesCard>p:nth-child(2) {
+        font-size: 19px;
+    }
+    
+    .StagesCard>p:nth-child(3) {
+        font-size: 16px;
+    }
+
+    #Questionaire{
+        width: 80%;
+    }
+
+    #QuestionaireHeading{
+        font-size: 30px;
+    }
+
+    .PrimaryBtn {
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+    
+    #AllProgramsBtnIcon{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #StagesInnerContainer {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    #QuestionsLeftSection {
+        width: 70%;
+        display: flex;
+    }
+
+    #QuestionImgContainer {
+        display: none;
+    }
+
+    #QuestionImgContainer2{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    #QuestionImgContainer2 > img {
+        width: 100%;
+    }
+
+    #StagesRightSection {
+        text-align: left;
+        width: 100%;
+    }
+
+    #StagesGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 30px 0px;
+    }
+
+    .StagesCard {
+        padding: 30px;
+    }
+    
+    .StagesCard>p {
+        margin: 5px;
+    }
+    
+    .StagesCard>p:nth-child(1) {
+        font-size: 44px;
+    }
+    
+    .StagesCard>p:nth-child(2) {
+        font-size: 18px;
+    }
+    
+    .StagesCard>p:nth-child(3) {
+        font-size: 16px;
+    }
+
+    #Questionaire{
+        width: 80%;
+    }
+
+    #QuestionaireHeading{
+        font-size: 32px;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #StagesInnerContainer {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    #QuestionsLeftSection {
+        width: 70%;
+        display: flex;
+    }
+
+    #QuestionImgContainer {
+        display: none;
+    }
+
+    #QuestionImgContainer2{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    #QuestionImgContainer2 > img {
+        width: 100%;
+    }
+
+
+    #StagesRightSection {
+        text-align: left;
+        width: 90%;
+    }
+
+    #StagesRightSection > p {
+        font-size: 32px;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 30px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    #StagesInnerContainer {
+        flex-direction: column;
+        margin: 30px auto;
+        gap: 30px;
+    }
+
+    #QuestionsLeftSection {
+        width: 50%;
+        display: flex;
+    }
+
+    #QuestionImgContainer {
+        display: none;
+    }
+
+    #QuestionImgContainer2{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    #QuestionImgContainer2 > img {
+        width: 100%;
+    }
+
+    #StagesRightSection {
+        text-align: left;
+        width: 90%;
+    }
+
+    #AboutInnerContainer3 > p:nth-child(1){
+        font-size: 34px;
+    }
+
+    #GridSection{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+   
+}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    #AllProgramsBtnIcon{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}

@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet'
 import styles from './Assessments.module.css'
 import ConsultationForm2 from '../../Components/ConsultationForm/ConsultationForm2'
 import Grid from '../../Components/Grid/Grid'
+import { useNavigate } from 'react-router-dom'
 
 const processSteps = [
     { 
@@ -34,28 +35,32 @@ const processSteps = [
     }
 ];
 
-const programs = [
+const assessments = [
     {
         img: GridIcon1,
         title: 'Depression Assessment',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.',
-        linkText: 'Start'
+        linkText: 'Start',
+        redirectUrl: "/depression-assessment"
     },
     {
         img: GridIcon4,
         title: 'Anxiety Assessment',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.',
-        linkText: 'Start'
+        linkText: 'Start',
+        redirectUrl: "/anxiety-assessment"
     },
     {
         img: GridIcon6,
         title: 'Stress Assessment',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.',
-        linkText: 'Start'
+        linkText: 'Start',
+        redirectUrl: "/perceived-stress-assessment"
     },
 ];
 
 const Assessments = () => {
+    const navigate = useNavigate();
 
     useEffect(()=> {
         window.scrollTo(0, 0);
@@ -105,13 +110,14 @@ const Assessments = () => {
 
                     <div id={styles.GridSection}>
                         {
-                            programs.map((item, index) => (
+                            assessments.map((item, index) => (
                                 <Grid 
                                     index={index+1}
                                     gridImg={item.img}
                                     title={item.title}
                                     description={item.description}
                                     linkText={"Start"}
+                                    onClick={() => navigate(`${item.redirectUrl}`)}
                                 />
                             ))
                         }

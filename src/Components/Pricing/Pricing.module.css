@@ -1,0 +1,92 @@
+p{
+    margin: 0px;
+}
+
+.PlanContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 60px 0px;
+    gap: 20px;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.PlanContainer:hover{
+    transform: translateY(5px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.PricingPlan{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.PricingSubContainer{
+    .Pricing{
+        font-weight: 900;
+        color: #26aba3;
+        font-size: 44px;
+    }
+
+    .SavingPrice{
+        color: #333;
+        font-weight: 600;
+        font-size: 17px;
+    }
+}
+
+.HRLine{
+    width: 45px;
+    height: 2px;
+    background-color: #b4b4b4;
+    border: none;
+}
+
+.BenefitsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 20px;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.BenefitPointer{
+    display: flex;
+    align-items: center;
+
+    .BenefitIcon{
+        color: orange;
+        stroke-width: 1;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+#PricingPlanBtn{
+    display: flex;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: green;
+    color: white;
+
+    #PricingPlanIcon{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+}

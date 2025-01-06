@@ -1,0 +1,86 @@
+#TableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+}
+
+#TableContainer {
+    border-collapse: collapse;
+    width: 100%;
+
+    table-layout: fixed;
+    /* Consistent column widths */
+    min-width: 700px;
+}
+
+#TableHeaderContainer {
+    background-color: rgb(246, 246, 246);
+    border-bottom: 3px solid black;
+}
+
+.TableHeader {
+    padding: 15px 8px;
+}
+
+.TableRowContainer {
+    border-bottom: 2px solid rgb(218, 218, 218);
+}
+
+.TableRowHeader {
+    padding: 15px 8px;
+    text-align: left;
+    width: 30%;
+}
+
+.TableRowData {
+    text-align: center;
+    width: 17.5%;
+
+    input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid gray;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        outline: none;
+        cursor: pointer;
+        margin-right: 12px;
+        position: relative;
+    }
+
+    input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background-color: #26aba3;
+        border-radius: 50%;
+    }
+    
+    input[type="radio"]:checked {
+        background-color: white;
+        border: 2px solid #26aba3;
+        box-shadow: 0 0 8px #26aba3;
+    }
+}
+
+
+
+/* ---------------------------- MOBILE SCREEN --------------------------------- */
+@media (max-width: 480px) {}
+
+@media (min-width: 481px) and (max-width: 768px) {}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {}
+
+
+@media (min-width: 1201px) and (max-width: 1440px) {}
