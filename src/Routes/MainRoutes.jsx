@@ -22,6 +22,7 @@ import AnxietyAssessment from '../Pages/Assessments/AnxietyAssessment';
 import Services from '../Pages/Services/Services';
 import ServiceDetails from '../Pages/Services/ServiceDetails';
 import Programs from '../Pages/Programs/Programs';
+import DownloadPage from '../Pages/DownloadScreen/DownloadPage';
 
 const MainRoutes = () => {
   return (
@@ -49,6 +50,7 @@ const MainRoutes = () => {
             <Route path="/service-details" element={<ServiceDetails />} />
             <Route path="/single-blog" element={<SingleBlogPage />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/download-app" element={<DownloadPage />} />
         </Routes>
     </div>
   )

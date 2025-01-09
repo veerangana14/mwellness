@@ -10,6 +10,7 @@ import ArticleImg2 from '../../Assets/images/articles-img-2.jpg'
 import ArticleImg3 from '../../Assets/images/articles-img-3.jpg'
 import ArticleGrid from '../../Components/Grid/ArticleGrid'
 import Pagination from '../../Components/Pagination/Pagination'
+import { useNavigate } from 'react-router-dom'
 
 const AllBlogs = [
     {
@@ -67,6 +68,7 @@ const Blogs = () => {
     const totalItems = 50;
     const itemsPerPage = 5;
     const [currentPage, setCurrentPage] = useState(1);
+    const navigate = useNavigate();
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -90,7 +92,9 @@ const Blogs = () => {
                     <div id="page-header-content">
                         <p className='header-title'>Blog Grid</p>
 
-                        <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; Blog Grid</p>
+                        <p className='header-sub-title'>
+                            <span className='header-link' onClick={() => navigate("/")}>Home</span>  &nbsp; &gt; &nbsp; Blog Grid
+                        </p>
                     </div>
                 </div>
 

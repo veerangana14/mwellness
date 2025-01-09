@@ -268,6 +268,9 @@
         margin: 30px auto;
     }
 
+    #SwitchTabBox{
+        margin: 35px;
+    }
     
     #PricingContainer > p:nth-child(1){
         font-size: 32px;
@@ -364,6 +367,28 @@
         gap: 30px;
         margin: 30px auto;
     }
+
+    #SwitchTabBox{
+        margin: 35px 0px;
+    }
+    
+    #PricingContainer > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #PricingContainer > p:nth-child(2){
+        font-size: 17px;
+        line-height: 27px;
+    }
+    
+    #PricingPlanContainer{
+        flex-direction: column;
+        width: 70%;
+        gap: 60px;
+        margin: auto;
+        margin-top: 50px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -443,6 +468,23 @@
         gap: 30px;
         margin: 50px auto;
     }
+
+    #PricingContainer > p:nth-child(1){
+        font-size: 32px;
+        font-weight: 800;
+    }
+    
+    #PricingContainer > p:nth-child(2){
+        font-size: 18px;
+        line-height: 27px;
+    }
+    
+    #PricingPlanContainer{
+        width: 95%;
+        gap: 30px;
+        margin: auto;
+        margin-top: 50px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -469,6 +511,13 @@
         width: 60%;
         gap: 40px;
         margin: 50px auto;
+    }
+
+    #PricingPlanContainer{
+        width: 85%;
+        gap: 40px;
+        margin: auto;
+        margin-top: 50px;
     }
 }
 

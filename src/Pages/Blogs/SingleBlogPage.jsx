@@ -19,6 +19,7 @@ import ArticleImg2 from '../../Assets/images/articles-img-2.jpg'
 import ArticleImg3 from '../../Assets/images/articles-img-3.jpg'
 import ArticleGrid from '../../Components/Grid/ArticleGrid'
 import { MdArrowOutward } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 
 const Articles = [
@@ -49,6 +50,8 @@ const Articles = [
 ]
 
 const SingleBlogPage = () => {
+    const navigate = useNavigate();
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -66,7 +69,9 @@ const SingleBlogPage = () => {
                     <div id="page-header-content">
                         <p className='header-title'>Overcome Conflicts in Relationships</p>
 
-                        <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; Blog Details</p>
+                        <p className='header-sub-title'>
+                            <span className='header-link' onClick={() => navigate("/")}>Home</span>  &nbsp; &gt; &nbsp; Blog Details
+                        </p>
                     </div>
                 </div>
 

@@ -1,51 +1,84 @@
-p{
+/* p{
     margin: 0px;
-}
+} */
 
-.PlanContainer{
+.PlanContainer {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
     padding: 60px 0px;
     gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.PopularPlanContainer:hover,
+.NormalPlanContainer:hover {
+    transform: translateY(5px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.PopularPlanContainer,
+.NormalPlanContainer {
+    border-radius: 20px;
+    padding: 40px 5px 5px 5px;
     width: 30%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.PlanContainer:hover{
-    transform: translateY(5px);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.PopularPlanContainer {
+    background-color: #26aba3;
 }
 
-.PricingPlan{
+.NormalPlanContainer {
+    background-color: white;
+}
+
+.PopularLabel {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 10;
+}
+
+
+.PricingPlan {
     font-size: 30px;
     font-weight: 400;
 }
 
-.PricingSubContainer{
-    .Pricing{
+.PricingSubContainer {
+    .Pricing {
         font-weight: 900;
         color: #26aba3;
         font-size: 44px;
     }
 
-    .SavingPrice{
+    .SavingPrice {
         color: #333;
         font-weight: 600;
         font-size: 17px;
     }
+
+    p {
+        margin: 10px;
+    }
 }
 
-.HRLine{
+.HRLine {
     width: 45px;
     height: 2px;
     background-color: #b4b4b4;
     border: none;
 }
 
-.BenefitsContainer{
+.BenefitsContainer {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -54,11 +87,11 @@ p{
     margin: 30px auto;
 }
 
-.BenefitPointer{
+.BenefitPointer {
     display: flex;
     align-items: center;
 
-    .BenefitIcon{
+    .BenefitIcon {
         color: orange;
         stroke-width: 1;
         font-size: 20px;
@@ -71,7 +104,22 @@ p{
     }
 }
 
-#PricingPlanBtn{
+#PricingPlanBtn {
+    display: flex;
+    border: 1.5px solid #26aba3;
+    border-radius: 25px;
+    padding: 12px 25px;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    color: #26aba3;
+}
+
+#PopularPricingPlanBtn {
     display: flex;
     border: none;
     border-radius: 25px;
@@ -84,9 +132,123 @@ p{
     font-weight: 700;
     background-color: green;
     color: white;
+}
 
-    #PricingPlanIcon{
+#PricingPlanIcon {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 480px) {
+    .PopularPlanContainer,
+    .NormalPlanContainer {
+        width: 100%;
+        margin: auto;
+    }
+
+    .PricingPlan {
+        font-size: 24px;
+    }
+
+    .PricingSubContainer {
+        .Pricing {
+            font-size: 40px;
+        }
+
+        .SavingPrice {
+            font-size: 15px;
+        }
+    }
+
+    .HRLine {
+        width: 60px;
+    }
+
+    .BenefitsContainer {
+        width: 70%;
+    }
+
+    .BenefitPointer {
+        span {
+            font-size: 15px;
+        }
+    }
+
+    #PricingPlanBtn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    #PopularPricingPlanBtn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    #PricingPlanIcon {
+        margin-left: 8px;
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .PopularPlanContainer,
+    .NormalPlanContainer {
+        width: 90%;
+        margin: auto;
+    }
+
+    .PricingPlan {
+        font-size: 30px;
+    }
+
+    .PricingSubContainer {
+        .Pricing {
+            font-size: 48px;
+        }
+
+        .SavingPrice {
+            font-size: 17px;
+        }
+    }
+
+    .HRLine {
+        width: 60px;
+    }
+
+    .BenefitsContainer {
+        width: 55%;
+    }
+
+    .BenefitPointer {
+        span {
+            font-size: 16px;
+        }
+    }
+
+    #PricingPlanBtn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    #PopularPricingPlanBtn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    #PricingPlanIcon {
         margin-left: 10px;
-        font-size: 20px;
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .BenefitsContainer {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .BenefitsContainer {
+        width: 75%;
     }
 }

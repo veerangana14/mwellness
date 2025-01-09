@@ -29,6 +29,7 @@ import Accordion from '../../Components/Accordion/Accordion'
 import ArticleGrid from '../../Components/Grid/ArticleGrid'
 import Carousel from '../../Components/Carousel/Carousel'
 import ConsultationForm from '../../Components/ConsultationForm/ConsultationForm'
+import { useNavigate } from 'react-router-dom'
 
 // const patientReviews = [
 //     {
@@ -65,8 +66,8 @@ import ConsultationForm from '../../Components/ConsultationForm/ConsultationForm
 
 const AccordionItems = [
     {
-        question: "What services does XXX offer?",
-        answer: "XXX provides a wide range of mental health services, including one-on-one therapy, group sessions, self-assessment tools, and expressive arts therapies such as music, art, and dance therapy. Our platform connects you with qualified professionals in psychiatry, clinical psychology, counselling psychology, and more—all available online."
+        question: "What services does Asharika offer?",
+        answer: "Asharika provides a wide range of mental health services, including one-on-one therapy, group sessions, self-assessment tools, and expressive arts therapies such as music, art, and dance therapy. Our platform connects you with qualified professionals in psychiatry, clinical psychology, counselling psychology, and more—all available online."
     },
     {
         question: "How do I book a consultation?",
@@ -85,7 +86,7 @@ const AccordionItems = [
         answer: "Our self-assessment tools are designed to help you understand your mental health better. These evidence-based forms cover areas like anxiety, stress, depression, and more. Results are private, insightful, and can be shared with your therapist for personalised care planning."
     },
     {
-        question: " Is XXX affordable?",
+        question: " Is Asharika affordable?",
         answer: "Yes, we aim to make mental health care accessible and affordable for everyone. Our transparent pricing includes flat fees for consultations, subscription packages for ongoing support, and discounts for young adults (18–23). Explore the right plan for you during your registration process."
     }
 ]
@@ -95,31 +96,37 @@ const GridItems = [
         img: GridIcon1,
         title: "Assessments",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.",
+        redirectUrl: "/assessments"
     },
     {
         img: GridIcon2,
         title: "Educational Seminars",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.",
+        redirectUrl: "/seminars"
     },
     {
         img: GridIcon3,
         title: "Mental Health Journals",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.",
+        redirectUrl: "/journals"
     },
     {
         img: GridIcon4,
         title: "Meet The Experts",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.",
+        redirectUrl: "/team"
     },
     {
         img: GridIcon5,
         title: "ARTS Therapy",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.",
+        redirectUrl: "/arts-video"
     },
     {
         img: GridIcon6,
         title: "Awareness Campaign",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant doloremqe laudantium.",
+        redirectUrl: "/awareness-campaigns"
     }
 ]
 
@@ -158,6 +165,8 @@ const Home = () => {
     const [videoUrl, setVideoUrl] = useState("");
 
     const [openIndex, setOpenIndex] = useState(null);
+
+    const navigate = useNavigate();
 
     const toggleAccordion = (index) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -226,16 +235,16 @@ const Home = () => {
                 <div id={styles.InnerContainer1}>
                     <div id={styles.HeaderLeftSection}>
                         <p>Breaking Barriers to Mental Health—For Everyone, Everywhere.</p>
-                        <p>At XXX, our certified experts are ready to help, offering world-class care through digital convenience, multidisciplinary approaches, and compassionate support. Transforming care into a seamless experience, we bring you advanced tools, expert guidance, and holistic therapies—all under one digital roof.</p>
+                        <p>At Asharika, our certified experts are ready to help, offering world-class care through digital convenience, multidisciplinary approaches, and compassionate support. Transforming care into a seamless experience, we bring you advanced tools, expert guidance, and holistic therapies—all under one digital roof.</p>
                         <p>Experience a first-of-its-kind digital mental health hospital dedicated to your well-being,
                         ensuring you’re never alone on your journey to recovery.</p>
 
                         <div id={styles.HeaderSectionButtons}>
-                            <button className={styles.PrimaryBtn} id={styles.HeaderGreenBtn}>
+                            <button className={styles.PrimaryBtn} id={styles.HeaderGreenBtn} onClick={() => navigate("/team")}>
                                 Meet Experts
                                 <MdArrowOutward className={styles.HeaderBtnArrowIcon} />
                             </button>
-                            <button className={styles.SecondaryBtn} id={styles.HeaderOrangeBtn}>
+                            <button className={styles.SecondaryBtn} id={styles.HeaderOrangeBtn} onClick={() => navigate("/get-started")}>
                                 Get Started
                                 <MdArrowOutward className={styles.HeaderBtnArrowIcon} />
                             </button>
@@ -359,6 +368,7 @@ const Home = () => {
                                     title={item.title}
                                     description={item.description}
                                     linkText={"More Info"}
+                                    onClick={() => navigate(`${item.redirectUrl}`)}
                                 />
                             ))
                         }
@@ -377,7 +387,7 @@ const Home = () => {
 
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page. Sed ut perspiciatis unde omnis iste natus error.It is a long established fact that a reader will be distracted by the readable content of a page. Sed ut perspiciatis unde omnis iste natus error.</p>
 
-                        <button className={styles.PrimaryBtn} id={styles.DownloadBtn}>
+                        <button className={styles.PrimaryBtn} id={styles.DownloadBtn} onClick={() => navigate("/about")}>
                             Download App <MdArrowOutward id={styles.DownloadBtnArrowIcon} />
                         </button>
                     </div>
@@ -530,7 +540,7 @@ const Home = () => {
                     <div id={styles.ArticlesHeader}>
                         <p>Latest Articles</p>
                         <div>
-                            <button className={styles.PrimaryBtn} id={styles.ArticleBtn}>
+                            <button className={styles.PrimaryBtn} id={styles.ArticleBtn} onClick={() => navigate("/blog-grid")}>
                                 Read More Articles
                                 <MdArrowOutward id={styles.ArticleBtnArrowIcon} />
                             </button>

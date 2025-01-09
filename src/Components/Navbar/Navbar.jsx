@@ -87,7 +87,7 @@ const Navbar = () => {
             </div>
  
             <div id={styles.GetStartedBtnContainer}>
-                <button className={styles.PrimaryBtn} onClick={() => navigate("/get-started")}>Get Started</button>
+                <button className={styles.PrimaryBtn} onClick={() => {navigate("/get-started"); window.scrollTo(0, 0);}}>Get Started</button>
             </div>
         </div>
     </div>

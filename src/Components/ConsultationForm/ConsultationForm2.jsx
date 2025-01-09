@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './ConsultationForm2.module.css'
 import AssessmentFormImg from '../../Assets/images/assessment-form-img.jpg'
 import { MdArrowOutward } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 const ConsultationForm2 = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div id={styles.AssessmentsFormSection}>
             <div id={styles.FormImgContainer}>
@@ -44,7 +51,13 @@ const ConsultationForm2 = () => {
                 </div>
 
                 <div id={styles.StartedBtn}>
-                    <button id={styles.GreenBtn}>
+                    <button 
+                        id={styles.GreenBtn} 
+                        onClick={() =>  {
+                            navigate("/programs");
+                            window.scrollTo(0, 0)
+                        }}
+                    >
                         Get A Consultation
                         <MdArrowOutward id={styles.OutwardArrowIcon} />
                     </button>

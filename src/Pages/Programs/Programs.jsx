@@ -182,7 +182,9 @@ const Programs = () => {
                     <div id="page-header-content">
                         <p className='header-title'>All Programs</p>
 
-                        <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; All Programs</p>
+                        <p className='header-sub-title'>
+                            <span className='header-link' onClick={() => navigate("/")}>Home</span> &nbsp; &gt; &nbsp; All Programs
+                        </p>
                     </div>
                 </div>
 
@@ -229,7 +231,7 @@ const Programs = () => {
                             </div>
 
                             <div id={styles.StartedBtn}>
-                                <button id={styles.GreenBtn}>
+                                <button id={styles.GreenBtn} onClick={() => navigate("/contact")}>
                                     Get A Consultation
                                     <MdArrowOutward id={styles.OutwardArrowIcon} />
                                 </button>

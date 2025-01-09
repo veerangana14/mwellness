@@ -2,22 +2,25 @@ import React from 'react'
 import styles from './AssessmentAccordion.module.css'
 
 const AssessmentAccordion = ({ openIndex, contentRef, index, question, answerObj, handleClick, handleAnswerChange, selectedAnswer }) => {
+
+    const isOpen = openIndex.includes(index); // Check if this accordion is open
+
     return (
         <div
-            className={`${styles.AccordionItem} ${openIndex === index ? `${styles.Open}` : ''}`}
+            className={`${styles.AccordionItem} ${isOpen ? `${styles.Open}` : ''}`}
         >
             <div
-                className={`${styles.AccordionHeader} ${openIndex === index ? `${styles.Active}` : ''}`}
+                className={`${styles.AccordionHeader} ${isOpen ? `${styles.Active}` : ''}`}
                 onClick={() => handleClick(index)}
             >
                 <p className={styles.AccordionQuestion}>{question}</p>
-                <span className={styles.AccordionIcon}>{openIndex === index ? '−' : '+'}</span>
+                <span className={styles.AccordionIcon}>{isOpen ? '−' : '+'}</span>
             </div>
             <div
                 className={styles.AccordionContent}
                 ref={(el) => (contentRef.current[index] = el)}
                 style={{
-                    maxHeight: openIndex === index ? `${contentRef.current[index]?.scrollHeight}px` : '0',
+                    maxHeight: isOpen ? `${contentRef.current[index]?.scrollHeight}px` : '0',
                     transition: 'max-height 0.5s ease-in-out, padding 0.3s ease',
                     textAlign: "left"
                 }}
@@ -31,7 +34,7 @@ const AssessmentAccordion = ({ openIndex, contentRef, index, question, answerObj
                                 id={key}
                                 value={value}
                                 checked={selectedAnswer === key}
-                                onChange={() => handleAnswerChange(index, key)}
+                                onChange={() => handleAnswerChange(index, key, value)}
                             />
                             {key}: {value}
                         </label>

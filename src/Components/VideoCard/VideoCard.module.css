@@ -1,39 +1,62 @@
 .SeminarVideoCard {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    align-items: start;
     width: 100%;
 }
 
 .SeminarVideo {
-    width: 30%;
+    width: 35%;
 }
 
 .SeminarVideo>iframe {
     width: 100%;
-    height: 180px;
+    height: 150px;
+}
+
+.SeminarVideo {
+    position: relative;
+    padding-top: 19%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.SeminarVideo > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .SeminarVideoInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
-    width: 65%;
+    /* align-content: center; */
+    /* align-items: start; */
+    width: 60%;
     text-align: left;
+    gap: 15px;
+}
+
+.SeminarVideoInfo > p{
+    margin: 0px;
 }
 
 .SeminarVideoInfo>p:nth-child(1) {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 18px;
 }
 
 .SeminarVideoInfo>p:nth-child(2) {
     color: #26aba3;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 15px;
 }
 
-.SeminarVideoInfo>p:nth-child(2) {
+.SeminarVideoInfo>p:nth-child(3) {
     font-weight: 200;
     font-size: 16px;
     margin: 0;
@@ -43,10 +66,26 @@
 @media (max-width: 480px) {
     .SeminarVideoCard {
         flex-direction: column;
+        gap: 10px;
     }
 
     .SeminarVideo {
         width: 100%;
+    }
+
+    .SeminarVideo {
+        position: relative;
+        padding-top: 56%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .SeminarVideo > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .SeminarVideoInfo {
@@ -58,12 +97,8 @@
     }
 
     .SeminarVideoInfo>p:nth-child(1) {
-        font-size: 1.1rem;
+        font-size: 18px;
         font-weight: 600;
-    }
-
-    .SeminarVideoInfo>p:nth-child(2) {
-        margin: 0;
     }
 }
 
@@ -71,10 +106,26 @@
 @media (min-width: 481px) and (max-width: 768px) {
     .SeminarVideoCard {
         flex-direction: column;
+        gap: 10px;
     }
 
     .SeminarVideo {
         width: 100%;
+    }
+
+    .SeminarVideo {
+        position: relative;
+        padding-top: 56%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .SeminarVideo > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .SeminarVideoInfo {
@@ -92,6 +143,12 @@
 
     .SeminarVideoInfo>p:nth-child(2) {
         margin: 0;
+        font-size: 14px;
+    }
+
+    .SeminarVideoInfo>p:nth-child(3) {
+        font-size: 15px;
+        font-weight: 200;
     }
 
     .SeminarVideoCard {
@@ -103,28 +160,98 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     .SeminarVideoCard{
         width: 100%;
+        align-items: start;
     }
 
     .SeminarVideo {
         width: 40%;
     }
 
+    .SeminarVideo {
+        position: relative;
+        padding-top: 22%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .SeminarVideo > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .SeminarVideoInfo{
         width: 55%;
+    }
+
+    .SeminarVideo>iframe {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .SeminarVideoInfo>p:nth-child(1) {
+        font-weight: 500;
+        font-size: 17px;
+    }
+    
+    .SeminarVideoInfo>p:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .SeminarVideoInfo>p:nth-child(3) {
+        font-size: 15px;
+        font-weight: 200;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
     .SeminarVideoCard{
         width: 100%;
+        align-items: start;
     }
 
     .SeminarVideo {
         width: 40%;
     }
 
+    .SeminarVideo {
+        position: relative;
+        padding-top: 22%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .SeminarVideo > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .SeminarVideoInfo{
         width: 55%;
+    }
+
+    .SeminarVideo>iframe {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .SeminarVideoInfo>p:nth-child(1) {
+        font-weight: 500;
+        font-size: 17px;
+    }
+    
+    .SeminarVideoInfo>p:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .SeminarVideoInfo>p:nth-child(3) {
+        font-size: 15px;
+        font-weight: 200;
     }
 }
 

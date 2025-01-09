@@ -10,28 +10,113 @@
 #SeminarContentContainer {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    /* width: 70%; */
+    width: 65%;
     margin: auto;
     text-align: left;
 }
 
 #SeminarContentContainer>p {
-    font-weight: 600;
+    /* font-weight: 600;
     font-size: 24px;
-    margin-top: 70px;
+    margin-top: 70px; */
+
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0px;
 }
 
 #SeminarVideoContent {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+    gap: 30px; */
+
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
 #VideoGridSection {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    /* gap: 20px; */
+
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#VideoPageContainer {
+    display: flex;
+    width: 85%;
+    margin: 60px auto;
+}
+
+#SidePanelContainer {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#SearchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+
+.SearchIcon {
+    position: absolute;
+    left: 10px;
+    font-size: 22px;
+    color: #333;
+    pointer-events: none;
+}
+
+#SearchContainer input[type="search"] {
+    width: 100%;
+    padding: 10px 10px 10px 45px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    background: transparent;
+}
+
+#SearchContainer input[type="search"]::placeholder {
+    color: #aaa;
+    font-size: 16px;
+}
+
+#SearchContainer input[type="search"]:focus {
+    outline: none;
+}
+
+#ExtrasContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+
+    .Extras {
+        display: flex;
+        align-items: center;
+    }
+
+    .ExtrasIcon {
+        margin-right: 20px;
+        font-size: 20px;
+        color: black;
+    }
+
+    .Extras>p {
+        font-weight: 600;
+    }
 }
 
 
@@ -46,13 +131,40 @@
     }
 
     #SeminarContentContainer>p {
-        font-weight: 700;
-        font-size: 28px;
+        /* font-weight: 700;
+        font-size: 28px; */
+
+        font-size: 21px;
     }
 
     #VideoGridSection {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 50px;
+
+        margin-top: 40px;
+    }
+
+    #VideoPageContainer {
+        flex-direction: column;
+        width: 85%;
+        gap: 60px;
+    }
+
+    #SidePanelContainer {
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    #SearchContainer {
+        align-items: left;
+    }
+
+    #ExtrasContainer {
+        gap: 5px;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
     }
 }
 
@@ -67,43 +179,112 @@
     }
 
     #SeminarContentContainer>p {
-        font-weight: 700;
-        font-size: 28px;
+        /* font-weight: 700;
+        font-size: 28px; */
+
+        font-size: 21px;
     }
 
     #VideoGridSection {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 50px;
+
+        margin-top: 40px;
+    }
+
+
+    #VideoPageContainer {
+        flex-direction: column;
+        width: 85%;
+        gap: 60px;
+    }
+
+    #SidePanelContainer {
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    #SearchContainer {
+        align-items: left;
+    }
+
+    #ExtrasContainer {
+        gap: 5px;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
     }
 }
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
     #SeminarContentContainer {
-        width: 80%;
+        /* width: 80%; */
+        width: 65%;
     }
 
     #SeminarContentContainer>p {
-        font-weight: 700;
-        font-size: 30px;
+        /* font-weight: 700;
+        font-size: 30px; */
+
+        font-size: 20px;
     }
 
     #VideoGridSection {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 60px;
-        margin-top: 30px;
+        /* margin-top: 30px; */
+
+        margin-top: 20px;
+    }
+
+    #VideoPageContainer {
+        gap: 40px;
+    }
+
+    #SidePanelContainer {
+        width: 30%;
+    }
+
+    #ExtrasContainer {
+        gap: 5px;
+
+        .ExtrasIcon {
+            margin-right: 20px;
+        }
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
     #SeminarContentContainer>p {
         font-weight: 700;
-        font-size: 30px;
+        /* font-size: 30px; */
+
+        font-size: 21px;
     }
     
     #VideoGridSection {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 30px;
+
+        row-gap: 40px;
+    }
+
+    #VideoPageContainer {
+        gap: 40px;
+    }
+
+    #SidePanelContainer {
+        width: 25%;
+    }
+
+    #ExtrasContainer {
+        gap: 5px;
+
+        .ExtrasIcon {
+            margin-right: 20px;
+        }
     }
 }
 

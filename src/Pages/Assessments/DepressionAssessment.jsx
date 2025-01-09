@@ -10,6 +10,10 @@ import Navbar from '../../Components/Navbar/Navbar'
 import { Helmet } from 'react-helmet'
 import { useNavigate } from 'react-router-dom'
 import AssessmentAccordion from '../../Components/Accordion/AssessmentAccordion'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import AssessmentResult from '../../Components/AssessmentResult/AssessmentResult'
+import { X } from 'lucide-react'
 
 
 const otherServices = [
@@ -127,69 +131,84 @@ const assessment = [
 ]
 
 const DepressionAssessment = () => {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [resultModalOpen, setResultModalOpen] = useState(false);
+
+    const [openIndex, setOpenIndex] = useState(assessment.map((_, index) => index)); // All accordions open initially
+
     const [answers, setAnswers] = useState({});
-    const [assessmentAnswers, setAssessmentAnswers] = useState([]);
+    const [assessmentAnswers, setAssessmentAnswers] = useState(
+        assessment.map((row, index) => ({
+            questionIndex: index,
+            question: row.ques,
+            answer: null,
+            answerIndex: null
+        }))
+    );
 
     const contentRef = useRef([]);
 
     const navigate = useNavigate();
 
-    // const handleAnswerChange = (questionIndex, answerValue) => {
-    //     setAnswers((prev) => ({
-    //         ...prev,
-    //         [questionIndex]: answerValue,
-    //     }));
-    // };
-
-    const handleAnswerChange = (questionIndex, answerValue) => {
-       
-        // setAssessmentAnswers(prev => (
-        //     [
-        //         ...prev,
-        //         {
-        //             answerIndex: answerValue,
-        //             question: assessment[questionIndex].ques,
-        //             answer: assessment[questionIndex].ans[answerValue]
-        //         }
-        //     ]
-        // ))
-
-        setAssessmentAnswers(prev => (
-            assessmentAnswers.find((ans) => ans.quesIndex === questionIndex) ?
-            [ 
-                ...assessmentAnswers.filter((ans) => ans.quesIndex !== questionIndex), 
-                {
-                    quesIndex: questionIndex,
-                    answerIndex: answerValue,
-                    question: assessment[questionIndex].ques,
-                    answer: assessment[questionIndex].ans[answerValue]
-                }
-            ] :
-            [
-                ...prev,
-                {
-                    quesIndex: questionIndex,
-                    answerIndex: answerValue,
-                    question: assessment[questionIndex].ques,
-                    answer: assessment[questionIndex].ans[answerValue]
-                }
-            ]
-        ))
+    const handleAnswerChange = (questionIndex, answerValue, ansKeyword) => {
+        setAssessmentAnswers(
+            assessmentAnswers.map((ans) => ans.questionIndex === questionIndex ? 
+            {
+                ...ans,
+                answer: ansKeyword,
+                answerIndex: answerValue
+            } : ans)
+        );
     };
 
     const handleSubmitAssesment = () => {
-        // console.log("Answers: ", answers);
-        // setAnswers({});
+        // Check if all questions are answered
+        const unansweredQuestions = assessmentAnswers.filter(item => item.answerIndex === null);
+
+        if (unansweredQuestions.length > 0) {
+            toast.warn('Please answer all the questions before submitting the assessment.', {
+                position: "top-right",
+                autoClose: 3000,
+            });
+
+            setAssessmentAnswers(
+                assessment.map((row, index) => ({
+                    questionIndex: index,
+                    question: row.ques,
+                    answer: null,
+                    answerIndex: null
+                }))
+            );
+            return;
+        }
+
+        setResultModalOpen(true);
+
+        toast.success('Assessment submitted successfully.', {
+            position: "top-right",
+            autoClose: 3000,
+        });
 
         console.log("Answers: ", assessmentAnswers);
-        setAssessmentAnswers([]);
+
+        setAssessmentAnswers(
+            assessment.map((row, index) => ({
+                questionIndex: index,
+                question: row.ques,
+                answer: null,
+                answerIndex: null
+            }))
+        );
+
 
         window.scrollTo(0, 0);
     }
     
     const toggleAccordion = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+        if (openIndex.includes(index)) {
+            setOpenIndex(openIndex.filter((i) => i !== index)); // Close the accordion
+        } else {
+            setOpenIndex([...openIndex, index]); // Open the accordion
+        }
     };
 
     useEffect(() => {
@@ -219,19 +238,45 @@ const DepressionAssessment = () => {
                                     answerObj={item.ans}
                                     handleClick={toggleAccordion}
                                     handleAnswerChange={handleAnswerChange}
-                                    // selectedAnswer={answers[index] || null}
-                                    // selectedAnswer={assessmentAnswers[index]?.answerIndex || null}
-                                    selectedAnswer={assessmentAnswers.find((a) => index === a.quesIndex) ? assessmentAnswers.find((a) => index === a.quesIndex)?.answerIndex : null}
+                                    selectedAnswer={assessmentAnswers.find((a) => index === a.questionIndex) ? assessmentAnswers.find((a) => index === a.questionIndex)?.answerIndex : null}
                                 />
                             ))
                         }
                     </div>
 
-                    <button className={styles.PrimaryBtn} id={styles.AllProgramsBtn} onClick={handleSubmitAssesment}>
+                    <button 
+                        className={styles.PrimaryBtn} 
+                        id={styles.AllProgramsBtn} 
+                        onClick={handleSubmitAssesment}
+                    >
                         Submit Assessment
                         <MdArrowOutward id={styles.AllProgramsBtnIcon} />
                     </button>
+
+                    <ToastContainer />
+
+                    {/* ------------------------- RESULT MODAL --------------------------- */}
+                    {
+                        resultModalOpen && 
+                        <div id={styles.ResultModalContainer}>
+                            <div className={styles.OverlayContent}>
+                                <button 
+                                    className={styles.CloseButton} 
+                                    onClick={() => setResultModalOpen(false)} 
+                                    title="Close Modal"
+                                >
+                                    <X size={24} />
+                                </button>
+
+                                <AssessmentResult 
+                                    score={10}
+                                    setResultModalOpen={setResultModalOpen}
+                                />
+                            </div>
+                        </div>
+                    }
                 </div>
+
 
                 <div id={styles.AboutThirdSection}>
                     <div id={styles.AboutInnerContainer3}>

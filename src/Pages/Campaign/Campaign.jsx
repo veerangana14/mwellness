@@ -15,6 +15,7 @@ import styles from './Campaign.module.css'
 import ArticleGrid from '../../Components/Grid/ArticleGrid'
 import Carousel from '../../Components/Carousel/Carousel'
 import { FaPlay } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 
 
 const patientReviews = [
@@ -94,6 +95,8 @@ const Campaign = () => {
     // for (let i = 0; i < patientReviews.length; i += reviewsPerSlide2) {
     //     slides2.push(patientReviews.slice(i, i + reviewsPerSlide2));
     // }
+    
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -147,11 +150,11 @@ const Campaign = () => {
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam architecto iste vitae non perspiciatis repellendus totam ipsa odio deserunt natus, eveniet.</p>
 
                             <div id={styles.HeaderSectionButtons}>
-                                <button className={styles.PrimaryBtn} id={styles.HeaderGreenBtn}>
+                                <button className={styles.PrimaryBtn} id={styles.HeaderGreenBtn} onClick={() => navigate("/contact")}>
                                     Get a Consultation
                                     <MdArrowOutward className={styles.HeaderBtnArrowIcon} />
                                 </button>
-                                <button className={styles.SecondaryBtn} id={styles.HeaderOrangeBtn}>
+                                <button className={styles.SecondaryBtn} id={styles.HeaderOrangeBtn} onClick={() => navigate("/about")}>
                                     Learn More
                                     <MdArrowOutward className={styles.HeaderBtnArrowIcon} />
                                 </button>
@@ -194,7 +197,7 @@ const Campaign = () => {
                     <div id={styles.ArticlesHeader}>
                         <p>Latest Campaigns</p>
                         <div>
-                            <button className={styles.PrimaryBtn} id={styles.ArticleBtn}>
+                            <button className={styles.PrimaryBtn} id={styles.ArticleBtn} onClick={() => navigate("/blog-grid")}>
                                 Read More Articles
                                 <MdArrowOutward id={styles.ArticleBtnArrowIcon} />
                             </button>
@@ -299,7 +302,7 @@ const Campaign = () => {
                             </div>
                         </div>
 
-                        <button className={styles.PrimaryBtn} id={styles.LearnMoreBtn}>
+                        <button className={styles.PrimaryBtn} id={styles.LearnMoreBtn} onClick={() => navigate("/about")}>
                             Tell Us More <MdArrowOutward id={styles.LearnMoreBtnArrowIcon} />
                         </button>
                     </div>

@@ -12,6 +12,11 @@
     font-size: 34px;
 }
 
+.header-link{
+    color: #26aba3;
+    cursor: pointer;
+}
+
 .primary-btn{
     padding: 14px 40px;
     color: white;

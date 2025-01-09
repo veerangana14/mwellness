@@ -5,8 +5,10 @@ import Footer from '../../Components/Footer/Footer'
 import { Helmet } from 'react-helmet'
 import ContactInfo from '../../Components/Contact/ContactInfo'
 import styles from './Contact.module.css'
+import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
+    const navigate = useNavigate();
 
     useEffect(()=> {
         window.scrollTo(0, 0);
@@ -25,7 +27,9 @@ const Contact = () => {
                 <div id={styles.ContactHeaderContent}>
                     <p className='header-title'>Contact Information</p>
 
-                    <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; Contact</p>
+                    <p className='header-sub-title'>
+                        <span className='header-link' onClick={() => navigate("/")}>Home</span>  &nbsp; &gt; &nbsp; Contact
+                    </p>
                 </div>
             </div>
 

@@ -38,6 +38,7 @@ import styles from './About.module.css'
 import Grid from '../../Components/Grid/Grid'
 import ConsultationForm from '../../Components/ConsultationForm/ConsultationForm'
 import Carousel from '../../Components/Carousel/Carousel'
+import { useNavigate } from 'react-router-dom'
 
 
 const certificates = [
@@ -104,7 +105,7 @@ const ImpactGoals = [
     {
         svgPath: "m7.5 13a4.5 4.5 0 1 1 4.5-4.5 4.505 4.505 0 0 1 -4.5 4.5zm0-7a2.5 2.5 0 1 0 2.5 2.5 2.5 2.5 0 0 0 -2.5-2.5zm7.5 14a5.006 5.006 0 0 0 -5-5h-5a5.006 5.006 0 0 0 -5 5v4h2v-4a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4h2zm2.5-11a4.5 4.5 0 1 1 4.5-4.5 4.505 4.505 0 0 1 -4.5 4.5zm0-7a2.5 2.5 0 1 0 2.5 2.5 2.5 2.5 0 0 0 -2.5-2.5zm6.5 14a5.006 5.006 0 0 0 -5-5h-4v2h4a3 3 0 0 1 3 3v4h2z",
         title: "Affordable Access for All",
-        description: "With cost-effective consultation models and tailored subscription packages, XXX ensures that quality mental health care is not a privilege but a right for everyone.",
+        description: "With cost-effective consultation models and tailored subscription packages, Asharika ensures that quality mental health care is not a privilege but a right for everyone.",
     },
     {
         svgPath: "M19.5,24a1,1,0,0,1-.929-.628l-.844-2.113-2.116-.891a1.007,1.007,0,0,1,.035-1.857l2.088-.791.837-2.092a1.008,1.008,0,0,1,1.858,0l.841,2.1,2.1.841a1.007,1.007,0,0,1,0,1.858l-2.1.841-.841,2.1A1,1,0,0,1,19.5,24ZM10,21a2,2,0,0,1-1.936-1.413L6.45,14.54,1.387,12.846a2.032,2.032,0,0,1,.052-3.871L6.462,7.441,8.154,2.387A1.956,1.956,0,0,1,10.108,1a2,2,0,0,1,1.917,1.439l1.532,5.015,5.03,1.61a2.042,2.042,0,0,1,0,3.872h0l-5.039,1.612-1.612,5.039A2,2,0,0,1,10,21Zm.112-17.977L8.2,8.564a1,1,0,0,1-.656.64L2.023,10.888l5.541,1.917a1,1,0,0,1,.636.643l1.77,5.53,1.83-5.53a1,1,0,0,1,.648-.648l5.53-1.769a.072.072,0,0,0,.02-.009L12.448,9.2a1,1,0,0,1-.652-.661Zm8.17,8.96h0ZM20.5,7a1,1,0,0,1-.97-.757l-.357-1.43L17.74,4.428a1,1,0,0,1,.034-1.94l1.4-.325L19.53.757a1,1,0,0,1,1.94,0l.354,1.418,1.418.355a1,1,0,0,1,0,1.94l-1.418.355L21.47,6.243A1,1,0,0,1,20.5,7Z",
@@ -128,6 +129,7 @@ const About = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPopupVisible, setPopupVisible] = useState(false);
     const [videoUrl, setVideoUrl] = useState("");
+    const navigate = useNavigate();
 
     const handlePlayClick = (embedUrl) => {
         setVideoUrl(embedUrl);
@@ -176,7 +178,9 @@ const About = () => {
                 <div id="page-header-content">
                     <p className='header-title'>About</p>
 
-                    <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; About</p>
+                    <p className='header-sub-title'>
+                        <span className='header-link' onClick={() => navigate("/")}>Home</span> &nbsp; &gt; &nbsp; About
+                    </p>
                 </div>
             </div>
 
@@ -218,7 +222,7 @@ const About = () => {
 
                         <p>Mission and Vision</p>
 
-                        <p>At XXX, our mission is to revolutionise mental health care by breaking barriers to accessibility, affordability, and acceptance. We are committed to providing an inclusive, secure, and holistic space where individuals can connect with certified experts and explore transformative therapies, empowering them to lead healthier, more balanced lives.</p>
+                        <p>At Asharika, our mission is to revolutionise mental health care by breaking barriers to accessibility, affordability, and acceptance. We are committed to providing an inclusive, secure, and holistic space where individuals can connect with certified experts and explore transformative therapies, empowering them to lead healthier, more balanced lives.</p>
 
                         <p>We envision a world where mental health is treated with the same urgency and compassion as physical health. By leveraging technology and fostering creativity through expressive arts, we aim to create a mental health ecosystem that prioritises care, understanding, and innovation, reshaping how the world perceives and accesses mental health support.</p>
                     </div>
@@ -290,17 +294,17 @@ const About = () => {
                 <p id={styles.StoryHeading}>Our Story</p>
 
                 <div id={styles.StoryBgContainer}>
-                    <p>XXX was born out of a shared realisation of the urgent need for accessible mental health care in India. With the rising stigma surrounding mental health, limited availability of affordable services, and geographical barriers to care, many individuals are left to struggle alone.</p>
+                    <p>Asharika was born out of a shared realisation of the urgent need for accessible mental health care in India. With the rising stigma surrounding mental health, limited availability of affordable services, and geographical barriers to care, many individuals are left to struggle alone.</p>
 
-                    <p>Founded in 2021 by Dr. Chitrabh Raghav Sinha and Neelabh Keshav Sinha, XXX set out to address these challenges head-on. Inspired by their combined experience in psychiatry, public health, and the innovative potential of digital platforms, the Sinha brothers envisioned a virtual mental health hospital—accessible to all, regardless of location or financial status.</p>
+                    <p>Founded in 2021 by Dr. Chitrabh Raghav Sinha and Neelabh Keshav Sinha, Asharika set out to address these challenges head-on. Inspired by their combined experience in psychiatry, public health, and the innovative potential of digital platforms, the Sinha brothers envisioned a virtual mental health hospital—accessible to all, regardless of location or financial status.</p>
 
-                    <p>Drawing upon the expertise of a multidisciplinary team, including specialists in psychiatry, psychology, and expressive arts therapy, XXX integrates traditional and creative therapeutic approaches. By harnessing the power of music, art, and dance therapies alongside evidence-based clinical practices, we offer a unique pathway to healing that acknowledges the complexities of every individual’s mental health journey.</p>
+                    <p>Drawing upon the expertise of a multidisciplinary team, including specialists in psychiatry, psychology, and expressive arts therapy, Asharika integrates traditional and creative therapeutic approaches. By harnessing the power of music, art, and dance therapies alongside evidence-based clinical practices, we offer a unique pathway to healing that acknowledges the complexities of every individual’s mental health journey.</p>
                 </div>
 
                 {/* <ul id={styles.GoalsList}>
                     <li className={styles.GoalItem}><span>Erasing Stigma: &nbsp;</span>We actively work to normalise conversations around mental health through awareness campaigns, online educational seminars, and collaborations with communities. By fostering understanding, we aim to dissolve the shame often associated with seeking help.</li>
                     
-                    <li className={styles.GoalItem}><span>Affordable Access for All: &nbsp;</span>With cost-effective consultation models and tailored subscription packages, XXX ensures that quality mental health care is not a privilege but a right for everyone.</li>
+                    <li className={styles.GoalItem}><span>Affordable Access for All: &nbsp;</span>With cost-effective consultation models and tailored subscription packages, Asharika ensures that quality mental health care is not a privilege but a right for everyone.</li>
                     
                     <li className={styles.GoalItem}><span>Holistic Wellness Through Creativity: &nbsp;</span>Our commitment to expressive arts therapy, including music, dance, and art, allows individuals to explore unconventional pathways to healing and self-expression.</li>
                     

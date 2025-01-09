@@ -1,13 +1,21 @@
 import React from 'react'
 import styles from './VideoCard.module.css'
+import ReactPlayer from 'react-player'
 
 const VideoCard = ({ title, date, time, duration, description, postedBy, embedURL }) => {
     return (
         <div className={styles.SeminarVideoCard}>
             <div className={styles.SeminarVideo}>
-                <iframe
+                {/* <iframe
                     style={{ borderRadius: "25px" }} src={embedURL} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
-                </iframe>
+                </iframe> */}
+
+                <ReactPlayer
+                    url={embedURL}
+                    controls
+                    width="100%"
+                    height="fit-content"
+                />
             </div>
 
             <div className={styles.SeminarVideoInfo}>

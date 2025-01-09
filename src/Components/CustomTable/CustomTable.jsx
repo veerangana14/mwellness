@@ -2,17 +2,13 @@ import React from "react"
 import styles from "./CustomTable.module.css"
 
 const CustomTable = ({ selectedValues, setSelectedValues, columns, rows, onSelectionChange }) => {
-    //   const [selectedValues, setSelectedValues] = useState(
-    //     Array(rows.length).fill(null)
-    //   );
 
     const handleSelection = (rowIndex, value) => {
-        // const updatedSelection = [...selectedValues];
-        // updatedSelection[rowIndex] = value;
         let updatedSelection = selectedValues.map((values, index) => values.questionIndex === rowIndex ? {
             questionIndex: rowIndex,
             question: values.question,
-            answer: value
+            answer: columns[value],
+            answerIndex: value
         } : values)
         setSelectedValues(updatedSelection);
         onSelectionChange(updatedSelection);
@@ -48,8 +44,8 @@ const CustomTable = ({ selectedValues, setSelectedValues, columns, rows, onSelec
                                             type="radio"
                                             name={`row-${rowIndex}`}
                                             value={btnIndex}
-                                            // checked={selectedValues[rowIndex] === btnIndex}
-                                            checked={selectedValues.find((value, ind) => value.questionIndex === rowIndex).answer === btnIndex}
+                                            // checked={selectedValues.find((value, ind) => value.questionIndex === rowIndex).answer === btnIndex}
+                                            checked={selectedValues.find((value, ind) => value.questionIndex === rowIndex)?.answerIndex === btnIndex}
                                             onChange={() => handleSelection(rowIndex, btnIndex)}
                                         />
                                         {btnIndex}

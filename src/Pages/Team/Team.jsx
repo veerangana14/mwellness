@@ -15,6 +15,7 @@ import TeamMemberCard from './TeamMemberCard'
 import { Helmet } from 'react-helmet'
 import styles from './Team.module.css'
 import '../../Assets/root.css'
+import { useNavigate } from 'react-router-dom'
 
 const psychiatryExpertsTeam = [
     {
@@ -118,6 +119,7 @@ const expressiveArtsTherapyTeam = [
 
 
 const Team = () => {
+    const navigate = useNavigate();
 
     useEffect(()=> {
         window.scrollTo(0, 0);
@@ -137,7 +139,9 @@ const Team = () => {
                 <div id="page-header-content">
                     <p className='header-title '>Team of Professionals</p>
 
-                    <p className='header-sub-title'>Home &nbsp; &gt; &nbsp; Team</p>
+                    <p className='header-sub-title'>
+                        <span className='header-link' onClick={() => navigate("/")}>Home</span>  &nbsp; &gt; &nbsp; Team
+                    </p>
                 </div>
             </div>
 
@@ -146,7 +150,7 @@ const Team = () => {
                 <div id={styles.TeamHeaderContainer}>
                     <div id={styles.TeamHeader}>
                         <p>Meet Our Team of Experts</p>
-                        <p>At XXX, we believe that exceptional care stems from a diverse and dedicated team. Our multidisciplinary specialists bring together expertise from psychiatry, clinical psychology, and expressive arts therapy to provide holistic, compassionate, and personalised mental  health support. Each member is committed to breaking barriers in mental health accessibility, offering innovative treatments, and empowering individuals to thrive. With extensive training from prestigious institutions and years of professional experience, our team is equipped to guide you through every step of your mental wellness journey</p>
+                        <p>At Asharika, we believe that exceptional care stems from a diverse and dedicated team. Our multidisciplinary specialists bring together expertise from psychiatry, clinical psychology, and expressive arts therapy to provide holistic, compassionate, and personalised mental  health support. Each member is committed to breaking barriers in mental health accessibility, offering innovative treatments, and empowering individuals to thrive. With extensive training from prestigious institutions and years of professional experience, our team is equipped to guide you through every step of your mental wellness journey</p>
                     </div>
 
                     {/* <div id={styles.TeamStats}>

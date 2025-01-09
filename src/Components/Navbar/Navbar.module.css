@@ -13,6 +13,10 @@
 .LogoImgContainer > img{
     width: 100%;
 }
+
+#NavbarLogo{
+    cursor: pointer;
+}
  
 #NavbarContainer{
     display: flex;
@@ -112,6 +116,10 @@
     display: none;
     cursor: pointer;
     color: black;
+}
+
+#GetStartedBtnContainer{
+    cursor: pointer;
 }
 
 .PrimaryBtn{

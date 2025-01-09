@@ -11,6 +11,10 @@ import Navbar from '../../Components/Navbar/Navbar'
 import { Helmet } from 'react-helmet'
 import { useNavigate } from 'react-router-dom'
 import CustomTable from '../../Components/CustomTable/CustomTable'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AssessmentResult from '../../Components/AssessmentResult/AssessmentResult'
+import { X } from 'lucide-react'
 
 const otherServices = [
     {
@@ -36,34 +40,51 @@ const otherServices = [
 const AnxietyAssessment = () => {
     const navigate = useNavigate();
 
+    const [resultModalOpen, setResultModalOpen] = useState(false);
+
     const columns = ["Not at all", "Mildly, but it didn’t bother me much", "Moderately – it wasn’t pleasant at times", "Severely – it bothered me a lot"];
 
     const rows = ["Numbness or tingling", "Feeling hot", "Wobbliness in legs", "Unable to relax", "Fear of worst happening", "Dizzy or lightheaded", "Heart pounding / racing", "Unsteady", "Terrified or afraid", "Nervous", "Feeling of choking", "Hands trembling", "Shaky / unsteady"];
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+    }, []);
 
-    // const [selectedValues, setSelectedValues] = useState([]);
-    // const [selectedValues, setSelectedValues] = useState(
-    //     Array(rows.length).fill(null)
-    // );
     const [selectedValues, setSelectedValues] = useState(
         rows.map((row, index) => ({
             questionIndex: index,
             question: row,
-            answer: null
+            answer: null,
+            answerIndex: null
         }))
     );
 
     const handleSubmitAssesment = () => {
+        const unansweredQuestions = selectedValues.filter(item => item.answer === null);
+
+        if (unansweredQuestions.length > 0) {
+            toast.warn('Please answer all the questions before submitting the assessment.', {
+                position: "top-right",
+                autoClose: 3000,
+            });
+            setSelectedValues([]);
+            return;
+        }
+
         console.log("Submitted Results:", selectedValues);
-        // setSelectedValues([]);
+
+        setResultModalOpen(true);
+
+        toast.success('Assessment submitted successfully.', {
+            position: "top-right",
+            autoClose: 3000,
+        });
 
         setSelectedValues(rows.map((row, index) => ({
             questionIndex: index,
             question: row,
-            answer: null
+            answer: null,
+            answerIndex: null
         })));
 
         window.scrollTo(0, 0);
@@ -91,6 +112,27 @@ const AnxietyAssessment = () => {
                         Submit Assessment
                         <MdArrowOutward id={styles.AllProgramsBtnIcon} />
                     </button>
+
+                    {/* ------------------------- RESULT MODAL --------------------------- */}
+                    {
+                        resultModalOpen && 
+                        <div id={styles.ResultModalContainer}>
+                            <div className={styles.OverlayContent}>
+                                <button 
+                                    className={styles.CloseButton} 
+                                    onClick={() => setResultModalOpen(false)} 
+                                    title="Close Modal"
+                                >
+                                    <X size={24} />
+                                </button>
+
+                                <AssessmentResult 
+                                    score={10}
+                                    setResultModalOpen={setResultModalOpen}
+                                />
+                            </div>
+                        </div>
+                    }
                 </div>
 
                 <div id={styles.AboutThirdSection}>
@@ -117,6 +159,8 @@ const AnxietyAssessment = () => {
                             All Services
                             <MdArrowOutward id={styles.AllProgramsBtnIcon} />
                         </button>
+
+                        <ToastContainer />
                     </div>
                 </div>
             </div>
