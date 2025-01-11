@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from '../Pages/Home/Home';
 import Contact from '../Pages/Contact/Contact';
 import FAQ from '../Pages/FAQ/FAQ';
@@ -23,8 +23,17 @@ import Services from '../Pages/Services/Services';
 import ServiceDetails from '../Pages/Services/ServiceDetails';
 import Programs from '../Pages/Programs/Programs';
 import DownloadPage from '../Pages/DownloadScreen/DownloadPage';
+import Register from '../Dashboard/pages/Register';
+import Login from '../Dashboard/pages/Login';
 
 const MainRoutes = () => {
+  const location = useLocation();
+  
+    // Load Tailwind styles dynamically for Dashboard
+    if (location.pathname.startsWith('/dashboard')) {
+      import('../tailwind.css');
+    }
+
   return (
     <div>
         <Routes>
@@ -51,6 +60,8 @@ const MainRoutes = () => {
             <Route path="/single-blog" element={<SingleBlogPage />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/download-app" element={<DownloadPage />} />
+            <Route path="/dashboard/register" element={<Register />} />
+            <Route path="/dashboard/login" element={<Login />} />
         </Routes>
     </div>
   )

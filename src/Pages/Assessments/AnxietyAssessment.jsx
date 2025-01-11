@@ -15,6 +15,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AssessmentResult from '../../Components/AssessmentResult/AssessmentResult'
 import { X } from 'lucide-react'
+import axios from 'axios'
 
 const otherServices = [
     {
@@ -38,13 +39,14 @@ const otherServices = [
 ]
 
 const AnxietyAssessment = () => {
+    const [assessmentResult, setAssessmentResult] = useState(null);
     const navigate = useNavigate();
 
     const [resultModalOpen, setResultModalOpen] = useState(false);
 
     const columns = ["Not at all", "Mildly, but it didn’t bother me much", "Moderately – it wasn’t pleasant at times", "Severely – it bothered me a lot"];
 
-    const rows = ["Numbness or tingling", "Feeling hot", "Wobbliness in legs", "Unable to relax", "Fear of worst happening", "Dizzy or lightheaded", "Heart pounding / racing", "Unsteady", "Terrified or afraid", "Nervous", "Feeling of choking", "Hands trembling", "Shaky / unsteady"];
+    const rows = ["Numbness or tingling", "Feeling hot", "Wobbliness in legs", "Unable to relax", "Fear of worst happening", "Dizzy or lightheaded", "Heart pounding / racing", "Unsteady", "Terrified or afraid", "Nervous", "Feeling of choking", "Hands trembling", "Shaky / unsteady", "Fear of losing control", "Difficulty in breathing", "Fear of dying", "Scared", "Indigestion", "Faint / lightheaded", "Face flushed", "Hot / cold sweats"];
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -59,7 +61,7 @@ const AnxietyAssessment = () => {
         }))
     );
 
-    const handleSubmitAssesment = () => {
+    const handleSubmitAssesment = async () => {
         const unansweredQuestions = selectedValues.filter(item => item.answer === null);
 
         if (unansweredQuestions.length > 0) {
@@ -71,14 +73,28 @@ const AnxietyAssessment = () => {
             return;
         }
 
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/mwellness/assessments/calculate-score`, {
+            "assessmentName": "Anxiety Assessment",
+            "assessmentAnswers": selectedValues
+        })
+        .then((result) => {
+            console.log("result ====>", result.data);
+
+            setAssessmentResult(result.data?.data);
+
+            setResultModalOpen(true);
+    
+            toast.success('Assessment submitted successfully.', {
+                position: "top-right",
+                autoClose: 3000,
+            });
+        })
+        .catch((err) => {
+            alert(err);
+        });
+
         console.log("Submitted Results:", selectedValues);
 
-        setResultModalOpen(true);
-
-        toast.success('Assessment submitted successfully.', {
-            position: "top-right",
-            autoClose: 3000,
-        });
 
         setSelectedValues(rows.map((row, index) => ({
             questionIndex: index,
@@ -115,19 +131,22 @@ const AnxietyAssessment = () => {
 
                     {/* ------------------------- RESULT MODAL --------------------------- */}
                     {
-                        resultModalOpen && 
+                        assessmentResult && resultModalOpen && 
                         <div id={styles.ResultModalContainer}>
                             <div className={styles.OverlayContent}>
                                 <button 
                                     className={styles.CloseButton} 
-                                    onClick={() => setResultModalOpen(false)} 
+                                    onClick={() => {
+                                        setAssessmentResult(null);
+                                        setResultModalOpen(false);
+                                    }} 
                                     title="Close Modal"
                                 >
                                     <X size={24} />
                                 </button>
 
                                 <AssessmentResult 
-                                    score={10}
+                                    result={assessmentResult}
                                     setResultModalOpen={setResultModalOpen}
                                 />
                             </div>

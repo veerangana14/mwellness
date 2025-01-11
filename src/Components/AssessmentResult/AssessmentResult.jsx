@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Heart, Phone, Calendar } from 'lucide-react'
 import styles from './AssessmentResult.module.css'
 import { useNavigate } from 'react-router-dom';
 
-const AssessmentResult = ({ score = 18, setResultModalOpen }) => {
+const AssessmentResult = ({ result, setResultModalOpen }) => {
     // const score = 18; // Example score out of 27 (PHQ-9 scale)  
 
     const getSeverityLevel = (score) => {
@@ -44,9 +44,60 @@ const AssessmentResult = ({ score = 18, setResultModalOpen }) => {
         };
     };
 
-    const severity = getSeverityLevel(score);
+    // const severity = getSeverityLevel(score);
+
+    const [colorGradient, setColorGradient] = useState("");
+
+    const getGradient = (level, assessmentName) => {
+        if(assessmentName === "Depression Assessment"){
+            if(level === "Normal ups and downs"){
+                return "MinimalDepressionGradient";
+            }
+            else if(level === "Mild mood disturbance"){
+                return "MildDepressionGradient";
+            }
+            else if(level === "Borderline clinical depression"){
+                return "ModerateDepressionGradient";
+            }
+            else if(level === "Moderate depression"){
+                return "ModerateDepressionGradient";
+            }
+            else if(level === "Severe depression"){
+                return "ModeratelySevereDepressionGradient";
+            }
+            else if(level === "Extreme depression"){
+                return "SevereDepressionGradient";
+            }
+        }
+        else if(assessmentName === "Perceived Stress Assessment"){
+            if(level === "Low stress"){
+                return "LowStressGradient";
+            }
+            else if(level === "Moderate stress"){
+                return "ModerateStressGradient";
+            }
+            else if(level === "High perceived stress"){
+                return "HighStressGradient";
+            }
+        }
+        else if(assessmentName === "Anxiety Assessment"){
+            if(level === "Low anxiety"){
+                return "LowAnxietyGradient";
+            }
+            else if(level === "Moderate anxiety"){
+                return "ModerateAnxietyGradient";
+            }
+            else if(level === "Potentially concerning levels of anxiety"){
+                return "HighAnxietyGradient";
+            }
+        }
+    }
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        setColorGradient(getGradient(result?.level, result?.assessmentName));
+    }, [result?.level, result?.assessmentName]);
 
     // return (
     //     <div className="w-full max-w-md mx-auto bg-white rounded-3xl shadow-lg p-8">
@@ -116,38 +167,38 @@ const AssessmentResult = ({ score = 18, setResultModalOpen }) => {
         <div className={styles.ResultContainer}>
             <div styles={{ position: "relative" }}>
                 <div className={styles.ProgressIndicator}>
-                    <div className={`${styles.GradientCircle}
-                    ${ score >= 20 ? `${styles.SevereDepressionGradient}` : 
-                    (score >= 15) ? `${styles.ModeratelySevereDepressionGradient}` :
-                    (score >= 10) ? `${styles.ModerateDepressionGradient}` :
-                    (score >= 5) ? `${styles.MildDepressionGradient}` :
-                    `${styles.MinimalDepressionGradient}` }`
-                    // ${styles.ModeratelySevereDepression}`
-                    }>
+                    <div 
+                        className={`${styles.GradientCircle} ${styles[colorGradient]}`}
+                    >
                         <div className={styles.InnerCircle}>
                             <div className={styles.ScoreText}>
-                                <div className={styles.Score}>{score}</div>
-                                <div className={styles.ScoreMax}>/27</div>
+                                {/* <div className={styles.Score}>{score}</div> */}
+                                <div className={styles.Score}>{result.totalScore}</div>
+                                {/* <div className={styles.ScoreMax}>/27</div> */}
+                                <div className={styles.ScoreMax}>/{result.assessmentMaxScore}</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.SeverityLabel}>
-                    <span className={styles.Label}>PHQ-9 ASSESSMENT</span>
+                    <span className={styles.Label}>{result.assessmentName}</span>
                 </div>
 
                 <div className={styles.SeverityLevel}>
-                    <h2 className={styles.LevelTitle}>{severity.level}</h2>
+                    {/* <h2 className={styles.LevelTitle}>{severity.level}</h2> */}
+                    <h2 className={styles.LevelTitle}>{result.level}</h2>
                 </div>
 
                 <div className={styles.ResultMessage}>
-                    <p className={styles.Message}>{severity.message}</p>
-                    <p className={styles.Guidance}>{severity.guidance}</p>
+                    {/* <p className={styles.Message}>{severity.message}</p> */}
+                    <p className={styles.Message}>{result.advice}</p>
+                    {/* <p className={styles.Guidance}>{severity.guidance}</p> */}
+                    {/* <p className={styles.Guidance}>{result.guidance}</p> */}
                 </div>
 
                 <div className={styles.ActionButtons}>
-                    {score >= 10 && (
+                    {result.totalScore >= 10 && (
                         <button
                             className={`${styles.Button} ${styles.ButtonPrimary}`}
                             onClick={() =>{

@@ -14,6 +14,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import AssessmentResult from '../../Components/AssessmentResult/AssessmentResult'
 import { X } from 'lucide-react'
+import axios from 'axios'
 
 const otherServices = [
     {
@@ -48,7 +49,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you felt that you were unable to control the important things in your life?",
         ans: {
             0: "never",
             1: "almost never",
@@ -58,7 +59,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you felt nervous and stressed?",
         ans: {
             0: "never",
             1: "almost never",
@@ -68,7 +69,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you felt confident about your ability to handle your personal problems?",
         ans: {
             0: "never",
             1: "almost never",
@@ -78,7 +79,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you felt that things were going your way?",
         ans: {
             0: "never",
             1: "almost never",
@@ -88,7 +89,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you found that you could not cope with all the things that you had to do?",
         ans: {
             0: "never",
             1: "almost never",
@@ -98,7 +99,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you been able to control irritations in your life?",
         ans: {
             0: "never",
             1: "almost never",
@@ -108,7 +109,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you felt that you were on top of things?",
         ans: {
             0: "never",
             1: "almost never",
@@ -118,7 +119,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you been angered because of things that happened that were outside of your control?",
         ans: {
             0: "never",
             1: "almost never",
@@ -128,7 +129,7 @@ const assessment = [
         }
     },
     {
-        ques: "In the last month, how often have you been upset because of something that happened unexpectedly?",
+        ques: "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
         ans: {
             0: "never",
             1: "almost never",
@@ -141,6 +142,7 @@ const assessment = [
 
 const PerceivedStressAssessment = () => {
     const [resultModalOpen, setResultModalOpen] = useState(false);
+    const [assessmentResult, setAssessmentResult] = useState(null);
 
     const [openIndex, setOpenIndex] = useState(assessment.map((_, index) => index)); // All accordions open initially
     const [assessmentAnswers, setAssessmentAnswers] = useState(
@@ -167,7 +169,7 @@ const PerceivedStressAssessment = () => {
         );
     };
 
-    const handleSubmitAssesment = () => {
+    const handleSubmitAssesment = async () => {
         // Check if all questions are answered
         const unansweredQuestions = assessmentAnswers.filter(item => item.answerIndex === null);
 
@@ -188,11 +190,23 @@ const PerceivedStressAssessment = () => {
             return;
         }
 
-        setResultModalOpen(true);
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/mwellness/assessments/calculate-score`, {
+            "assessmentName": "Perceived Stress Assessment",
+            "assessmentAnswers": assessmentAnswers
+        })
+        .then((result) => {
+            console.log("result ====>", result.data);
 
-        toast.success('Assessment submitted successfully.', {
-            position: "top-right",
-            autoClose: 3000,
+            setAssessmentResult(result.data?.data);
+            setResultModalOpen(true);
+    
+            toast.success('Assessment submitted successfully.', {
+                position: "top-right",
+                autoClose: 3000,
+            });
+        })
+        .catch((err) => {
+            alert(err);
         });
 
         console.log("Answers: ", assessmentAnswers);
@@ -262,19 +276,22 @@ const PerceivedStressAssessment = () => {
 
                     {/* ------------------------- RESULT MODAL --------------------------- */}
                     {
-                        resultModalOpen && 
+                        assessmentResult && resultModalOpen && 
                         <div id={styles.ResultModalContainer}>
                             <div className={styles.OverlayContent}>
                                 <button 
                                     className={styles.CloseButton} 
-                                    onClick={() => setResultModalOpen(false)} 
+                                    onClick={() => {
+                                        setAssessmentResult(null);
+                                        setResultModalOpen(false);
+                                    }} 
                                     title="Close Modal"
                                 >
                                     <X size={24} />
                                 </button>
 
                                 <AssessmentResult 
-                                    score={10}
+                                    result={assessmentResult}
                                     setResultModalOpen={setResultModalOpen}
                                 />
                             </div>

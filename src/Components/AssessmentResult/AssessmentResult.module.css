@@ -16,7 +16,7 @@
     position: relative;
 }
 
-.SevereDepressionGradient{
+.SevereDepressionGradient, .HighAnxietyGradient, .HighStressGradient {
     background: linear-gradient(to right, #fed7aa, #fecaca, #fecdd3);
 }
 
@@ -24,7 +24,7 @@
     background: linear-gradient(to right, #fde68a, #fed7aa, #fecaca);
 }
 
-.ModerateDepressionGradient{
+.ModerateDepressionGradient, .ModerateStressGradient, .ModerateAnxietyGradient{
     background: linear-gradient(to right, #fef9c3, #fde68a, #fed7aa);
 }
 
@@ -32,7 +32,7 @@
     background: linear-gradient(to right, #d1fae5, #a5f3fc, #bae6fd);
 }
 
-.MinimalDepressionGradient{
+.MinimalDepressionGradient, .LowAnxietyGradient, .LowStressGradient{
     background: linear-gradient(to right, #d9f99d, #a7f3d0, #a5f3fc);
 }
 
