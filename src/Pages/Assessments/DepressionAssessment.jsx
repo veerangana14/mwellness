@@ -283,7 +283,8 @@ const DepressionAssessment = () => {
             return;
         }
 
-        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/mwellness/assessments/calculate-score`, {
+        // await axios.post(`${process.env.REACT_APP_API_BASE_URL}/mwellness/assessments/calculate-score`, {
+        await axios.post(`http://3.109.156.102:8080/api/v1/mwellness/assessments/calculate-score`, {
             "assessmentName": "Depression Assessment",
             "assessmentAnswers": assessmentAnswers
         })
